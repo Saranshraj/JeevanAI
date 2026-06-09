@@ -1,0 +1,48 @@
+name: Post to Dev.to
+
+on:
+  schedule:
+    - cron: "0 4 * * *"   # 4am UTC = 9:30am IST, daily
+  workflow_dispatch:
+    inputs:
+      count:
+        description: "Number of articles to post (default: 1)"
+        default: "1"
+        required: false
+      slug:
+        description: "Specific article slug (optional, overrides count)"
+        required: false
+
+jobs:
+  post:
+    runs-on: ubuntu-latest
+    if: "!contains(github.event.head_commit.message, '[skip ci]')"
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Post article(s) to Dev.to
+        env:
+          DEVTO_API_KEY: ${{ secrets.DEVTO_API_KEY }}
+        run: |
+          if [ -n "${{ github.event.inputs.slug }}" ]; then
+            node scripts/post-to-devto.js --slug "${{ github.event.inputs.slug }}"
+          else
+            node scripts/post-to-devto.js --count "${{ github.event.inputs.count || '1' }}"
+          fi
+
+      - name: Commit tracker if updated
+        run: |
+          git config user.email "saranshraj.srivastava@gmail.com"
+          git config user.name "Jeevan AI Bot"
+          git add devto-posted.json
+          git diff --cached --quiet && echo "no changes" || \
+            (git commit -m "chore: update devto posted tracker [skip ci]" && git push)
