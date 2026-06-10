@@ -1,0 +1,933 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-S6X8Q5EY8E"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-S6X8Q5EY8E');
+</script>
+<meta charset="UTF-8">
+<link rel="icon" type="image/png" href="/logo.png">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- SEO Meta -->
+<title>Why Cybersecurity SaaS Brands Are Invisible in AI Search | Jeevan AI</title>
+<meta name="description" content="Cybersecurity buyers use ChatGPT and Perplexity to shortlist vendors before they ever contact sales. Most cybersecurity SaaS brands are missing from those answers. Here is exactly why.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://jeevanai.co.in/blog/why-cybersecurity-saas-invisible-ai-search">
+
+<!-- Open Graph -->
+<meta property="og:title" content="Why Cybersecurity SaaS Brands Are Invisible in AI Search">
+<meta property="og:description" content="Most cybersecurity vendors are absent from ChatGPT, Perplexity, and Google AI Mode shortlists. Compliance-first content is the root cause. Here is the diagnostic and the fix.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://jeevanai.co.in/blog/why-cybersecurity-saas-invisible-ai-search">
+<meta property="og:site_name" content="Jeevan AI">
+<meta property="article:published_time" content="2026-06-10">
+<meta property="article:author" content="Jeevan AI">
+
+<!-- Article Schema (JSON-LD) -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Why Cybersecurity SaaS Brands Are Invisible in AI Search",
+  "description": "Most cybersecurity vendors are absent from ChatGPT, Perplexity, and Google AI Mode shortlists. Compliance-first content is the root cause. Here is the diagnostic and the fix.",
+  "author": {
+    "@type": "Organization",
+    "name": "Jeevan AI",
+    "url": "https://jeevanai.co.in"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Jeevan AI",
+    "url": "https://jeevanai.co.in",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://jeevanai.co.in/assets/logo.png"
+    }
+  },
+  "datePublished": "2026-06-10",
+  "dateModified": "2026-06-10",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://jeevanai.co.in/blog/why-cybersecurity-saas-invisible-ai-search"
+  },
+  "keywords": ["cybersecurity SaaS AI visibility", "why cybersecurity brands not in ChatGPT", "AI search visibility security vendors", "GEO for cybersecurity", "cybersecurity content strategy AI", "Perplexity cybersecurity recommendations"]
+}
+</script>
+
+<!-- FAQ Schema -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Why don't cybersecurity SaaS brands appear in ChatGPT recommendations?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Most cybersecurity brands publish compliance-first content: SOC 2 attestations, feature checklists, and broad security posture language. This content does not map to the specific buyer queries AI tools receive, such as 'best SIEM for a 200-person SaaS company' or 'endpoint detection tool for remote-first teams.' AI cannot match generic compliance content to specific buying intent, so the brand is skipped in favour of competitors with use-case-specific pages."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do compliance certifications like SOC 2 or ISO 27001 help with AI visibility?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "They help with trust signals, but they do not directly improve AI recommendation frequency. AI tools cite certifications as a secondary trust confirmation, not as a match signal for buyer queries. A brand with SOC 2 certification and no use-case-specific content will still be invisible to a buyer asking 'which cloud security tool is easiest to deploy for a 50-person engineering team.'"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Which AI tools do cybersecurity buyers use most for vendor research?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Perplexity AI is the most commonly used AI research tool among technical buyers in cybersecurity procurement, followed by ChatGPT and Google AI Mode. Perplexity's source-cited format is particularly influential because it shows buyers exactly which sites confirmed a recommendation, making third-party citation coverage especially important for security vendors."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How long does it take for cybersecurity content to appear in AI citations?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Published content typically takes 4 to 8 weeks to begin appearing in AI citation patterns, depending on domain authority and how quickly the content is indexed and referenced by third-party sources. Use-case pages targeting specific buyer segments tend to surface faster than broad 'what is X' guides because they match narrower, higher-intent queries that AI tools receive frequently."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the highest-impact content a cybersecurity SaaS brand can publish for AI visibility?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Deployment scenario pages are the highest-impact content type for cybersecurity AI visibility. These pages name a specific buyer profile (company size, industry, tech stack), describe the threat scenario they face, explain how the product addresses it, and include a quantified outcome. This structure matches the exact query format AI tools receive from security buyers and gives AI a clear, citable signal to attach to that query."
+      }
+    }
+  ]
+}
+</script>
+
+<style>
+  /* ── DESIGN TOKENS (inherited from blog-index) ── */
+  :root {
+    --bg:             #0d0d14;
+    --bg-card:        #13131f;
+    --bg-card-hover:  #17172a;
+    --border:         rgba(255,255,255,0.07);
+    --border-hover:   rgba(79,142,247,0.4);
+    --accent:         #4f8ef7;
+    --accent-dim:     rgba(79,142,247,0.12);
+    --accent-glow:    rgba(79,142,247,0.08);
+    --text:           #e8e8f0;
+    --text-dim:       #8888aa;
+    --text-muted:     #555577;
+    --tag-bg:         rgba(79,142,247,0.1);
+    --tag-text:       #7aabff;
+    --white:          #ffffff;
+    --radius:         12px;
+    --radius-sm:      8px;
+    --font-sans:      'DM Sans', 'Inter', system-ui, sans-serif;
+    --font-serif:     'DM Serif Display', Georgia, serif;
+    --font-mono:      'JetBrains Mono', monospace;
+    --max-w:          1180px;
+    --prose-w:        720px;
+  }
+
+  /* ── RESET ── */
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    background: var(--bg); color: var(--text);
+    font-family: var(--font-sans); line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+  a { color: inherit; text-decoration: none; }
+  img { display: block; max-width: 100%; }
+
+  @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700&family=DM+Serif+Display&display=swap');
+
+  /* ── NAV ── */
+  .nav {
+    position: sticky; top: 0; z-index: 100;
+    background: rgba(13,13,20,0.92);
+    backdrop-filter: blur(16px);
+    border-bottom: 1px solid var(--border);
+    padding: 0 24px;
+  }
+  .nav__inner {
+    max-width: var(--max-w); margin: 0 auto;
+    display: flex; align-items: center; justify-content: space-between;
+    height: 64px;
+  }
+  .nav__logo {
+    display: flex; align-items: center; gap: 10px;
+    font-weight: 700; font-size: 1.05rem; letter-spacing: -0.01em;
+  }
+  .nav__logo-mark {
+    width: 32px; height: 32px; border-radius: 8px;
+    background: var(--accent); color: #fff;
+    display: flex; align-items: center; justify-content: center;
+    font-weight: 800; font-size: 0.9rem;
+  }
+  .nav__links { display: flex; align-items: center; gap: 6px; }
+  .nav__links a {
+    padding: 7px 14px; border-radius: 8px; font-size: 0.875rem;
+    color: var(--text-dim); transition: all 0.2s;
+  }
+  .nav__links a:hover { color: var(--text); background: rgba(255,255,255,0.05); }
+  .nav__links a.active { color: var(--accent); }
+  .nav__cta {
+    padding: 8px 18px; border-radius: 8px;
+    background: var(--accent); color: #fff;
+    font-size: 0.875rem; font-weight: 600;
+    transition: opacity 0.2s;
+  }
+  .nav__cta:hover { opacity: 0.88; }
+
+  /* ── ARTICLE HERO ── */
+  .article-hero {
+    padding: 64px 24px 0;
+    border-bottom: 1px solid var(--border);
+    overflow: hidden;
+    position: relative;
+  }
+  .article-hero::before {
+    content: '';
+    position: absolute; top: 0; left: 50%; transform: translateX(-50%);
+    width: 600px; height: 300px;
+    background: radial-gradient(ellipse at 50% 0%, rgba(79,142,247,0.10) 0%, transparent 70%);
+    pointer-events: none;
+  }
+  .article-hero__inner {
+    max-width: var(--prose-w); margin: 0 auto; position: relative;
+  }
+  .article-hero__breadcrumb {
+    display: flex; align-items: center; gap: 8px;
+    font-size: 0.8rem; color: var(--text-muted);
+    margin-bottom: 28px;
+  }
+  .article-hero__breadcrumb a { color: var(--text-dim); transition: color 0.2s; }
+  .article-hero__breadcrumb a:hover { color: var(--accent); }
+  .article-hero__breadcrumb span { color: var(--text-muted); }
+  .article-hero__meta {
+    display: flex; align-items: center; gap: 12px;
+    margin-bottom: 24px; flex-wrap: wrap;
+  }
+  .post-tag {
+    padding: 3px 10px; border-radius: 100px;
+    font-size: 0.72rem; font-weight: 600; letter-spacing: 0.04em;
+    text-transform: uppercase; background: var(--tag-bg); color: var(--tag-text);
+  }
+  .post-date { font-size: 0.8rem; color: var(--text-muted); }
+  .read-time { font-size: 0.8rem; color: var(--text-muted); }
+  .article-hero__title {
+    font-family: var(--font-serif);
+    font-size: clamp(1.9rem, 3.5vw, 2.6rem);
+    line-height: 1.18; letter-spacing: -0.02em;
+    color: var(--white); margin-bottom: 20px;
+  }
+  .article-hero__subtitle {
+    font-size: 1.1rem; color: var(--text-dim);
+    line-height: 1.65; margin-bottom: 40px;
+    max-width: 620px;
+  }
+  /* Hero visual strip */
+  .article-hero__visual {
+    height: 200px;
+    background: linear-gradient(135deg, #111128 0%, #0d0d1e 50%, #0a1225 100%);
+    border-radius: var(--radius) var(--radius) 0 0;
+    border: 1px solid var(--border); border-bottom: none;
+    display: flex; align-items: center; justify-content: center;
+    gap: 32px; padding: 0 40px;
+    position: relative; overflow: hidden;
+  }
+  .article-hero__visual::after {
+    content: '';
+    position: absolute; bottom: 0; left: 0; right: 0; height: 60px;
+    background: linear-gradient(to top, var(--bg), transparent);
+  }
+  .vis-node {
+    display: flex; flex-direction: column; align-items: center; gap: 8px;
+  }
+  .vis-node__circle {
+    width: 52px; height: 52px; border-radius: 50%;
+    border: 1px solid rgba(79,142,247,0.25);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 1.3rem;
+    background: rgba(79,142,247,0.06);
+  }
+  .vis-node__label { font-size: 0.68rem; color: var(--text-muted); letter-spacing: 0.04em; text-transform: uppercase; }
+  .vis-arrow {
+    font-size: 1.2rem; color: rgba(79,142,247,0.3);
+    margin-bottom: 20px;
+  }
+  .vis-node--winner .vis-node__circle {
+    border-color: rgba(79,142,247,0.6);
+    background: rgba(79,142,247,0.12);
+    box-shadow: 0 0 20px rgba(79,142,247,0.15);
+  }
+  .vis-node--winner .vis-node__label { color: var(--accent); }
+
+  /* ── ARTICLE LAYOUT ── */
+  .article-wrap {
+    max-width: var(--max-w); margin: 0 auto;
+    padding: 64px 24px 96px;
+    display: grid;
+    grid-template-columns: var(--prose-w) 1fr;
+    gap: 64px;
+    align-items: start;
+  }
+
+  /* ── PROSE ── */
+  .article-prose { max-width: var(--prose-w); }
+
+  /* Summary block */
+  .summary-block {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-left: 3px solid var(--accent);
+    border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+    padding: 20px 24px;
+    margin-bottom: 40px;
+  }
+  .summary-block p {
+    font-size: 0.95rem; color: var(--text-dim);
+    line-height: 1.65; margin: 0;
+  }
+
+  /* Intro */
+  .article-intro { margin-bottom: 48px; }
+  .article-intro p {
+    font-size: 1.05rem; line-height: 1.75;
+    color: var(--text-dim); margin-bottom: 20px;
+  }
+  .article-intro p:first-child { color: var(--text); }
+
+  /* Body sections */
+  .article-section { margin-bottom: 48px; }
+  .article-section h2 {
+    font-family: var(--font-serif);
+    font-size: 1.4rem; line-height: 1.25;
+    color: var(--white); margin-bottom: 16px;
+    letter-spacing: -0.01em;
+  }
+  .article-section h3 {
+    font-size: 1.05rem; font-weight: 600;
+    color: var(--text); margin: 24px 0 10px;
+  }
+  .article-section p {
+    font-size: 0.975rem; line-height: 1.78;
+    color: var(--text-dim); margin-bottom: 16px;
+  }
+
+  /* Citation-ready callout */
+  .citation-ready {
+    background: linear-gradient(135deg, rgba(79,142,247,0.06) 0%, rgba(79,142,247,0.02) 100%);
+    border: 1px solid rgba(79,142,247,0.18);
+    border-radius: var(--radius-sm);
+    padding: 18px 22px;
+    margin-bottom: 20px;
+  }
+  .citation-ready p {
+    font-size: 0.95rem; line-height: 1.7;
+    color: var(--text); margin: 0;
+  }
+
+  /* Signal table */
+  .signal-table {
+    width: 100%; border-collapse: collapse;
+    margin: 24px 0; font-size: 0.875rem;
+  }
+  .signal-table th {
+    text-align: left; padding: 10px 14px;
+    border-bottom: 1px solid var(--border);
+    color: var(--text-muted); font-weight: 600;
+    font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.06em;
+  }
+  .signal-table td {
+    padding: 12px 14px; border-bottom: 1px solid rgba(255,255,255,0.04);
+    color: var(--text-dim); vertical-align: top; line-height: 1.55;
+  }
+  .signal-table tr:last-child td { border-bottom: none; }
+  .signal-name {
+    font-weight: 600; color: var(--text); white-space: nowrap;
+  }
+  .signal-score {
+    font-family: var(--font-mono); font-size: 0.8rem;
+    color: var(--accent); white-space: nowrap;
+  }
+  .signal-bad {
+    font-family: var(--font-mono); font-size: 0.8rem;
+    color: #e06060; white-space: nowrap;
+  }
+  .signal-good {
+    font-family: var(--font-mono); font-size: 0.8rem;
+    color: #4fd68a; white-space: nowrap;
+  }
+
+  /* Numbered list style */
+  .article-section ol {
+    list-style: none; counter-reset: step-counter;
+    padding: 0; margin: 20px 0;
+  }
+  .article-section ol li {
+    counter-increment: step-counter;
+    display: flex; gap: 14px; align-items: flex-start;
+    padding: 14px 0; border-bottom: 1px solid rgba(255,255,255,0.04);
+    font-size: 0.95rem; color: var(--text-dim); line-height: 1.65;
+  }
+  .article-section ol li:last-child { border-bottom: none; }
+  .article-section ol li::before {
+    content: counter(step-counter);
+    min-width: 26px; height: 26px; border-radius: 50%;
+    background: var(--accent-dim); border: 1px solid rgba(79,142,247,0.25);
+    color: var(--accent); font-size: 0.75rem; font-weight: 700;
+    display: flex; align-items: center; justify-content: center;
+    flex-shrink: 0; margin-top: 1px;
+  }
+  .article-section ol li strong { color: var(--text); }
+
+  /* Divider */
+  .article-divider {
+    border: none; border-top: 1px solid var(--border);
+    margin: 48px 0;
+  }
+
+  /* FAQ */
+  .faq-section { margin-bottom: 48px; }
+  .faq-section h2 {
+    font-family: var(--font-serif);
+    font-size: 1.4rem; color: var(--white);
+    margin-bottom: 24px; letter-spacing: -0.01em;
+  }
+  .faq-item {
+    border-bottom: 1px solid var(--border);
+    padding: 20px 0;
+  }
+  .faq-item:last-child { border-bottom: none; }
+  .faq-q {
+    font-size: 0.975rem; font-weight: 600;
+    color: var(--white); margin-bottom: 10px; line-height: 1.45;
+  }
+  .faq-a {
+    font-size: 0.925rem; color: var(--text-dim);
+    line-height: 1.7; margin: 0;
+  }
+
+  /* Conclusion */
+  .article-conclusion { margin-bottom: 48px; }
+  .article-conclusion p {
+    font-size: 0.975rem; line-height: 1.78;
+    color: var(--text-dim); margin-bottom: 16px;
+  }
+
+  /* CTA inline */
+  .inline-cta {
+    background: linear-gradient(135deg, rgba(79,142,247,0.08) 0%, rgba(79,142,247,0.03) 100%);
+    border: 1px solid rgba(79,142,247,0.22);
+    border-radius: var(--radius);
+    padding: 28px 32px;
+    display: flex; align-items: center; justify-content: space-between; gap: 24px;
+    flex-wrap: wrap;
+  }
+  .inline-cta__text p { font-size: 0.875rem; color: var(--text-muted); margin-top: 4px; }
+  .inline-cta__text strong { font-size: 1rem; color: var(--white); }
+  .btn-primary {
+    display: inline-flex; align-items: center; gap: 8px;
+    padding: 12px 22px; border-radius: var(--radius-sm);
+    background: var(--accent); color: #fff;
+    font-size: 0.875rem; font-weight: 600; white-space: nowrap;
+    transition: opacity 0.2s;
+  }
+  .btn-primary:hover { opacity: 0.88; }
+
+  /* ── SIDEBAR ── */
+  .article-sidebar {
+    position: sticky; top: 88px;
+  }
+  .sidebar-toc {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 24px;
+    margin-bottom: 24px;
+  }
+  .sidebar-toc h4 {
+    font-size: 0.72rem; font-weight: 700; text-transform: uppercase;
+    letter-spacing: 0.08em; color: var(--text-muted); margin-bottom: 16px;
+  }
+  .toc-list { list-style: none; }
+  .toc-list li { padding: 4px 0; }
+  .toc-list a {
+    font-size: 0.82rem; color: var(--text-dim);
+    transition: color 0.2s; line-height: 1.4;
+    display: block;
+  }
+  .toc-list a:hover { color: var(--accent); }
+  .sidebar-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 24px;
+    text-align: center;
+  }
+  .sidebar-card h4 {
+    font-size: 0.95rem; font-weight: 600; color: var(--white);
+    margin-bottom: 8px; line-height: 1.4;
+  }
+  .sidebar-card p {
+    font-size: 0.8rem; color: var(--text-dim);
+    margin-bottom: 18px; line-height: 1.55;
+  }
+  .btn-outline-sm {
+    display: inline-flex; align-items: center; gap: 6px;
+    padding: 9px 18px; border-radius: var(--radius-sm);
+    border: 1px solid var(--border); background: transparent;
+    color: var(--text-dim); font-size: 0.8rem; font-weight: 500;
+    transition: all 0.2s; cursor: pointer; width: 100%; justify-content: center;
+  }
+  .btn-outline-sm:hover { border-color: var(--accent); color: var(--accent); }
+
+  /* ── RELATED ── */
+  .related-section {
+    border-top: 1px solid var(--border);
+    padding: 64px 24px;
+  }
+  .related-section__inner { max-width: var(--max-w); margin: 0 auto; }
+  .related-section h3 {
+    font-size: 0.78rem; font-weight: 700; text-transform: uppercase;
+    letter-spacing: 0.08em; color: var(--text-muted); margin-bottom: 28px;
+  }
+  .related-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+  .related-card {
+    background: var(--bg-card); border: 1px solid var(--border);
+    border-radius: var(--radius); padding: 22px;
+    transition: border-color 0.2s, transform 0.2s;
+  }
+  .related-card:hover { border-color: var(--border-hover); transform: translateY(-2px); }
+  .related-card .post-tag { margin-bottom: 12px; display: inline-block; }
+  .related-card h4 {
+    font-size: 0.95rem; font-weight: 600; color: var(--white);
+    line-height: 1.4; margin-bottom: 8px;
+  }
+  .related-card p { font-size: 0.82rem; color: var(--text-dim); line-height: 1.55; margin-bottom: 16px; }
+  .related-link {
+    font-size: 0.8rem; font-weight: 600; color: var(--accent);
+    display: flex; align-items: center; gap: 6px;
+    transition: gap 0.2s;
+  }
+  .related-link:hover { gap: 10px; }
+
+  /* ── CTA STRIP ── */
+  .cta-strip {
+    border-top: 1px solid var(--border);
+    background: linear-gradient(135deg, rgba(79,142,247,0.06) 0%, transparent 60%);
+    padding: 72px 24px;
+  }
+  .cta-strip__inner { max-width: 640px; margin: 0 auto; text-align: center; }
+  .cta-strip__title { font-family: var(--font-serif); font-size: 2rem; color: var(--white); margin-bottom: 12px; }
+  .cta-strip__sub { color: var(--text-dim); margin-bottom: 32px; font-size: 1rem; }
+
+  /* ── FOOTER ── */
+  .footer { border-top: 1px solid var(--border); padding: 48px 24px 32px; }
+  .footer__inner { max-width: var(--max-w); margin: 0 auto; }
+  .footer__grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 40px; margin-bottom: 40px; }
+  .footer__brand p { color: var(--text-dim); font-size: 0.875rem; margin-top: 12px; max-width: 260px; line-height: 1.6; }
+  .footer__col h5 { font-size: 0.78rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: var(--text-muted); margin-bottom: 14px; }
+  .footer__col ul { list-style: none; display: flex; flex-direction: column; gap: 8px; }
+  .footer__col li a { font-size: 0.875rem; color: var(--text-dim); transition: color 0.2s; }
+  .footer__col li a:hover { color: var(--text); }
+  .footer__bottom { display: flex; justify-content: space-between; align-items: center; padding-top: 24px; border-top: 1px solid var(--border); }
+  .footer__bottom span { font-size: 0.8rem; color: var(--text-muted); }
+
+  /* ── RESPONSIVE ── */
+  @media (max-width: 1024px) {
+    .article-wrap { grid-template-columns: 1fr; gap: 48px; }
+    .article-sidebar { position: static; }
+    .related-grid { grid-template-columns: repeat(2, 1fr); }
+  }
+  @media (max-width: 600px) {
+    .nav__links { display: none; }
+    .article-hero__visual { gap: 16px; padding: 0 20px; }
+    .related-grid { grid-template-columns: 1fr; }
+    .footer__grid { grid-template-columns: 1fr; }
+    .footer__bottom { flex-direction: column; gap: 8px; text-align: center; }
+    .inline-cta { flex-direction: column; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ── NAV ── -->
+<nav class="nav" role="navigation" aria-label="Main navigation">
+  <div class="nav__inner">
+    <a href="/index.html" class="nav__logo" aria-label="Jeevan AI home">
+      <img src="/logo.png" alt="Jeevan AI" style="width:36px;height:36px;border-radius:8px;object-fit:cover">
+      <span>Jeevan AI</span>
+    </a>
+    <div class="nav__links">
+      <a href="/index.html#how-it-works">How It Works</a>
+      <a href="/index.html#features">Features</a>
+      <a href="/index.html#pricing">Pricing</a>
+      <a href="/blog-index.html" class="active">Blog</a>
+      <a href="/index.html#about">About</a>
+      <a href="mailto:jeevanaijobs@gmail.com">Contact</a>
+    </div>
+    <a href="https://jeevanai.co.in" class="nav__cta">Get Early Access</a>
+  </div>
+</nav>
+
+<!-- ── ARTICLE HERO ── -->
+<header class="article-hero">
+  <div class="article-hero__inner">
+    <nav class="article-hero__breadcrumb" aria-label="Breadcrumb">
+      <a href="/index.html">Home</a>
+      <span>›</span>
+      <a href="/blog-index.html">Blog</a>
+      <span>›</span>
+      <span>Why Cybersecurity SaaS Is Invisible in AI Search</span>
+    </nav>
+    <div class="article-hero__meta">
+      <span class="post-tag">Diagnostic Guide</span>
+      <span class="post-date">10 Jun 2026</span>
+      <span class="read-time">· 10 min read</span>
+    </div>
+    <h1 class="article-hero__title">Why Cybersecurity SaaS Brands Are Invisible in AI Search</h1>
+    <p class="article-hero__subtitle">Your SOC 2 badge is on the homepage. Your feature list is thorough. But when a security buyer asks ChatGPT or Perplexity which tool to use, you are not in the answer. The reason is content structure, not product quality.</p>
+
+    <!-- Hero Visual -->
+    <div class="article-hero__visual" role="img" aria-label="Diagram showing cybersecurity brand AI visibility gap">
+      <div class="vis-node">
+        <div class="vis-node__circle">&#128737;</div>
+        <span class="vis-node__label">Your Brand</span>
+      </div>
+      <span class="vis-arrow">&#8594;</span>
+      <div class="vis-node">
+        <div class="vis-node__circle">&#129302;</div>
+        <span class="vis-node__label">AI Engine</span>
+      </div>
+      <span class="vis-arrow">&#8594;</span>
+      <div class="vis-node vis-node--winner">
+        <div class="vis-node__circle">&#128269;</div>
+        <span class="vis-node__label">Gap Found</span>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- ── ARTICLE BODY ── -->
+<div class="article-wrap">
+
+  <!-- PROSE -->
+  <main class="article-prose" id="article-content">
+
+    <!-- Standalone Summary (AI citation target) -->
+    <div class="summary-block" role="note">
+      <p>Cybersecurity SaaS brands are among the most AI-invisible category of B2B software, despite having sophisticated buyers who rely heavily on AI tools for vendor shortlisting. The root cause: most security vendors publish compliance-first content (certifications, feature matrices, posture language) that does not match the specific query patterns security buyers use in ChatGPT, Perplexity, and Google AI Mode. The fix requires replacing generic security positioning with deployment-scenario pages that name a specific buyer profile, threat context, and quantified outcome.</p>
+    </div>
+
+    <!-- INTRO -->
+    <div class="article-intro">
+      <p>A security engineer at a 150-person SaaS company opens Perplexity and types: "best endpoint detection and response tool for a remote-first engineering team on AWS." Three vendors appear in the cited answer. Your product, which is a near-perfect fit for that profile, is not one of them. You have a SOC 2 Type II report, a G2 rating above 4.5, and a case study on your website. None of it helped.</p>
+      <p>This scenario is now the norm across cybersecurity procurement. According to buyer research published by Gartner, security tooling decisions at mid-market companies now involve between three and seven stakeholders, and the shortlisting phase increasingly happens before any vendor contact: buyers use AI tools to generate candidate lists, then validate those lists through peer communities and review sites. If your brand is absent from the AI shortlist, you may never reach the validation stage at all.</p>
+      <p>This guide explains the specific content failures that make cybersecurity SaaS brands invisible in AI search, how to audit your current state, and what to publish first to begin closing the gap.</p>
+    </div>
+
+    <!-- SECTION 1 -->
+    <section class="article-section" id="how-buyers-search">
+      <h2>How Cybersecurity Buyers Actually Use AI in the Buying Process</h2>
+      <div class="citation-ready">
+        <p>Security buyers are among the most AI-native research users in B2B software. Perplexity AI is the dominant AI research tool in technical security roles because its source-citation format allows buyers to verify claims before acting on them. ChatGPT is used for category exploration and comparison framing. Google AI Mode surfaces during initial awareness searches. A brand absent from all three is effectively invisible to the modern security procurement process.</p>
+      </div>
+      <p>The query patterns security buyers use in AI tools are highly specific. They do not search for "cybersecurity software." They search for: "best SIEM for a 200-person company running on Azure," "endpoint protection for a team with no dedicated security staff," or "identity threat detection tool that integrates with Okta." These are deployment-scenario queries: they name a company profile, an infrastructure context, and sometimes a specific integration requirement.</p>
+      <p>AI tools respond to these queries by synthesising content that directly describes those scenarios. A vendor whose website has a page titled "EDR for AWS-native engineering teams" has a clear match signal. A vendor whose website has a page titled "Enterprise Endpoint Protection" does not match the same query, even if the product is functionally identical. The match is made at the content level, not the product level.</p>
+      <h3>The three query types that determine AI recommendation frequency</h3>
+      <p>Across audits of cybersecurity vendors in Jeevan AI's dataset, buyer queries in this category fall into three repeating patterns:</p>
+      <ol>
+        <li><strong>Deployment-scenario queries:</strong> "best [tool category] for [company profile] on [infrastructure]." These are the highest-volume, highest-intent queries in the category. Most cybersecurity brands have no content that directly matches them.</li>
+        <li><strong>Comparison queries:</strong> "[Vendor A] vs [Vendor B] for [use case]." These are generated by buyers already in evaluation. Brands without comparison content lose this entire query segment to third-party review sites.</li>
+        <li><strong>Problem-first queries:</strong> "how to protect against [threat type] with limited security headcount." These match buyers in early awareness. Threat-specific content with outcome framing captures this segment; generic "threat protection" positioning does not.</li>
+      </ol>
+    </section>
+
+    <hr class="article-divider">
+
+    <!-- SECTION 2 -->
+    <section class="article-section" id="why-invisible">
+      <h2>The Three Content Failures Making Cybersecurity Brands Invisible</h2>
+      <div class="citation-ready">
+        <p>Cybersecurity SaaS brands consistently underperform in AI visibility not because their products are weak, but because their content is structured for compliance audiences rather than buying audiences. The three content failures below account for the majority of AI invisibility cases observed across cybersecurity vendor audits: compliance-first positioning, feature-centric pages without outcome framing, and trust signals that carry weight in security forums but not in AI citation patterns.</p>
+      </div>
+
+      <h3>Failure 1: Compliance-first language without use-case specificity</h3>
+      <p>The most common content pattern on cybersecurity vendor websites is compliance documentation presented as product positioning. Pages titled "Our Approach to Zero Trust" or "SOC 2 Type II Certified" communicate trust to a security-literate audience but do not match any buyer query. A buyer searching for "zero trust solution for a hybrid workforce of 300 users" will not be matched to a page about zero trust philosophy. They will be matched to a page that describes exactly that deployment scenario.</p>
+      <p>Compliance certifications matter at the validation stage of buying, not at the shortlisting stage. AI tools operate at the shortlisting stage. If your content is structured entirely for validation, you will never appear in the shortlist to validate against.</p>
+
+      <h3>Failure 2: Feature lists without buyer-outcome framing</h3>
+      <p>The second failure is publishing detailed feature documentation without connecting features to specific buyer outcomes. "Real-time threat detection with sub-second response latency" is a feature. "Reduced mean time to detection from 14 hours to 22 minutes for a 50-person engineering team" is an outcome. AI tools are trained to cite outcomes because outcomes are what buyers search for. Features without outcomes are technically accurate but citation-inert.</p>
+      <p>This failure is particularly acute in categories like SIEM, EDR, and identity security, where vendors compete on technical depth. The brand that translates technical depth into outcome language for specific buyer segments will capture AI recommendation share from more technically sophisticated competitors who do not make that translation.</p>
+
+      <h3>Failure 3: Trust signals that do not translate outside security communities</h3>
+      <p>Security vendors frequently rely on trust signals that carry significant weight inside security communities: conference speaking credits, CVE research attribution, threat intelligence contributions. These are genuinely credible signals, but they are not the format AI tools are trained to cite when answering buyer queries. A vendor cited at DEF CON is not automatically a vendor cited by Perplexity in response to "best threat intelligence platform for a financial services team."</p>
+      <p>The trust signals AI tools weight most heavily are: independent review site ratings with reviewer context (role, company size, use case), third-party blog posts that name the vendor in a deployment context, and FAQ content that directly answers the questions buyers are asking. These are more accessible to produce than CVE research, yet most cybersecurity vendors under-invest in them relative to technical community presence.</p>
+
+      <hr class="article-divider">
+
+      <!-- Comparison Table -->
+      <h3>AI-visible vs AI-invisible cybersecurity content: the core differences</h3>
+      <table class="signal-table" role="table" aria-label="Comparison of AI-visible versus AI-invisible cybersecurity content">
+        <thead>
+          <tr>
+            <th>Content Dimension</th>
+            <th>AI-Invisible (Most Vendors)</th>
+            <th>AI-Visible (Gap Closers)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><span class="signal-name">Page title format</span></td>
+            <td>"Enterprise Threat Detection"</td>
+            <td>"EDR for Mid-Market SaaS Companies Running on AWS"</td>
+          </tr>
+          <tr>
+            <td><span class="signal-name">Primary trust proof</span></td>
+            <td>SOC 2 badge, ISO 27001 logo</td>
+            <td>"Reduced MTTD from 14h to 22 min for a 60-person engineering team"</td>
+          </tr>
+          <tr>
+            <td><span class="signal-name">Audience definition</span></td>
+            <td>"Security teams of all sizes"</td>
+            <td>"Security leads at SaaS companies between 50 and 500 employees with no dedicated SOC"</td>
+          </tr>
+          <tr>
+            <td><span class="signal-name">FAQ coverage</span></td>
+            <td>None, or product FAQ only</td>
+            <td>Buyer scenario FAQs: "How long does deployment take?", "Does it work without a SIEM?"</td>
+          </tr>
+          <tr>
+            <td><span class="signal-name">Third-party citations</span></td>
+            <td>Conference appearances, CVE credits</td>
+            <td>G2 reviews with role/company context, independent comparison blog mentions</td>
+          </tr>
+          <tr>
+            <td><span class="signal-name">Integration coverage</span></td>
+            <td>Integration list page (logos only)</td>
+            <td>Dedicated pages: "Using [Product] with Okta: Setup and Outcomes for Mid-Market Teams"</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <hr class="article-divider">
+
+    <!-- SECTION 3 -->
+    <section class="article-section" id="audit-your-visibility">
+      <h2>How to Audit Your Cybersecurity Brand's AI Visibility Right Now</h2>
+      <div class="citation-ready">
+        <p>A structured AI visibility audit for a cybersecurity brand takes approximately 90 minutes and requires no specialised tools. The audit covers three areas: query coverage (whether your brand appears in the queries your buyers are actually running), signal gap analysis (which buying decision factor is driving your absence), and competitive citation mapping (which competitor is filling your slot and on what content). Jeevan AI automates this audit across five AI platforms simultaneously and produces a scored report per factor.</p>
+      </div>
+
+      <h3>Step 1: Identify your buyer's actual query set</h3>
+      <p>Start by listing the five to eight queries a buyer in your exact target segment would run in Perplexity or ChatGPT at the shortlisting stage. Do not start from your product features. Start from the buyer's situation: their company size, their infrastructure, their threat concern, their team structure. A useful prompt to generate this list: "I am a [role] at a [size] company running on [infrastructure]. What would I type into Perplexity to find a [your category] tool?"</p>
+      <p>Run each of those queries across ChatGPT, Perplexity, and Google AI Mode. Record which vendors appear in each answer. If your brand does not appear in any of them, you have confirmed the visibility gap. If your brand appears in some but not others, you have identified which platforms need the most work.</p>
+
+      <h3>Step 2: Identify the signal gap causing your absence</h3>
+      <p>For each query where a competitor appears and you do not, visit that competitor's website and identify the page that is most likely being cited. In the majority of cases, it will be either a deployment-scenario page, a comparison page, or a detailed case study with specific metrics. That page represents the content gap you need to close.</p>
+      <p>Map the gap to the buying decision factor it represents. If the competitor's cited page is a use-case page describing a specific buyer profile, the gap is Use Case Fit. If it is a case study with hard metrics, the gap is Quality Evidence. If it is a third-party review or blog post, the gap is Trust. Each factor requires a different content type to close.</p>
+
+      <h3>Step 3: Score your content against the query</h3>
+      <p>For each buyer query you identified in Step 1, review whether your existing content directly matches the query. A direct match requires: the buyer profile named explicitly, the infrastructure or threat context described, and an outcome or capability statement with specific detail. Generic category pages do not match. Use-case-specific pages do.</p>
+      <p>Most cybersecurity vendors find that they have zero direct-match pages against their own buyer queries. This is the gap. It is solvable with a focused content plan of four to six pages targeting your highest-priority buyer segments.</p>
+    </section>
+
+    <hr class="article-divider">
+
+    <!-- SECTION 4 -->
+    <section class="article-section" id="what-to-publish">
+      <h2>What to Publish First: The Priority Content Stack for Cybersecurity Brands</h2>
+      <div class="citation-ready">
+        <p>The highest-leverage content investment for a cybersecurity SaaS brand trying to improve AI visibility is a set of deployment-scenario pages: one per core buyer segment, structured around the buyer's threat context and infrastructure, and anchored by a specific outcome metric. These pages directly match the query patterns AI tools receive from security buyers and give AI a clear, citable signal to attach to those queries. Supporting content, including integration-specific pages and buyer-scenario FAQs, amplifies the core pages once they are live.</p>
+      </div>
+
+      <h3>Priority 1: Deployment-scenario pages (highest impact)</h3>
+      <p>Write one page per core buyer segment. Each page should name the buyer profile in the title (e.g., "Endpoint Protection for AWS-Native SaaS Teams Without a Dedicated SOC"), describe the specific threat context that buyer faces, explain how your product addresses it in concrete operational terms, and close with a quantified outcome from a customer in that profile. This structure matches the query format AI tools receive and gives AI the specificity it needs to cite your brand.</p>
+      <p>Target three to five of these pages as your first priority. Focus on the buyer segments where you have the strongest existing customer base, because you can pull real outcome data from those accounts to anchor each page.</p>
+
+      <h3>Priority 2: Integration-specific pages (medium impact, fast to produce)</h3>
+      <p>Security buyers frequently search for tool combinations: "Crowdstrike and Splunk alternative for a 100-person team," or "identity security that works natively with Okta and Google Workspace." Integration-specific pages that describe exactly how your product works with a specific partner tool, including setup time and operational outcome, capture these query segments with relatively low production effort. Each page targets a distinct integration-specific query.</p>
+
+      <h3>Priority 3: Buyer-scenario FAQ content (highest citation rate per word)</h3>
+      <p>FAQ content is the most-cited content type across ChatGPT, Gemini, and Perplexity in B2B software categories. For cybersecurity brands, the highest-performing FAQ questions are buyer-scenario questions: "Does this work if we don't have a SIEM?", "How long does onboarding take for a 50-person team?", "Can non-security staff manage this tool day to day?" These questions are exactly what buyers are typing into AI tools, and FAQ content that answers them with specific detail will be cited directly in AI responses.</p>
+      <p>Add a comprehensive FAQ section to each deployment-scenario page, not a single FAQ page at the site level. FAQ content that is contextually adjacent to use-case content performs significantly better in AI citation patterns than standalone FAQ pages.</p>
+
+      <h3>Priority 4: Third-party citation generation (medium impact, requires external action)</h3>
+      <p>AI tools weight external validation heavily in cybersecurity because buyers are appropriately sceptical of vendor self-promotion in security contexts. The most effective external citation sources for security vendors are: independent comparison blog posts (not paid placements), review site entries with role-specific reviewer context, and community mentions in Hacker News, Reddit's r/netsec, or security-specific Slack communities. Each of these requires active outreach rather than passive publishing, but they are the trust signals that differentiate AI-cited vendors from AI-invisible ones.</p>
+    </section>
+
+    <hr class="article-divider">
+
+    <!-- FAQ -->
+    <section class="faq-section" id="faq">
+      <h2>Frequently Asked Questions</h2>
+
+      <div class="faq-item">
+        <p class="faq-q">Why don't cybersecurity SaaS brands appear in ChatGPT recommendations?</p>
+        <p class="faq-a">Most cybersecurity brands publish compliance-first content: SOC 2 attestations, feature checklists, and broad security posture language. This content does not map to the specific buyer queries AI tools receive, such as "best SIEM for a 200-person SaaS company" or "endpoint detection tool for remote-first teams." AI cannot match generic compliance content to specific buying intent, so the brand is skipped in favour of competitors with use-case-specific pages.</p>
+      </div>
+
+      <div class="faq-item">
+        <p class="faq-q">Do compliance certifications like SOC 2 or ISO 27001 help with AI visibility?</p>
+        <p class="faq-a">They help with trust signals, but they do not directly improve AI recommendation frequency. AI tools cite certifications as a secondary trust confirmation, not as a match signal for buyer queries. A brand with SOC 2 certification and no use-case-specific content will still be invisible to a buyer asking "which cloud security tool is easiest to deploy for a 50-person engineering team."</p>
+      </div>
+
+      <div class="faq-item">
+        <p class="faq-q">Which AI tools do cybersecurity buyers use most for vendor research?</p>
+        <p class="faq-a">Perplexity AI is the most commonly used AI research tool among technical buyers in cybersecurity procurement, followed by ChatGPT and Google AI Mode. Perplexity's source-cited format is particularly influential because it shows buyers exactly which sites confirmed a recommendation, making third-party citation coverage especially important for security vendors.</p>
+      </div>
+
+      <div class="faq-item">
+        <p class="faq-q">How long does it take for cybersecurity content to appear in AI citations?</p>
+        <p class="faq-a">Published content typically takes 4 to 8 weeks to begin appearing in AI citation patterns, depending on domain authority and how quickly the content is indexed and referenced by third-party sources. Use-case pages targeting specific buyer segments tend to surface faster than broad "what is X" guides because they match narrower, higher-intent queries that AI tools receive frequently.</p>
+      </div>
+
+      <div class="faq-item">
+        <p class="faq-q">What is the highest-impact content a cybersecurity SaaS brand can publish for AI visibility?</p>
+        <p class="faq-a">Deployment scenario pages are the highest-impact content type for cybersecurity AI visibility. These pages name a specific buyer profile (company size, industry, tech stack), describe the threat scenario they face, explain how the product addresses it, and include a quantified outcome. This structure matches the exact query format AI tools receive from security buyers and gives AI a clear, citable signal to attach to that query.</p>
+      </div>
+    </section>
+
+    <hr class="article-divider">
+
+    <!-- CONCLUSION -->
+    <section class="article-conclusion">
+      <p>Cybersecurity SaaS brands face a specific version of the AI visibility problem: their content is credible to security professionals but invisible to AI citation engines. The gap is not a product gap or a credibility gap. It is a content structure gap. Compliance-first positioning, feature-centric pages, and community trust signals are all valuable in their own context, but none of them match the deployment-scenario queries that security buyers are running in Perplexity, ChatGPT, and Google AI Mode.</p>
+      <p>The fix is structured and specific: identify your five highest-priority buyer segments, publish one deployment-scenario page per segment with a quantified outcome, add buyer-scenario FAQ content to each page, and begin generating third-party citations through review sites and independent blog coverage. That content stack, built over six to eight weeks, is what converts a cybersecurity brand from AI-invisible to AI-cited.</p>
+      <p>The brands that make this transition in 2026 will have a compounding advantage. Content published today feeds into AI training cycles that shape recommendations 12 to 18 months from now. Every week of delay is a week of compounding lost to a competitor who moved first.</p>
+
+      <!-- Inline CTA -->
+      <div class="inline-cta">
+        <div class="inline-cta__text">
+          <strong>See How AI Tools Cite Brands Like Yours</strong>
+          <p>Run a free scan across ChatGPT, Perplexity, Gemini, and Google AI Mode. Identify your exact content gaps in 10 minutes.</p>
+        </div>
+        <a href="https://jeevanai.co.in" class="btn-primary">Get Early Access &#8594;</a>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- SIDEBAR -->
+  <aside class="article-sidebar" aria-label="Article navigation and actions">
+
+    <div class="sidebar-toc">
+      <h4>In this article</h4>
+      <ul class="toc-list">
+        <li><a href="#how-buyers-search">How cybersecurity buyers use AI</a></li>
+        <li><a href="#why-invisible">The three content failures</a></li>
+        <li><a href="#audit-your-visibility">How to audit your AI visibility</a></li>
+        <li><a href="#what-to-publish">What to publish first</a></li>
+        <li><a href="#faq">Frequently asked questions</a></li>
+      </ul>
+    </div>
+
+    <div class="sidebar-card">
+      <h4>Is your cybersecurity brand visible in AI search?</h4>
+      <p>Find out in 10 minutes. Free scan across 5 AI platforms, scored against your specific buyer segments.</p>
+      <a href="https://jeevanai.co.in" class="btn-primary" style="width:100%; justify-content:center; margin-bottom:12px;">Get Early Access &#8594;</a>
+      <a href="/blog/ai-visibility-score-benchmarks.html" class="btn-outline-sm">What's a good AI visibility score? &#8594;</a>
+    </div>
+
+  </aside>
+
+</div>
+
+<!-- ── RELATED POSTS ── -->
+<section class="related-section">
+  <div class="related-section__inner">
+    <h3>Continue reading</h3>
+    <div class="related-grid">
+
+      <article class="related-card">
+        <span class="post-tag">Why AI Recommends</span>
+        <h4>The Buying Decision Factors AI Uses to Decide Which Brand to Recommend</h4>
+        <p>A plain-English breakdown of the buying decision signals that determine whether AI recommends your brand or your competitor.</p>
+        <a href="/blog/buying-decision-factors-ai-brand-recommendation.html" class="related-link">Read article &#8594;</a>
+      </article>
+
+      <article class="related-card">
+        <span class="post-tag">GEO Strategy</span>
+        <h4>The Content Gap That's Making You Invisible to AI Search</h4>
+        <p>Most AI visibility gaps come down to one missing content type. Here is how to identify yours and prioritise what to publish next.</p>
+        <a href="/blog/content-gap-ai-search-visibility.html" class="related-link">Read article &#8594;</a>
+      </article>
+
+      <article class="related-card">
+        <span class="post-tag">GEO Strategy</span>
+        <h4>How to Write a Blog Post That AI Will Actually Cite</h4>
+        <p>Most blogs are invisible to AI citation engines, not because they are bad, but because they are structured wrong. Here is the format that works.</p>
+        <a href="/blog/how-to-write-content-for-ai-search.html" class="related-link">Read article &#8594;</a>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- ── CTA STRIP ── -->
+<section class="cta-strip" aria-labelledby="cta-heading">
+  <div class="cta-strip__inner">
+    <h2 class="cta-strip__title" id="cta-heading">See How AI Tools Cite Brands Like Yours</h2>
+    <p class="cta-strip__sub">Free early access. No credit card. Scan across ChatGPT, Perplexity, Gemini, and Google AI Mode.</p>
+    <a href="https://jeevanai.co.in" class="btn-primary">Get Early Access &#8594;</a>
+  </div>
+</section>
+
+<!-- ── FOOTER ── -->
+<footer class="footer" role="contentinfo">
+  <div class="footer__inner">
+    <div class="footer__grid">
+      <div class="footer__brand">
+        <a href="/index.html" class="nav__logo">
+          <img src="/logo.png" alt="Jeevan AI" style="width:36px;height:36px;border-radius:8px;object-fit:cover">
+          <span>Jeevan AI</span>
+        </a>
+        <p>Global AI Visibility platform. Find out why AI recommends your competitor and get a content plan to fix it.</p>
+      </div>
+      <div class="footer__col">
+        <h5>Product</h5>
+        <ul>
+          <li><a href="/index.html#how-it-works">How It Works</a></li>
+          <li><a href="/index.html#features">Features</a></li>
+          <li><a href="/index.html#pricing">Pricing</a></li>
+          <li><a href="/blog-index.html">Blog</a></li>
+        </ul>
+      </div>
+      <div class="footer__col">
+        <h5>Company</h5>
+        <ul>
+          <li><a href="/index.html#about">About</a></li>
+          <li><a href="mailto:jeevanaijobs@gmail.com">Contact</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+        </ul>
+      </div>
+      <div class="footer__col">
+        <h5>Compare</h5>
+        <ul>
+          <li><a href="#">vs Otterly.ai</a></li>
+          <li><a href="#">vs Semrush AI</a></li>
+          <li><a href="#">vs Profound</a></li>
+          <li><a href="#">For Agencies</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <span>&#169; 2026 Jeevan AI. All rights reserved.</span>
+      <span>Global Platform</span>
+      <span>AI Visibility &middot; GEO Optimisation</span>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
