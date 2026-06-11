@@ -112,17 +112,17 @@
 <style>
   /* ── DESIGN TOKENS (inherited from blog-index) ── */
   :root {
-    --bg:             #0d0d14;
-    --bg-card:        #13131f;
-    --bg-card-hover:  #17172a;
-    --border:         rgba(255,255,255,0.07);
+    --bg: #ffffff;
+    --bg-card: #ffffff;
+    --bg-card-hover: #f9fafb;
+    --border: #e5e7eb;
     --border-hover: rgba(99,102,241,0.45);
     --accent: #6366f1;
     --accent-dim: rgba(99,102,241,0.1);
     --accent-glow: rgba(99,102,241,0.06);
-    --text:           #e8e8f0;
-    --text-dim:       #8888aa;
-    --text-muted:     #555577;
+    --text: #111827;
+    --text-dim: #4b5563;
+    --text-muted: #9ca3af;
     --tag-bg: rgba(99,102,241,0.1);
     --tag-text:       #818cf8;
     --white:          #ffffff;
@@ -151,7 +151,7 @@
   /* ── NAV ── */
   .nav {
     position: sticky; top: 0; z-index: 100;
-    background: rgba(13,13,20,0.92);
+    background: rgba(255,255,255,0.95);
     backdrop-filter: blur(16px);
     border-bottom: 1px solid var(--border);
     padding: 0 24px;
@@ -176,7 +176,7 @@
     padding: 7px 14px; border-radius: 8px; font-size: 0.875rem;
     color: var(--text-dim); transition: all 0.2s;
   }
-  .nav__links a:hover { color: var(--text); background: rgba(255,255,255,0.05); }
+  .nav__links a:hover { color: var(--text); background: rgba(0,0,0,0.05); }
   .nav__links a.active { color: var(--accent); }
   .nav__cta {
     padding: 8px 18px; border-radius: 8px;
