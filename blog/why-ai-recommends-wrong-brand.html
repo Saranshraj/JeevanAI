@@ -75,11 +75,11 @@
 
 <style>
   :root {
-    --bg:#0d0d14;--bg-card:#13131f;--border:rgba(255,255,255,0.07);--border-hover:rgba(79,142,247,0.4);
+    --bg: #f6f6fb;--bg-card: #ffffff;--border: rgba(0,0,0,0.08);--border-hover:rgba(79,142,247,0.4);
     --accent:#4f8ef7;--accent-dim:rgba(79,142,247,0.12);
-    --text:#e8e8f0;--text-dim:#8888aa;--text-muted:#555577;
-    --tag-bg:rgba(79,142,247,0.1);--tag-text:#7aabff;
-    --white:#ffffff;--radius:12px;--radius-sm:8px;
+    --text: #1a1a2e;--text-dim: #4a4a6a;--text-muted: #7a7a9a;
+    --tag-bg:rgba(79,142,247,0.1);--tag-text: #2060d0;
+    --white: #1a1a2e;--radius:12px;--radius-sm:8px;
     --font-sans:'DM Sans','Inter',system-ui,sans-serif;
     --font-serif:'DM Serif Display',Georgia,serif;
     --font-mono:'JetBrains Mono',monospace;
@@ -91,13 +91,13 @@
   a{color:inherit;text-decoration:none}
   @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700&family=DM+Serif+Display&display=swap');
 
-  .nav{position:sticky;top:0;z-index:100;background:rgba(13,13,20,0.92);backdrop-filter:blur(16px);border-bottom:1px solid var(--border);padding:0 24px}
+  .nav{position:sticky;top:0;z-index:100;background: rgba(246,246,251,0.95);backdrop-filter:blur(16px);border-bottom:1px solid var(--border);padding:0 24px}
   .nav__inner{max-width:var(--max-w);margin:0 auto;display:flex;align-items:center;justify-content:space-between;height:64px}
   .nav__logo{display:flex;align-items:center;gap:10px;font-weight:700;font-size:1.05rem}
   .nav__logo-mark{width:32px;height:32px;border-radius:8px;background:var(--accent);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:0.9rem}
   .nav__links{display:flex;align-items:center;gap:6px}
   .nav__links a{padding:7px 14px;border-radius:8px;font-size:0.875rem;color:var(--text-dim);transition:all 0.2s}
-  .nav__links a:hover{color:var(--text);background:rgba(255,255,255,0.05)}
+  .nav__links a:hover{color:var(--text);background: rgba(0,0,0,0.05)}
   .nav__links a.active{color:var(--accent)}
   .nav__cta{padding:8px 18px;border-radius:8px;background:var(--accent);color:#fff;font-size:0.875rem;font-weight:600;transition:opacity 0.2s}
   .nav__cta:hover{opacity:0.88}
@@ -117,7 +117,7 @@
   /* Gap visual */
   .article-hero__visual{height:160px;background:linear-gradient(135deg,#111128 0%,#0d0d1e 100%);border-radius:var(--radius) var(--radius) 0 0;border:1px solid var(--border);border-bottom:none;display:flex;align-items:center;justify-content:center;gap:32px;padding:0 40px;overflow:hidden}
   .gap-brand{display:flex;flex-direction:column;align-items:center;gap:8px;flex:1;max-width:160px}
-  .gap-brand__bar-wrap{width:100%;background:rgba(255,255,255,0.05);border-radius:var(--radius-sm);overflow:hidden;height:80px;display:flex;flex-direction:column;justify-content:flex-end}
+  .gap-brand__bar-wrap{width:100%;background: rgba(0,0,0,0.05);border-radius:var(--radius-sm);overflow:hidden;height:80px;display:flex;flex-direction:column;justify-content:flex-end}
   .gap-brand__bar{width:100%;border-radius:var(--radius-sm) var(--radius-sm) 0 0}
   .gap-brand__label{font-size:0.68rem;color:var(--text-muted);letter-spacing:0.04em;text-transform:uppercase;text-align:center}
   .gap-brand__sublabel{font-size:0.62rem;text-align:center;margin-top:2px}
