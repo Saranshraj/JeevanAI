@@ -794,6 +794,9 @@
 /* Sidebar / meta text */
 .article-sidebar *,
 .article-meta *     { color: #6b7280; }
+/* Sidebar CTA buttons must stay readable, not dimmed by .article-sidebar * */
+.article-sidebar .btn-primary { color: #ffffff !important; }
+.article-sidebar .btn-outline-sm { color: #4f46e5 !important; }
 
 /* ── Gradient sections: force text white ── */
 /* These were failing because --white resolved to #111827.
