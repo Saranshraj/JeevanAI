@@ -1,0 +1,1099 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-S6X8Q5EY8E"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-S6X8Q5EY8E');
+</script>
+<meta charset="UTF-8">
+<link rel="icon" type="image/png" href="/logo.png">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!--
+  ═══════════════════════════════════════════════════════════════════════
+  JEEVAN AI BLOG POST TEMPLATE  —  canonical, theme-correct skeleton.
+  ═══════════════════════════════════════════════════════════════════════
+  HOW TO USE (for any new blog post, human or automated):
+    1. Copy this file to blog/<slug>.html
+    2. Replace every __TOKEN__ below with real content.
+    3. __SLUG__ is the filename without .html (e.g. ai-visibility-fintech-saas).
+    4. Keep the <style> block EXACTLY as-is. It is already theme-correct
+       (light/gradient, readable on every surface). Do not re-introduce dark
+       values (#0d0d14, #13131f, #e8e8f0) or rename --white.
+    5. Add the post to blog-index.html so it is linked.
+    6. NEVER use an emdash anywhere in content. Use a comma or the word "to".
+    7. On push, scripts/normalize-theme.js runs in CI as a safety net and
+       repairs theme regressions automatically.
+  This file is excluded from sitemap.xml and feed.xml because its canonical
+  is the literal placeholder below (it does not start with the site URL).
+  ═══════════════════════════════════════════════════════════════════════
+-->
+
+<!-- SEO Meta -->
+<title>__TITLE__ | Jeevan AI</title>
+<meta name="description" content="__META_DESCRIPTION__">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="__CANONICAL_URL__">
+
+<!-- Open Graph -->
+<meta property="og:title" content="__TITLE__">
+<meta property="og:description" content="__META_DESCRIPTION__">
+<meta property="og:type" content="article">
+<meta property="og:url" content="__CANONICAL_URL__">
+<meta property="og:site_name" content="Jeevan AI">
+<meta property="article:published_time" content="__DATE_ISO__">
+<meta property="article:author" content="Jeevan AI">
+
+<!-- Article Schema (JSON-LD) -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "__TITLE__",
+  "description": "__META_DESCRIPTION__",
+  "author": {
+    "@type": "Organization",
+    "name": "Jeevan AI",
+    "url": "https://jeevanai.co.in"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Jeevan AI",
+    "url": "https://jeevanai.co.in",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://jeevanai.co.in/assets/logo.png"
+    }
+  },
+  "datePublished": "__DATE_ISO__",
+  "dateModified": "__DATE_ISO__",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "__CANONICAL_URL__"
+  },
+  "keywords": ["__KEYWORD_1__", "__KEYWORD_2__", "__KEYWORD_3__", "__KEYWORD_4__"]
+}
+</script>
+
+<!-- FAQ Schema -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "__FAQ_Q1__",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "__FAQ_A1__"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "__FAQ_Q2__",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "__FAQ_A2__"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "__FAQ_Q3__",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "__FAQ_A3__"
+      }
+    }
+  ]
+}
+</script>
+
+<style>
+  /* ── DESIGN TOKENS ── */
+  :root {
+    --bg: #ffffff;
+    --bg-card: #ffffff;
+    --bg-card-hover: #f9fafb;
+    --border: #e5e7eb;
+    --border-hover: rgba(99,102,241,0.45);
+    --accent: #6366f1;
+    --accent-dim: rgba(99,102,241,0.1);
+    --accent-glow: rgba(99,102,241,0.06);
+    --text: #111827;
+    --text-dim: #4b5563;
+    --text-muted: #9ca3af;
+    --tag-bg: rgba(99,102,241,0.1);
+    --tag-text: #4f46e5;
+    --white: #ffffff;
+    --radius:         12px;
+    --radius-sm:      8px;
+    --font-sans:      'DM Sans', 'Inter', system-ui, sans-serif;
+    --font-serif:     'DM Serif Display', Georgia, serif;
+    --font-mono:      'JetBrains Mono', monospace;
+    --max-w:          1180px;
+    --prose-w:        720px;
+  }
+
+  /* ── RESET ── */
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    background: var(--bg); color: var(--text);
+    font-family: var(--font-sans); line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+  a { color: inherit; text-decoration: none; }
+  img { display: block; max-width: 100%; }
+
+  @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700&family=DM+Serif+Display&display=swap');
+
+  /* ── NAV ── */
+  .nav {
+    position: sticky; top: 0; z-index: 100;
+    background: rgba(255,255,255,0.95);
+    backdrop-filter: blur(16px);
+    border-bottom: 1px solid var(--border);
+    padding: 0 24px;
+  }
+  .nav__inner {
+    max-width: var(--max-w); margin: 0 auto;
+    display: flex; align-items: center; justify-content: space-between;
+    height: 64px;
+  }
+  .nav__logo {
+    display: flex; align-items: center; gap: 10px;
+    font-weight: 700; font-size: 1.05rem; letter-spacing: -0.01em;
+  }
+  .nav__logo-mark {
+    width: 32px; height: 32px; border-radius: 8px;
+    background: var(--accent); color: #fff;
+    display: flex; align-items: center; justify-content: center;
+    font-weight: 800; font-size: 0.9rem;
+  }
+  .nav__links { display: flex; align-items: center; gap: 6px; }
+  .nav__links a {
+    padding: 7px 14px; border-radius: 8px; font-size: 0.875rem;
+    color: var(--text-dim); transition: all 0.2s;
+  }
+  .nav__links a:hover { color: var(--text); background: rgba(0,0,0,0.05); }
+  .nav__links a.active { color: var(--accent); }
+  .nav__cta {
+    padding: 8px 18px; border-radius: 8px;
+    background: var(--accent); color: #fff;
+    font-size: 0.875rem; font-weight: 600;
+    transition: opacity 0.2s;
+  }
+  .nav__cta:hover { opacity: 0.88; }
+
+  /* ── ARTICLE HERO ── */
+  .article-hero {
+    padding: 64px 24px 0;
+    border-bottom: 1px solid var(--border);
+    overflow: hidden;
+    position: relative;
+  }
+  .article-hero::before {
+    content: '';
+    position: absolute; top: 0; left: 50%; transform: translateX(-50%);
+    width: 600px; height: 300px;
+    background: radial-gradient(ellipse at 50% 0%, rgba(99,102,241,0.10) 0%, transparent 70%);
+    pointer-events: none;
+  }
+  .article-hero__inner {
+    max-width: var(--prose-w); margin: 0 auto; position: relative;
+  }
+  .article-hero__breadcrumb {
+    display: flex; align-items: center; gap: 8px;
+    font-size: 0.8rem; color: var(--text-muted);
+    margin-bottom: 28px;
+  }
+  .article-hero__breadcrumb a { color: var(--text-dim); transition: color 0.2s; }
+  .article-hero__breadcrumb a:hover { color: var(--accent); }
+  .article-hero__breadcrumb span { color: var(--text-muted); }
+  .article-hero__meta {
+    display: flex; align-items: center; gap: 12px;
+    margin-bottom: 24px; flex-wrap: wrap;
+  }
+  .post-tag {
+    padding: 3px 10px; border-radius: 100px;
+    font-size: 0.72rem; font-weight: 600; letter-spacing: 0.04em;
+    text-transform: uppercase; background: var(--tag-bg); color: var(--tag-text);
+  }
+  .post-date { font-size: 0.8rem; color: var(--text-muted); }
+  .read-time { font-size: 0.8rem; color: var(--text-muted); }
+  .article-hero__title {
+    font-family: var(--font-serif);
+    font-size: clamp(1.9rem, 3.5vw, 2.6rem);
+    line-height: 1.18; letter-spacing: -0.02em;
+    color: var(--white); margin-bottom: 20px;
+  }
+  .article-hero__subtitle {
+    font-size: 1.1rem; color: var(--text-dim);
+    line-height: 1.65; margin-bottom: 40px;
+    max-width: 620px;
+  }
+  .article-hero__visual {
+    height: 200px;
+    background: linear-gradient(135deg, #111128 0%, #0d0d1e 50%, #0a1225 100%);
+    border-radius: var(--radius) var(--radius) 0 0;
+    border: 1px solid var(--border); border-bottom: none;
+    display: flex; align-items: center; justify-content: center;
+    gap: 32px; padding: 0 40px;
+    position: relative; overflow: hidden;
+  }
+  .article-hero__visual::after {
+    content: '';
+    position: absolute; bottom: 0; left: 0; right: 0; height: 60px;
+    background: linear-gradient(to top, var(--bg), transparent);
+  }
+  .vis-node {
+    display: flex; flex-direction: column; align-items: center; gap: 8px;
+  }
+  .vis-node__circle {
+    width: 52px; height: 52px; border-radius: 50%;
+    border: 1px solid rgba(99,102,241,0.25);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 1.3rem;
+    background: rgba(99,102,241,0.06);
+  }
+  .vis-node__label { font-size: 0.68rem; color: var(--text-muted); letter-spacing: 0.04em; text-transform: uppercase; }
+  .vis-arrow {
+    font-size: 1.2rem; color: rgba(99,102,241,0.3);
+    margin-bottom: 20px;
+  }
+  .vis-node--winner .vis-node__circle {
+    border-color: rgba(99,102,241,0.6);
+    background: rgba(99,102,241,0.1);
+    box-shadow: 0 0 20px rgba(99,102,241,0.15);
+  }
+  .vis-node--winner .vis-node__label { color: var(--accent); }
+
+  /* ── ARTICLE LAYOUT ── */
+  .article-wrap {
+    max-width: var(--max-w); margin: 0 auto;
+    padding: 64px 24px 96px;
+    display: grid;
+    grid-template-columns: var(--prose-w) 1fr;
+    gap: 64px;
+    align-items: start;
+  }
+
+  /* ── PROSE ── */
+  .article-prose { max-width: var(--prose-w); }
+
+  .summary-block {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-left: 3px solid var(--accent);
+    border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+    padding: 20px 24px;
+    margin-bottom: 40px;
+  }
+  .summary-block p {
+    font-size: 0.95rem; color: var(--text-dim);
+    line-height: 1.65; margin: 0;
+  }
+
+  .article-intro { margin-bottom: 48px; }
+  .article-intro p {
+    font-size: 1.05rem; line-height: 1.75;
+    color: var(--text-dim); margin-bottom: 20px;
+  }
+  .article-intro p:first-child { color: var(--text); }
+
+  .article-section { margin-bottom: 48px; }
+  .article-section h2 {
+    font-family: var(--font-serif);
+    font-size: 1.4rem; line-height: 1.25;
+    color: var(--white); margin-bottom: 16px;
+    letter-spacing: -0.01em;
+  }
+  .article-section h3 {
+    font-size: 1.05rem; font-weight: 600;
+    color: var(--text); margin: 24px 0 10px;
+  }
+  .article-section p {
+    font-size: 0.975rem; line-height: 1.78;
+    color: var(--text-dim); margin-bottom: 16px;
+  }
+
+  .citation-ready {
+    background: linear-gradient(135deg, rgba(99,102,241,0.06) 0%, rgba(99,102,241,0.02) 100%);
+    border: 1px solid rgba(99,102,241,0.18);
+    border-radius: var(--radius-sm);
+    padding: 18px 22px;
+    margin-bottom: 20px;
+  }
+  .citation-ready p {
+    font-size: 0.95rem; line-height: 1.7;
+    color: var(--text); margin: 0;
+  }
+
+  .signal-table {
+    width: 100%; border-collapse: collapse;
+    margin: 24px 0; font-size: 0.875rem;
+  }
+  .signal-table th {
+    text-align: left; padding: 10px 14px;
+    border-bottom: 1px solid var(--border);
+    color: var(--text-muted); font-weight: 600;
+    font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.06em;
+  }
+  .signal-table td {
+    padding: 12px 14px; border-bottom: 1px solid rgba(255,255,255,0.04);
+    color: var(--text-dim); vertical-align: top; line-height: 1.55;
+  }
+  .signal-table tr:last-child td { border-bottom: none; }
+  .signal-name {
+    font-weight: 600; color: var(--text); white-space: nowrap;
+  }
+  .signal-score {
+    font-family: var(--font-mono); font-size: 0.8rem;
+    color: var(--accent); white-space: nowrap;
+  }
+
+  .article-section ol {
+    list-style: none; counter-reset: step-counter;
+    padding: 0; margin: 20px 0;
+  }
+  .article-section ol li {
+    counter-increment: step-counter;
+    display: flex; gap: 14px; align-items: flex-start;
+    padding: 14px 0; border-bottom: 1px solid rgba(255,255,255,0.04);
+    font-size: 0.95rem; color: var(--text-dim); line-height: 1.65;
+  }
+  .article-section ol li:last-child { border-bottom: none; }
+  .article-section ol li::before {
+    content: counter(step-counter);
+    min-width: 26px; height: 26px; border-radius: 50%;
+    background: var(--accent-dim); border: 1px solid rgba(99,102,241,0.25);
+    color: var(--accent); font-size: 0.75rem; font-weight: 700;
+    display: flex; align-items: center; justify-content: center;
+    flex-shrink: 0; margin-top: 1px;
+  }
+  .article-section ol li strong { color: var(--text); }
+
+  .article-divider {
+    border: none; border-top: 1px solid var(--border);
+    margin: 48px 0;
+  }
+
+  .faq-section { margin-bottom: 48px; }
+  .faq-section h2 {
+    font-family: var(--font-serif);
+    font-size: 1.4rem; color: var(--white);
+    margin-bottom: 24px; letter-spacing: -0.01em;
+  }
+  .faq-item {
+    border-bottom: 1px solid var(--border);
+    padding: 20px 0;
+  }
+  .faq-item:last-child { border-bottom: none; }
+  .faq-q {
+    font-size: 0.975rem; font-weight: 600;
+    color: var(--white); margin-bottom: 10px; line-height: 1.45;
+  }
+  .faq-a {
+    font-size: 0.925rem; color: var(--text-dim);
+    line-height: 1.7; margin: 0;
+  }
+
+  .article-conclusion { margin-bottom: 48px; }
+  .article-conclusion p {
+    font-size: 0.975rem; line-height: 1.78;
+    color: var(--text-dim); margin-bottom: 16px;
+  }
+
+  .inline-cta {
+    background: linear-gradient(135deg, rgba(99,102,241,0.07) 0%, rgba(99,102,241,0.03) 100%);
+    border: 1px solid rgba(99,102,241,0.22);
+    border-radius: var(--radius);
+    padding: 28px 32px;
+    display: flex; align-items: center; justify-content: space-between; gap: 24px;
+    flex-wrap: wrap;
+  }
+  .inline-cta__text p { font-size: 0.875rem; color: var(--text-muted); margin-top: 4px; }
+  .inline-cta__text strong { font-size: 1rem; color: var(--white); }
+  .btn-primary {
+    display: inline-flex; align-items: center; gap: 8px;
+    padding: 12px 22px; border-radius: var(--radius-sm);
+    background: var(--accent); color: #fff;
+    font-size: 0.875rem; font-weight: 600; white-space: nowrap;
+    transition: opacity 0.2s;
+  }
+  .btn-primary:hover { opacity: 0.88; }
+
+  /* ── SIDEBAR ── */
+  .article-sidebar {
+    position: sticky; top: 88px;
+  }
+  .sidebar-toc {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 24px;
+    margin-bottom: 24px;
+  }
+  .sidebar-toc h4 {
+    font-size: 0.72rem; font-weight: 700; text-transform: uppercase;
+    letter-spacing: 0.08em; color: var(--text-muted); margin-bottom: 16px;
+  }
+  .toc-list { list-style: none; }
+  .toc-list li { padding: 4px 0; }
+  .toc-list a {
+    font-size: 0.82rem; color: var(--text-dim);
+    transition: color 0.2s; line-height: 1.4;
+    display: block;
+  }
+  .toc-list a:hover { color: var(--accent); }
+  .sidebar-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 24px;
+    text-align: center;
+  }
+  .sidebar-card h4 {
+    font-size: 0.95rem; font-weight: 600; color: var(--white);
+    margin-bottom: 8px; line-height: 1.4;
+  }
+  .sidebar-card p {
+    font-size: 0.8rem; color: var(--text-dim);
+    margin-bottom: 18px; line-height: 1.55;
+  }
+  .btn-outline-sm {
+    display: inline-flex; align-items: center; gap: 6px;
+    padding: 9px 18px; border-radius: var(--radius-sm);
+    border: 1px solid var(--border); background: transparent;
+    color: var(--text-dim); font-size: 0.8rem; font-weight: 500;
+    transition: all 0.2s; cursor: pointer; width: 100%; justify-content: center;
+  }
+  .btn-outline-sm:hover { border-color: var(--accent); color: var(--accent); }
+
+  /* ── RELATED ── */
+  .related-section {
+    border-top: 1px solid var(--border);
+    padding: 64px 24px;
+  }
+  .related-section__inner { max-width: var(--max-w); margin: 0 auto; }
+  .related-section h3 {
+    font-size: 0.78rem; font-weight: 700; text-transform: uppercase;
+    letter-spacing: 0.08em; color: var(--text-muted); margin-bottom: 28px;
+  }
+  .related-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+  .related-card {
+    background: var(--bg-card); border: 1px solid var(--border);
+    border-radius: var(--radius); padding: 22px;
+    transition: border-color 0.2s, transform 0.2s;
+  }
+  .related-card:hover { border-color: var(--border-hover); transform: translateY(-2px); }
+  .related-card .post-tag { margin-bottom: 12px; display: inline-block; }
+  .related-card h4 {
+    font-size: 0.95rem; font-weight: 600; color: var(--white);
+    line-height: 1.4; margin-bottom: 8px;
+  }
+  .related-card p { font-size: 0.82rem; color: var(--text-dim); line-height: 1.55; margin-bottom: 16px; }
+  .related-link {
+    font-size: 0.8rem; font-weight: 600; color: var(--accent);
+    display: flex; align-items: center; gap: 6px;
+    transition: gap 0.2s;
+  }
+  .related-link:hover { gap: 10px; }
+
+  /* ── CTA STRIP ── */
+  .cta-strip {
+    border-top: 1px solid var(--border);
+    background: linear-gradient(135deg, rgba(99,102,241,0.06) 0%, transparent 60%);
+    padding: 72px 24px;
+  }
+  .cta-strip__inner { max-width: 640px; margin: 0 auto; text-align: center; }
+  .cta-strip__title { font-family: var(--font-serif); font-size: 2rem; color: var(--white); margin-bottom: 12px; }
+  .cta-strip__sub { color: var(--text-dim); margin-bottom: 32px; font-size: 1rem; }
+
+  /* ── FOOTER ── */
+  .footer { border-top: 1px solid var(--border); padding: 48px 24px 32px; }
+  .footer__inner { max-width: var(--max-w); margin: 0 auto; }
+  .footer__grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 40px; margin-bottom: 40px; }
+  .footer__brand p { color: var(--text-dim); font-size: 0.875rem; margin-top: 12px; max-width: 260px; line-height: 1.6; }
+  .footer__col h5 { font-size: 0.78rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: var(--text-muted); margin-bottom: 14px; }
+  .footer__col ul { list-style: none; display: flex; flex-direction: column; gap: 8px; }
+  .footer__col li a { font-size: 0.875rem; color: var(--text-dim); transition: color 0.2s; }
+  .footer__col li a:hover { color: var(--text); }
+  .footer__bottom { display: flex; justify-content: space-between; align-items: center; padding-top: 24px; border-top: 1px solid var(--border); }
+  .footer__bottom span { font-size: 0.8rem; color: var(--text-muted); }
+
+  /* ── RESPONSIVE ── */
+  @media (max-width: 1024px) {
+    .article-wrap { grid-template-columns: 1fr; gap: 48px; }
+    .article-sidebar { position: static; }
+    .related-grid { grid-template-columns: repeat(2, 1fr); }
+  }
+  @media (max-width: 600px) {
+    .nav__links { display: none; }
+    .article-hero__visual { gap: 16px; padding: 0 20px; }
+    .related-grid { grid-template-columns: 1fr; }
+    .footer__grid { grid-template-columns: 1fr; }
+    .footer__bottom { flex-direction: column; gap: 8px; text-align: center; }
+    .inline-cta { flex-direction: column; }
+  }
+
+/* ═══════════════════════════════════════════════
+   GRADIENT THEME INJECTION
+   ═══════════════════════════════════════════════ */
+
+/* Card depth */
+.step, .plan, .preview-card, .factor-item, .scan-card,
+.post-card, .blog-card, .card, .feature-card, .pricing-card {
+  box-shadow: 0 1px 3px 0 rgba(0,0,0,0.08), 0 1px 2px -1px rgba(0,0,0,0.05);
+}
+.step:hover, .preview-card:hover, .post-card:hover, .blog-card:hover {
+  box-shadow: 0 4px 8px -1px rgba(0,0,0,0.1), 0 2px 4px -2px rgba(0,0,0,0.06);
+  transform: translateY(-2px);
+  transition: box-shadow 0.2s, transform 0.2s;
+}
+
+/* Primary button gradient */
+.btn-primary {
+  background: linear-gradient(135deg, #6366f1 0%, #7c3aed 100%) !important;
+  box-shadow: 0 2px 6px rgba(99,102,241,0.38);
+}
+.btn-primary:hover {
+  opacity: 0.93;
+  box-shadow: 0 4px 14px rgba(99,102,241,0.42) !important;
+}
+
+/* ── LANDING PAGE HERO GRADIENT ── */
+.hero {
+  background: linear-gradient(135deg, #1e3a8a 0%, #4338ca 45%, #7c3aed 100%) !important;
+  overflow: hidden;
+  position: relative;
+}
+.hero::before {
+  background: radial-gradient(ellipse at 20% 60%, rgba(255,255,255,0.07) 0%, transparent 55%) !important;
+}
+.hero h1                 { color: #ffffff !important; }
+.hero h1 em { color: #c7d2fe !important; }
+.hero .hero__sub         { color: rgba(255,255,255,0.87) !important; }
+.hero .hero__badge {
+  background:   rgba(255,255,255,0.13) !important;
+  border-color: rgba(255,255,255,0.22) !important;
+  color: #e0e7ff !important;
+}
+.hero .hero__badge-dot   { background: #a5b4fc !important; }
+.hero .hero__note        { color: rgba(255,255,255,0.52) !important; }
+.hero .platforms__label  { color: rgba(255,255,255,0.6) !important; }
+.hero .platform-chip {
+  background:   rgba(255,255,255,0.1) !important;
+  border-color: rgba(255,255,255,0.18) !important;
+  color: rgba(255,255,255,0.82) !important;
+}
+/* Hero primary CTA: white button on gradient */
+.hero .btn-primary {
+  background: #ffffff !important;
+  color: #4338ca !important;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.22) !important;
+}
+.hero .btn-primary:hover {
+  background: #eef2ff !important;
+  box-shadow: 0 6px 22px rgba(0,0,0,0.28) !important;
+}
+/* Hero outline CTA */
+.hero .btn-outline {
+  border-color: rgba(255,255,255,0.35) !important;
+  color: #ffffff !important;
+  background: rgba(255,255,255,0.07) !important;
+}
+.hero .btn-outline:hover {
+  border-color: rgba(255,255,255,0.58) !important;
+  background: rgba(255,255,255,0.13) !important;
+}
+
+/* ── SECTION BACKGROUNDS (visual rhythm) ── */
+/* Stats bar: soft indigo wash */
+.stats {
+  background: linear-gradient(135deg, #eff6ff 0%, #eef2ff 100%) !important;
+  border-top: 1px solid #e0e7ff;
+  border-bottom: 1px solid #e0e7ff;
+}
+.stat { background: transparent !important; }
+
+/* Testimonial: soft purple wash */
+.testimonial-strip {
+  background: linear-gradient(135deg, #f5f3ff 0%, #eff6ff 100%) !important;
+  border-top: 1px solid #e0e7ff !important;
+  border-bottom: 1px solid #e0e7ff !important;
+}
+
+/* Bottom CTA: matches hero gradient */
+.cta-final {
+  background: linear-gradient(135deg, #1e3a8a 0%, #4338ca 45%, #7c3aed 100%) !important;
+}
+.cta-final * { color: #ffffff !important; }
+.cta-final .btn-primary {
+  background: #ffffff !important;
+  color: #4338ca !important;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.2) !important;
+}
+.cta-final .btn-primary:hover { background: #eef2ff !important; }
+.cta-final .btn-outline {
+  border-color: rgba(255,255,255,0.38) !important;
+  color: #ffffff !important;
+  background: rgba(255,255,255,0.07) !important;
+}
+
+/* ── BLOG ARTICLE HERO GRADIENT ── */
+.article-hero {
+  background: linear-gradient(135deg, #1e3a8a 0%, #4338ca 45%, #7c3aed 100%) !important;
+  padding: 64px 24px 72px !important;
+}
+.article-hero__title,
+.article-hero__subtitle,
+.article-hero__breadcrumb,
+.article-hero__breadcrumb a,
+.article-hero__breadcrumb span {
+  color: #ffffff !important;
+}
+.article-hero__breadcrumb a:hover    { opacity: 0.75; }
+.article-hero__subtitle,
+.article-hero__sub { color: rgba(255,255,255,0.84) !important; }
+.article-hero__meta,
+.article-hero__meta span,
+.article-hero__meta time            { color: rgba(255,255,255,0.58) !important; }
+.article-hero__breadcrumb .sep      { color: rgba(255,255,255,0.35) !important; }
+
+/* ── BLOG PROSE TYPOGRAPHY ── */
+.article-prose, .article-section, .article-intro {
+  font-size: 1.1rem;
+  line-height: 1.85;
+  color: #374151;
+}
+.article-section h2 {
+  font-size: 1.5rem;
+  color: #111827;
+  margin-top: 2.5rem;
+  margin-bottom: 0.85rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid #e5e7eb;
+}
+.article-section h3 {
+  font-size: 1.2rem;
+  color: #1f2937;
+  margin-top: 1.75rem;
+  margin-bottom: 0.6rem;
+}
+.article-section p,
+.article-intro p {
+  margin-bottom: 1.3rem;
+}
+.article-section blockquote,
+.article-intro blockquote {
+  border-left: 4px solid #6366f1;
+  background: #f5f3ff;
+  padding: 0.8rem 1.25rem;
+  border-radius: 0 8px 8px 0;
+  color: #4b5563;
+  font-style: italic;
+  margin: 1.5rem 0;
+}
+.article-section table {
+  box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+  border-radius: 8px;
+  overflow: hidden;
+}
+.article-section th {
+  background: #eef2ff;
+  color: #4338ca;
+}
+.article-divider {
+  border-color: #e5e7eb;
+  margin: 2.5rem 0;
+}
+/* Related posts cards */
+.related-posts__card, .related-card {
+  box-shadow: 0 1px 3px rgba(0,0,0,0.07);
+  transition: box-shadow 0.2s, transform 0.2s;
+}
+.related-posts__card:hover, .related-card:hover {
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  transform: translateY(-1px);
+}
+
+
+/* ═══════════════════════════════════════════════════════════
+   CONTRAST FIX — injected by fix-contrast.js
+   ═══════════════════════════════════════════════════════════
+
+   --white is now #ffffff so that gradient-section headings
+   (.hero h1, .article-hero__title, .cta-final h2) render white
+   on the dark gradient.
+
+   The elements below live on WHITE backgrounds and must be
+   explicitly dark — they cannot rely on --white any more.
+   ─────────────────────────────────────────────────────────── */
+
+/* Section headings on white background */
+.section-title,
+.section-label { color: #111827; }
+
+/* How-it-works cards */
+.step h3 { color: #111827; }
+.step p   { color: #374151; }
+
+/* Factors list */
+.factor-item__name { color: #111827; }
+
+/* Scan demo card */
+.scan-card__title { color: #111827; }
+
+/* Pricing */
+.plan__price  { color: #111827; }
+.plan__name   { color: #6b7280; }
+
+/* Blog preview cards on homepage */
+.preview-card h3 { color: #111827; }
+.preview-card p  { color: #374151; }
+
+/* Testimonial (now on light purple wash — dark text is correct) */
+.testimonial-strip__quote  { color: #111827; }
+.testimonial-strip__author { color: #6b7280; }
+
+/* Stats */
+.stat__num   { color: var(--accent); }   /* accent stays, fine on tinted bg */
+.stat__label { color: #4b5563; }
+
+/* Inline CTA blocks (mid-article, white bg) */
+.inline-cta__text,
+.inline-cta__text strong { color: #111827; }
+
+/* Related posts section */
+.related-posts__title { color: #111827; }
+
+/* ── Blog-specific ── */
+/* Article prose body */
+.article-prose,
+.article-section,
+.article-intro     { color: #374151; }
+
+.article-section h2 { color: #111827; }
+.article-section h3 { color: #1f2937; }
+.article-section p,
+.article-intro p    { color: #374151; }
+
+/* Sidebar / meta text */
+.article-sidebar *,
+.article-meta *     { color: #6b7280; }
+/* Sidebar CTA buttons must stay readable, not dimmed by .article-sidebar * */
+.article-sidebar .btn-primary { color: #ffffff !important; }
+.article-sidebar .btn-outline-sm { color: #4f46e5 !important; }
+
+/* ── Gradient sections: force text white ── */
+/* These were failing because --white resolved to #111827.
+   Now --white = #ffffff, so var(--white) already gives white.
+   These rules are safety nets for any element using --text or --text-dim
+   inside a gradient container. */
+.hero .hero__sub,
+.hero p,
+.hero .section-sub  { color: rgba(255,255,255,0.88) !important; }
+
+.cta-final p,
+.cta-final .section-sub,
+.cta-final small    { color: rgba(255,255,255,0.82) !important; }
+
+.article-hero__meta,
+.article-hero__meta *,
+.article-hero__breadcrumb,
+.article-hero__breadcrumb a,
+.article-hero__breadcrumb span { color: rgba(255,255,255,0.72) !important; }
+
+</style>
+</head>
+<body>
+
+<!-- ── NAV ── -->
+<nav class="nav" role="navigation" aria-label="Main navigation">
+  <div class="nav__inner">
+    <a href="/index.html" class="nav__logo" aria-label="Jeevan AI home">
+      <img src="/logo.png" alt="Jeevan AI" style="width:36px;height:36px;border-radius:8px;object-fit:cover">
+      <span>Jeevan AI</span>
+    </a>
+    <div class="nav__links">
+      <a href="/index.html#how-it-works">How It Works</a>
+      <a href="/index.html#features">Features</a>
+      <a href="/index.html#pricing">Pricing</a>
+      <a href="/blog-index.html" class="active">Blog</a>
+      <a href="/index.html#about">About</a>
+      <a href="mailto:jeevanaijobs@gmail.com">Contact</a>
+    </div>
+    <a href="https://jeevanai.co.in" class="nav__cta">Get Early Access</a>
+  </div>
+</nav>
+
+<!-- ── ARTICLE HERO ── -->
+<header class="article-hero">
+  <div class="article-hero__inner">
+    <nav class="article-hero__breadcrumb" aria-label="Breadcrumb">
+      <a href="/index.html">Home</a>
+      <span>&#8250;</span>
+      <a href="/blog-index.html">Blog</a>
+      <span>&#8250;</span>
+      <span>__BREADCRUMB_LABEL__</span>
+    </nav>
+    <div class="article-hero__meta">
+      <span class="post-tag">__TAG__</span>
+      <span class="post-date">__DATE_DISPLAY__</span>
+      <span class="read-time">· __READ_TIME__ min read</span>
+    </div>
+    <h1 class="article-hero__title">__TITLE__</h1>
+    <p class="article-hero__subtitle">__SUBTITLE__</p>
+
+    <!-- Hero Visual (decorative flow diagram, keep or adjust emoji/labels) -->
+    <div class="article-hero__visual" role="img" aria-label="Diagram showing brand AI recommendation flow">
+      <div class="vis-node">
+        <div class="vis-node__circle">&#127970;</div>
+        <span class="vis-node__label">Your Brand</span>
+      </div>
+      <span class="vis-arrow">&#8594;</span>
+      <div class="vis-node">
+        <div class="vis-node__circle">&#129302;</div>
+        <span class="vis-node__label">AI Engine</span>
+      </div>
+      <span class="vis-arrow">&#8594;</span>
+      <div class="vis-node vis-node--winner">
+        <div class="vis-node__circle">&#127942;</div>
+        <span class="vis-node__label">Citation</span>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- ── ARTICLE BODY ── -->
+<div class="article-wrap">
+
+  <!-- PROSE -->
+  
+<main class="article-prose" id="article-content">
+
+    <!-- Lead summary box. One paragraph stating the core thesis. -->
+    <div class="summary-block" role="note">
+      <p>__SUMMARY__</p>
+    </div>
+
+    <!-- INTRO: 2-3 paragraphs. First paragraph is a concrete scene/hook. -->
+    <div class="article-intro">
+      <p>__INTRO_PARAGRAPH_1__</p>
+      <p>__INTRO_PARAGRAPH_2__</p>
+      <p>__INTRO_PARAGRAPH_3__</p>
+    </div>
+
+    <!-- SECTION 1 (repeat this block per section; give each a unique id) -->
+    <section class="article-section" id="__SECTION_1_ID__">
+      <h2>__SECTION_1_HEADING__</h2>
+      <!-- Optional emphasis box for a key takeaway -->
+      <div class="citation-ready">
+        <p>__SECTION_1_KEY_POINT__</p>
+      </div>
+      <p>__SECTION_1_BODY_PARAGRAPH__</p>
+      <h3>__SECTION_1_SUBHEADING__</h3>
+      <p>__SECTION_1_SUBSECTION_BODY__</p>
+    </section>
+
+    <hr class="article-divider">
+
+    <!-- Optional data table component -->
+    <section class="article-section" id="__SECTION_2_ID__">
+      <h2>__SECTION_2_HEADING__</h2>
+      <table class="signal-table" role="table" aria-label="__TABLE_CAPTION__">
+        <thead>
+          <tr><th>__COL_1__</th><th>__COL_2__</th><th>__COL_3__</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><span class="signal-name">__ROW_1_NAME__</span></td>
+            <td>__ROW_1_DESC__</td>
+            <td><span class="signal-score">__ROW_1_SCORE__</span></td>
+          </tr>
+          <!-- add more rows as needed -->
+        </tbody>
+      </table>
+      <p>__SECTION_2_BODY_PARAGRAPH__</p>
+    </section>
+
+    <hr class="article-divider">
+
+    <!-- MID-ARTICLE CTA (keep as-is; links to the product) -->
+    <div class="inline-cta">
+      <div class="inline-cta__text">
+        <strong>See how AI tools cite brands like yours</strong>
+        <p>Scan your brand across ChatGPT, Perplexity, Gemini and Google AI Mode. Free. Results in 10 minutes.</p>
+      </div>
+      <a href="https://jeevanai.co.in" class="btn-primary">See How AI Tools Cite Brands Like Yours &#8594;</a>
+    </div>
+
+    <hr class="article-divider">
+
+    <!-- Optional numbered-steps component -->
+    <section class="article-section" id="__SECTION_3_ID__">
+      <h2>__SECTION_3_HEADING__</h2>
+      <ol>
+        <li><strong>__STEP_1_TITLE__.</strong> __STEP_1_BODY__</li>
+        <li><strong>__STEP_2_TITLE__.</strong> __STEP_2_BODY__</li>
+        <li><strong>__STEP_3_TITLE__.</strong> __STEP_3_BODY__</li>
+      </ol>
+    </section>
+
+    <hr class="article-divider">
+
+    <!-- FAQ: questions/answers must match the FAQ JSON-LD in <head> -->
+    <section class="faq-section" id="faq">
+      <h2>Frequently Asked Questions</h2>
+      <div class="faq-item">
+        <p class="faq-q">__FAQ_Q1__</p>
+        <p class="faq-a">__FAQ_A1__</p>
+      </div>
+      <div class="faq-item">
+        <p class="faq-q">__FAQ_Q2__</p>
+        <p class="faq-a">__FAQ_A2__</p>
+      </div>
+      <div class="faq-item">
+        <p class="faq-q">__FAQ_Q3__</p>
+        <p class="faq-a">__FAQ_A3__</p>
+      </div>
+    </section>
+
+    <hr class="article-divider">
+
+    <!-- CONCLUSION: 2-3 paragraphs, ends with a soft CTA -->
+    <section class="article-conclusion">
+      <p>__CONCLUSION_PARAGRAPH_1__</p>
+      <p>__CONCLUSION_PARAGRAPH_2__</p>
+
+      <div class="inline-cta">
+        <div class="inline-cta__text">
+          <strong>See how AI tools cite brands like yours</strong>
+          <p>Scan your brand across 5 AI platforms. Free. No credit card. Results in 10 minutes.</p>
+        </div>
+        <a href="https://jeevanai.co.in" class="btn-primary">See How AI Tools Cite Brands Like Yours &#8594;</a>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- SIDEBAR -->
+  <aside class="article-sidebar" aria-label="Article navigation and actions">
+
+    <div class="sidebar-toc">
+      <h4>In this article</h4>
+      <ul class="toc-list">
+        <!-- One <li> per section; href must match each section's id -->
+        <li><a href="#__SECTION_1_ID__">__TOC_LABEL_1__</a></li>
+        <li><a href="#__SECTION_2_ID__">__TOC_LABEL_2__</a></li>
+        <li><a href="#__SECTION_3_ID__">__TOC_LABEL_3__</a></li>
+        <li><a href="#faq">Frequently asked questions</a></li>
+      </ul>
+    </div>
+
+    <div class="sidebar-card">
+      <h4>__SIDEBAR_CARD_HEADING__</h4>
+      <p>Find out which AI tools cite your brand, which competitor they cite instead, and what content to publish next.</p>
+      <a href="https://jeevanai.co.in" class="btn-primary" style="width:100%;justify-content:center;margin-bottom:12px;">Run Free Scan &#8594;</a>
+      <a href="/blog/__RELATED_SLUG_1__.html" class="btn-outline-sm">__SIDEBAR_LINK_LABEL__ &#8594;</a>
+    </div>
+
+  </aside>
+
+</div>
+
+<!-- ── RELATED POSTS ── -->
+<section class="related-section">
+  <div class="related-section__inner">
+    <h3>Continue reading</h3>
+    <div class="related-grid">
+
+      <!-- 3 related posts. Link to real existing slugs in blog/. -->
+      <article class="related-card">
+        <span class="post-tag">__RELATED_TAG_1__</span>
+        <h4>__RELATED_TITLE_1__</h4>
+        <p>__RELATED_BLURB_1__</p>
+        <a href="/blog/__RELATED_SLUG_1__.html" class="related-link">Read article &#8594;</a>
+      </article>
+
+      <article class="related-card">
+        <span class="post-tag">__RELATED_TAG_2__</span>
+        <h4>__RELATED_TITLE_2__</h4>
+        <p>__RELATED_BLURB_2__</p>
+        <a href="/blog/__RELATED_SLUG_2__.html" class="related-link">Read article &#8594;</a>
+      </article>
+
+      <article class="related-card">
+        <span class="post-tag">__RELATED_TAG_3__</span>
+        <h4>__RELATED_TITLE_3__</h4>
+        <p>__RELATED_BLURB_3__</p>
+        <a href="/blog/__RELATED_SLUG_3__.html" class="related-link">Read article &#8594;</a>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- ── CTA STRIP ── -->
+<section class="cta-strip" aria-labelledby="cta-heading">
+  <div class="cta-strip__inner">
+    <h2 class="cta-strip__title" id="cta-heading">See how AI tools cite brands like yours</h2>
+    <p class="cta-strip__sub">5 queries across ChatGPT, Gemini and Perplexity. Free. No credit card.</p>
+    <a href="https://jeevanai.co.in" class="btn-primary">See How AI Tools Cite Brands Like Yours &#8594;</a>
+  </div>
+</section>
+
+<!-- ── FOOTER ── -->
+<footer class="footer" role="contentinfo">
+  <div class="footer__inner">
+    <div class="footer__grid">
+      <div class="footer__brand">
+        <a href="/index.html" class="nav__logo">
+          <img src="/logo.png" alt="Jeevan AI" style="width:36px;height:36px;border-radius:8px;object-fit:cover">
+          <span>Jeevan AI</span>
+        </a>
+        <p>Global AI Visibility platform. Find out why AI recommends your competitor and get a content plan to fix it. Built for international SaaS and D2C brands.</p>
+      </div>
+      <div class="footer__col">
+        <h5>Product</h5>
+        <ul>
+          <li><a href="/index.html#how-it-works">How It Works</a></li>
+          <li><a href="/index.html#features">Features</a></li>
+          <li><a href="/index.html#pricing">Pricing</a></li>
+          <li><a href="/blog-index.html">Blog</a></li>
+        </ul>
+      </div>
+      <div class="footer__col">
+        <h5>Company</h5>
+        <ul>
+          <li><a href="/index.html#about">About</a></li>
+          <li><a href="mailto:jeevanaijobs@gmail.com">Contact</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+        </ul>
+      </div>
+      <div class="footer__col">
+        <h5>Compare</h5>
+        <ul>
+          <li><a href="#">vs Otterly.ai</a></li>
+          <li><a href="#">vs Semrush AI</a></li>
+          <li><a href="#">vs Profound</a></li>
+          <li><a href="#">For Agencies</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <span>&#169; 2026 Jeevan AI. All rights reserved.</span>
+      <span>Global Platform</span>
+      <span>AI Visibility &#183; GEO Optimisation</span>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

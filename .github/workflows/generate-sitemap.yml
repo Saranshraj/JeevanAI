@@ -23,6 +23,9 @@ jobs:
         with:
           node-version: "20"
 
+      - name: Normalize theme (auto-repair any new/automated pages)
+        run: node scripts/normalize-theme.js
+
       - name: Generate sitemap.xml
         run: node scripts/generate-sitemap.js
 
@@ -33,6 +36,6 @@ jobs:
         run: |
           git config user.email "saranshraj.srivastava@gmail.com"
           git config user.name "Jeevan AI Bot"
-          git add sitemap.xml feed.xml
+          git add -A '*.html' sitemap.xml feed.xml
           git diff --cached --quiet && echo "no changes, skipping commit" || \
-            (git commit -m "chore: regenerate sitemap + feed [skip ci]" && git push)
+            (git commit -m "chore: normalize theme + regenerate sitemap/feed [skip ci]" && git push)
