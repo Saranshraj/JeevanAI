@@ -19,7 +19,7 @@
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"AI Search Visibility for D2C Brands in Australia: Why ChatGPT Is Building a Shortlist Your Brand Isn't On","description":"Australian D2C brands are invisible in ChatGPT and Gemini despite strong products. Here's the specific GEO playbook for the Australian market.","author":{"@type":"Organization","name":"Jeevan AI","url":"https://jeevanai.co.in"},"publisher":{"@type":"Organization","name":"Jeevan AI","url":"https://jeevanai.co.in","logo":{"@type":"ImageObject","url":"https://jeevanai.co.in/logo.png"}},"datePublished":"2026-06-04","dateModified":"2026-06-04","mainEntityOfPage":{"@type":"WebPage","@id":"https://jeevanai.co.in/blog/ai-search-visibility-australia-d2c"},"keywords":["AI search visibility Australia D2C","GEO for Australian brands","ChatGPT Australia recommendations","AI visibility Australian market","Australia D2C marketing 2026"]}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Why are Australian D2C brands invisible in ChatGPT recommendations?","acceptedAnswer":{"@type":"Answer","text":"Because the content infrastructure that makes brands citable — comparison pages, specific trust claims, Australian social proof, local availability information — has not been built. US brands that have been publishing this content globally for years appear by default."}},{"@type":"Question","name":"What is the fastest GEO content to publish for the Australian market?","acceptedAnswer":{"@type":"Answer","text":"An Australian market page covering AUD pricing, Australia Post shipping, and ACL warranty information. This single page addresses the most common Australian-specific query additions and can be indexed within days."}},{"@type":"Question","name":"Does having an Australian domain (.com.au) help AI visibility?","acceptedAnswer":{"@type":"Answer","text":"Yes, for Gemini (which tracks Google organic rankings closely) and for Google AI Mode. A .com.au domain with Australian-market content ranks more strongly in Australian Google results, which flows through to Gemini recommendations. For ChatGPT and Perplexity, domain extension matters less than content quality and third-party citations."}},{"@type":"Question","name":"Should I target Australian publications for GEO-relevant press coverage?","acceptedAnswer":{"@type":"Answer","text":"Yes. Australian editorial coverage in publications like Broadsheet, Vogue Australia, and The Design Files carries specific weight on Australian-market queries. US press mentions do not translate directly to Australian AI recommendation presence."}},{"@type":"Question","name":"How is GEO different for Australian D2C brands vs US D2C brands?","acceptedAnswer":{"@type":"Answer","text":"The trust signals differ. Australian buyers specifically ask about ACCC compliance, AUD pricing, Australia Post delivery, and Australian-made credentials. Content that addresses these Australia-specific buying factors will outperform generic global content on Australian-market queries."}}]}</script>
 <style>
-:root{--bg: #ffffff;--bg-card: #ffffff;--border: #e5e7eb;--border-hover: rgba(99,102,241,0.45);--accent: #6366f1;--text: #111827;--text-dim: #6b7280;--text-muted: #9ca3af;--tag-bg: rgba(99,102,241,0.1);--tag-text: #4f46e5;--white: #111827;--radius:12px;--radius-sm:8px;--font-sans:'DM Sans','Inter',system-ui,sans-serif;--font-serif:'DM Serif Display',Georgia,serif;--max-w:1180px;--prose-w:720px}
+:root{--bg: #ffffff;--bg-card: #ffffff;--border: #e5e7eb;--border-hover: rgba(99,102,241,0.45);--accent: #6366f1;--text: #111827;--text-dim: #4b5563;--text-muted: #9ca3af;--tag-bg: rgba(99,102,241,0.1);--tag-text: #4f46e5;--white: #ffffff;--radius:12px;--radius-sm:8px;--font-sans:'DM Sans','Inter',system-ui,sans-serif;--font-serif:'DM Serif Display',Georgia,serif;--max-w:1180px;--prose-w:720px}
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth}body{background:var(--bg);color:var(--text);font-family:var(--font-sans);line-height:1.6;-webkit-font-smoothing:antialiased}a{color:inherit;text-decoration:none}
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700&family=DM+Serif+Display&display=swap');
 .nav{position:sticky;top:0;z-index:100;background: rgba(255,255,255,0.95);backdrop-filter:blur(16px);border-bottom:1px solid var(--border);padding:0 24px}.nav__inner{max-width:var(--max-w);margin:0 auto;display:flex;align-items:center;justify-content:space-between;height:64px}.nav__logo{display:flex;align-items:center;gap:10px;font-weight:700;font-size:1.05rem}.nav__links{display:flex;align-items:center;gap:6px}.nav__links a{padding:7px 14px;border-radius:8px;font-size:0.875rem;color:var(--text-dim);transition:all 0.2s}.nav__links a:hover{color:var(--text);background: rgba(0,0,0,0.05)}.nav__links a.active{color:var(--accent)}
@@ -220,6 +220,90 @@
   box-shadow: 0 4px 8px rgba(0,0,0,0.1);
   transform: translateY(-1px);
 }
+
+
+/* ═══════════════════════════════════════════════════════════
+   CONTRAST FIX — injected by fix-contrast.js
+   ═══════════════════════════════════════════════════════════
+
+   --white is now #ffffff so that gradient-section headings
+   (.hero h1, .article-hero__title, .cta-final h2) render white
+   on the dark gradient.
+
+   The elements below live on WHITE backgrounds and must be
+   explicitly dark — they cannot rely on --white any more.
+   ─────────────────────────────────────────────────────────── */
+
+/* Section headings on white background */
+.section-title,
+.section-label { color: #111827; }
+
+/* How-it-works cards */
+.step h3 { color: #111827; }
+.step p   { color: #374151; }
+
+/* Factors list */
+.factor-item__name { color: #111827; }
+
+/* Scan demo card */
+.scan-card__title { color: #111827; }
+
+/* Pricing */
+.plan__price  { color: #111827; }
+.plan__name   { color: #6b7280; }
+
+/* Blog preview cards on homepage */
+.preview-card h3 { color: #111827; }
+.preview-card p  { color: #374151; }
+
+/* Testimonial (now on light purple wash — dark text is correct) */
+.testimonial-strip__quote  { color: #111827; }
+.testimonial-strip__author { color: #6b7280; }
+
+/* Stats */
+.stat__num   { color: var(--accent); }   /* accent stays, fine on tinted bg */
+.stat__label { color: #4b5563; }
+
+/* Inline CTA blocks (mid-article, white bg) */
+.inline-cta__text,
+.inline-cta__text strong { color: #111827; }
+
+/* Related posts section */
+.related-posts__title { color: #111827; }
+
+/* ── Blog-specific ── */
+/* Article prose body */
+.article-prose,
+.article-section,
+.article-intro     { color: #374151; }
+
+.article-section h2 { color: #111827; }
+.article-section h3 { color: #1f2937; }
+.article-section p,
+.article-intro p    { color: #374151; }
+
+/* Sidebar / meta text */
+.article-sidebar *,
+.article-meta *     { color: #6b7280; }
+
+/* ── Gradient sections: force text white ── */
+/* These were failing because --white resolved to #111827.
+   Now --white = #ffffff, so var(--white) already gives white.
+   These rules are safety nets for any element using --text or --text-dim
+   inside a gradient container. */
+.hero .hero__sub,
+.hero p,
+.hero .section-sub  { color: rgba(255,255,255,0.88) !important; }
+
+.cta-final p,
+.cta-final .section-sub,
+.cta-final small    { color: rgba(255,255,255,0.82) !important; }
+
+.article-hero__meta,
+.article-hero__meta *,
+.article-hero__breadcrumb,
+.article-hero__breadcrumb a,
+.article-hero__breadcrumb span { color: rgba(255,255,255,0.72) !important; }
 
 </style>
 </head>

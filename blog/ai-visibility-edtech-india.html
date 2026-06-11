@@ -19,7 +19,7 @@
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"AI Search Visibility for EdTech Brands in India: Why ChatGPT Recommends BYJU'S, Unacademy and Coursera — and Skips Everyone Else","description":"ChatGPT recommends BYJU'S, Unacademy and Coursera in India's EdTech category. Here's exactly why — and the specific content gaps that let smaller EdTech brands compete.","author":{"@type":"Organization","name":"Jeevan AI","url":"https://jeevanai.co.in"},"publisher":{"@type":"Organization","name":"Jeevan AI","url":"https://jeevanai.co.in","logo":{"@type":"ImageObject","url":"https://jeevanai.co.in/logo.png"}},"datePublished":"2026-06-05","dateModified":"2026-06-05","mainEntityOfPage":{"@type":"WebPage","@id":"https://jeevanai.co.in/blog/ai-visibility-edtech-india"},"keywords":["AI search visibility EdTech India","GEO for EdTech India","ChatGPT EdTech recommendations India","AI visibility Indian education platform","EdTech brand marketing AI search"]}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Why does ChatGPT recommend BYJU'S and Unacademy so often?","acceptedAnswer":{"@type":"Answer","text":"These brands built substantial content infrastructure — press coverage, Reddit presence, specific outcome data, Wikipedia articles — during the period when AI training datasets were assembled. They have more publicly indexed, citable content evidence than most smaller brands."}},{"@type":"Question","name":"Can a smaller EdTech brand compete in AI recommendations against BYJU'S?","acceptedAnswer":{"@type":"Answer","text":"Yes — on specific query types. Broad category queries are hard to displace. Niche certification queries, regional language queries, and specific outcome queries are areas where a focused brand with better, more specific content can outperform a generalist incumbent."}},{"@type":"Question","name":"What is the most important content for EdTech AI visibility in India?","acceptedAnswer":{"@type":"Answer","text":"A placement outcome page with specific, verifiable batch-level data. This addresses the strongest buying factor in the EdTech category and is frequently absent from smaller brand websites."}},{"@type":"Question","name":"Does accreditation matter for AI visibility?","acceptedAnswer":{"@type":"Answer","text":"Significantly. UGC recognition, IIT/IIM collaborations, and NASSCOM certifications are cited by AI models on trust queries. If your accreditation status is not explicitly published and indexed, you are absent from accreditation-focused queries."}},{"@type":"Question","name":"How does Jeevan AI's scan work for EdTech brands?","acceptedAnswer":{"@type":"Answer","text":"Jeevan AI runs your brand through ChatGPT, Gemini, Perplexity, and Google AI Mode on EdTech-specific buyer queries. It scores you on placement outcomes, accreditation, faculty credibility, use case fit, and pricing transparency, identifies every critical gap, and generates a content plan specific to your EdTech category."}}]}</script>
 <style>
-:root{--bg: #ffffff;--bg-card: #ffffff;--border: #e5e7eb;--border-hover: rgba(99,102,241,0.45);--accent: #6366f1;--text: #111827;--text-dim: #6b7280;--text-muted: #9ca3af;--tag-bg: rgba(99,102,241,0.1);--tag-text: #4f46e5;--white: #111827;--radius:12px;--radius-sm:8px;--font-sans:'DM Sans','Inter',system-ui,sans-serif;--font-serif:'DM Serif Display',Georgia,serif;--max-w:1180px;--prose-w:720px}
+:root{--bg: #ffffff;--bg-card: #ffffff;--border: #e5e7eb;--border-hover: rgba(99,102,241,0.45);--accent: #6366f1;--text: #111827;--text-dim: #4b5563;--text-muted: #9ca3af;--tag-bg: rgba(99,102,241,0.1);--tag-text: #4f46e5;--white: #ffffff;--radius:12px;--radius-sm:8px;--font-sans:'DM Sans','Inter',system-ui,sans-serif;--font-serif:'DM Serif Display',Georgia,serif;--max-w:1180px;--prose-w:720px}
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth}body{background:var(--bg);color:var(--text);font-family:var(--font-sans);line-height:1.6;-webkit-font-smoothing:antialiased}a{color:inherit;text-decoration:none}
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700&family=DM+Serif+Display&display=swap');
 .nav{position:sticky;top:0;z-index:100;background: rgba(255,255,255,0.95);backdrop-filter:blur(16px);border-bottom:1px solid var(--border);padding:0 24px}.nav__inner{max-width:var(--max-w);margin:0 auto;display:flex;align-items:center;justify-content:space-between;height:64px}.nav__logo{display:flex;align-items:center;gap:10px;font-weight:700;font-size:1.05rem}.nav__links{display:flex;align-items:center;gap:6px}.nav__links a{padding:7px 14px;border-radius:8px;font-size:0.875rem;color:var(--text-dim);transition:all 0.2s}.nav__links a:hover{color:var(--text);background: rgba(0,0,0,0.05)}.nav__links a.active{color:var(--accent)}
@@ -219,6 +219,90 @@
   box-shadow: 0 4px 8px rgba(0,0,0,0.1);
   transform: translateY(-1px);
 }
+
+
+/* ═══════════════════════════════════════════════════════════
+   CONTRAST FIX — injected by fix-contrast.js
+   ═══════════════════════════════════════════════════════════
+
+   --white is now #ffffff so that gradient-section headings
+   (.hero h1, .article-hero__title, .cta-final h2) render white
+   on the dark gradient.
+
+   The elements below live on WHITE backgrounds and must be
+   explicitly dark — they cannot rely on --white any more.
+   ─────────────────────────────────────────────────────────── */
+
+/* Section headings on white background */
+.section-title,
+.section-label { color: #111827; }
+
+/* How-it-works cards */
+.step h3 { color: #111827; }
+.step p   { color: #374151; }
+
+/* Factors list */
+.factor-item__name { color: #111827; }
+
+/* Scan demo card */
+.scan-card__title { color: #111827; }
+
+/* Pricing */
+.plan__price  { color: #111827; }
+.plan__name   { color: #6b7280; }
+
+/* Blog preview cards on homepage */
+.preview-card h3 { color: #111827; }
+.preview-card p  { color: #374151; }
+
+/* Testimonial (now on light purple wash — dark text is correct) */
+.testimonial-strip__quote  { color: #111827; }
+.testimonial-strip__author { color: #6b7280; }
+
+/* Stats */
+.stat__num   { color: var(--accent); }   /* accent stays, fine on tinted bg */
+.stat__label { color: #4b5563; }
+
+/* Inline CTA blocks (mid-article, white bg) */
+.inline-cta__text,
+.inline-cta__text strong { color: #111827; }
+
+/* Related posts section */
+.related-posts__title { color: #111827; }
+
+/* ── Blog-specific ── */
+/* Article prose body */
+.article-prose,
+.article-section,
+.article-intro     { color: #374151; }
+
+.article-section h2 { color: #111827; }
+.article-section h3 { color: #1f2937; }
+.article-section p,
+.article-intro p    { color: #374151; }
+
+/* Sidebar / meta text */
+.article-sidebar *,
+.article-meta *     { color: #6b7280; }
+
+/* ── Gradient sections: force text white ── */
+/* These were failing because --white resolved to #111827.
+   Now --white = #ffffff, so var(--white) already gives white.
+   These rules are safety nets for any element using --text or --text-dim
+   inside a gradient container. */
+.hero .hero__sub,
+.hero p,
+.hero .section-sub  { color: rgba(255,255,255,0.88) !important; }
+
+.cta-final p,
+.cta-final .section-sub,
+.cta-final small    { color: rgba(255,255,255,0.82) !important; }
+
+.article-hero__meta,
+.article-hero__meta *,
+.article-hero__breadcrumb,
+.article-hero__breadcrumb a,
+.article-hero__breadcrumb span { color: rgba(255,255,255,0.72) !important; }
 
 </style>
 </head>
