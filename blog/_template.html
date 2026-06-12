@@ -26,7 +26,21 @@
        values (#0d0d14, #13131f, #e8e8f0) or rename --white.
     5. Add the post to blog-index.html so it is linked.
     6. NEVER use an emdash anywhere in content. Use a comma or the word "to".
-    7. On push, scripts/normalize-theme.js runs in CI as a safety net and
+    7. SEO INTERLINKING (required): every post MUST include at least 2-3
+       contextual internal links inside the body prose (not just the
+       related-posts / breadcrumb / CTA blocks). Wrap a relevant phrase in
+       <a href="/blog/<slug>.html"> or <a href="/glossary/<slug>.html">
+       pointing to the most relevant hub or cluster page. In-prose links carry
+       far more SEO weight than template-driven links and help AI crawlers map
+       topical relationships.
+    8. SOURCE CITATIONS (required): every data point, statistic, or claim
+       attributed to research ("studies show", "according to", named figures,
+       percentages) MUST carry an external source link to a live, authoritative
+       URL (e.g. Gartner, Search Engine Journal, BrightEdge, Statista). Use
+       <a href="..." target="_blank" rel="noopener noreferrer">. First-party
+       data (your own audits/surveys) should say so explicitly; corroborate
+       with an external citation where one exists.
+    9. On push, scripts/normalize-theme.js runs in CI as a safety net and
        repairs theme regressions automatically.
   This file is excluded from sitemap.xml and feed.xml because its canonical
   is the literal placeholder below (it does not start with the site URL).
