@@ -791,7 +791,7 @@
 
     <!-- INTRO -->
     <div class="article-intro">
-      <p>Structured data has always mattered for SEO. It powers rich snippets, knowledge panels, and voice search responses. But in 2026, schema markup has taken on a second, more urgent role: it determines how AI systems classify, attribute, and cite your brand when a buyer asks about your category.</p>
+      <p>Structured data has always mattered for SEO. It powers rich snippets, knowledge panels, and voice search responses. But in 2026, schema markup has taken on a second, more urgent role: it determines how AI systems classify, attribute, and cite your brand when a buyer asks about your category. <a href="https://www.searchenginejournal.com/generative-engine-optimization/" target="_blank" rel="noopener noreferrer">Search Engine Journal's GEO guide</a> identifies structured data as one of the highest-leverage signals for generative engine optimisation.</p>
       <p>Perplexity, Google AI Mode, and Gemini all use live retrieval. When they crawl your pages to generate a response, they parse your JSON-LD schema before processing the body text. Your Organization schema establishes your brand as a named entity. Your Article schema signals content authority and recency. Your FAQPage schema pre-formats answers for direct extraction. Without these signals, your content is harder for AI to attribute and your brand is less likely to appear in cited responses, even if you rank well organically.</p>
       <p>This guide covers the five schema types with the highest impact on AI citation rate, the exact JSON-LD implementation for each, and the audit process for identifying your current gaps. The examples throughout draw on patterns Jeevan AI observes across brand audits in B2B SaaS, D2C, and professional services.</p>
     </div>
@@ -805,7 +805,7 @@
       <p>The mechanism differs between AI types. For training-data models like ChatGPT, schema works indirectly. It increases snippet eligibility in Google search, which increases the probability your content enters training corpora in a prominent position. For retrieval-augmented models like Perplexity and Google AI Mode, schema works directly: it is parsed at inference time and shapes how the AI classifies and attributes your content in real time.</p>
       <p>Both pathways matter. A brand optimising schema gains on both fronts: better training data representation and better real-time retrieval performance.</p>
       <h3>Why most brand sites fail the schema test</h3>
-      <p>The most common schema gap Jeevan AI identifies in brand audits is not missing schema, it is incomplete schema. Brands often have a basic Organization block on the homepage and nothing else. Category pages, blog posts, FAQ pages, and product pages are left unstructured. From an AI retrieval perspective, those pages are anonymous. The brand name and URL appear in the text, but there is no machine-readable signal connecting the content to the brand entity.</p>
+      <p>The most common schema gap Jeevan AI identifies in brand audits is not missing schema, it is incomplete schema. Brands often have a basic Organization block on the homepage and nothing else. Category pages, blog posts, FAQ pages, and product pages are left unstructured. From an AI retrieval perspective, those pages are anonymous. The brand name and URL appear in the text, but there is no machine-readable signal connecting the content to the brand entity. This is closely related to the <a href="/blog/entity-building-knowledge-graph-ai-visibility.html">entity building work</a> that gives schema markup its anchor point.</p>
       <p>A second common failure is schema that exists but contains errors: missing required fields, incorrect property types, or stale data. Google's Rich Results Test flags these, but many teams implement schema once and never revisit it as the site evolves.</p>
     </section>
 
@@ -905,10 +905,10 @@
 }</pre>
       </div>
 
-      <p>The <code>sameAs</code> array is where most brands underinvest. Linking to your G2, Capterra, LinkedIn, and Crunchbase profiles gives AI systems corroborating entity signals from third-party sources, making your brand classification more confident and citation attribution more reliable.</p>
+      <p>The <code>sameAs</code> array is where most brands underinvest. Linking to your G2, Capterra, LinkedIn, and Crunchbase profiles gives AI systems corroborating entity signals from third-party sources, making your brand classification more confident and citation attribution more reliable. <a href="https://developers.google.com/search/docs/appearance/structured-data" target="_blank" rel="noopener noreferrer">Google's structured data documentation</a> provides the full specification for each schema type and its required fields.</p>
 
       <h3>FAQPage schema: the highest-citation schema type</h3>
-      <p>FAQPage schema is the single most impactful schema type for AI citation rate because it does the AI's job for it. AI systems answering a question will almost always prefer a source with a pre-formatted answer over a source where the answer has to be extracted from prose. Every FAQ section on a category page, pricing page, or comparison page should have FAQPage schema.</p>
+      <p>FAQPage schema is the single most impactful schema type for AI citation rate because it does the AI's job for it. AI systems answering a question will almost always prefer a source with a pre-formatted answer over a source where the answer has to be extracted from prose. Every FAQ section on a category page, pricing page, or comparison page should have FAQPage schema. <a href="https://schema.org/Article" target="_blank" rel="noopener noreferrer">Schema.org's Article type</a> is equally important for blog content, providing authorship and recency signals that retrieval systems rely on.</p>
 
       <div class="code-block">
         <div class="code-label">JSON-LD: FAQPage Schema</div>
@@ -1080,7 +1080,7 @@
 
     <!-- CONCLUSION -->
     <section class="article-conclusion">
-      <p>Schema markup is the fastest technical lever available for improving AI citation rate in 2026. It does not require new content, it does not require new backlinks, and it does not require changes to your product. It requires taking what you have already written and making it machine-readable in a way that lets AI systems classify, attribute, and cite your brand with confidence.</p>
+      <p>Schema markup is the fastest technical lever available for improving AI citation rate in 2026. It does not require new content, it does not require new backlinks, and it does not require changes to your product. It requires taking what you have already written and making it machine-readable in a way that lets AI systems classify, attribute, and cite your brand with confidence. Understanding <a href="/blog/geo-order-of-operations.html">the order of operations for GEO</a> will help you decide when to prioritise schema fixes versus content or citation work.</p>
       <p>The priority order is clear: FAQPage schema on your category and comparison pages first, Organization schema with a full sameAs array second, Article schema on every blog post third. Those three implementations cover the majority of the citation gap for most brands.</p>
       <p>The brands that treat schema as a one-time SEO task and never revisit it are leaving significant citation share on the table. AI retrieval systems are re-crawling and re-classifying content continuously. Brands that maintain accurate, current schema across their key pages accumulate entity authority that compounds over time, making each piece of new content more likely to be cited than the last.</p>
 
