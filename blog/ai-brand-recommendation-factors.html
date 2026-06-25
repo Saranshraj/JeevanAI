@@ -1,218 +1,381 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>What Factors Do AI Models Use to Decide Which Brands to Recommend? | Jeevan AI</title>
-  <meta name="description" content="The exact signals ChatGPT, Perplexity, and Gemini use when deciding which brand to name in a recommendation. Entity presence, citation density, sentiment, and training data weight explained." />
-  <link rel="canonical" href="https://jeevanai.co.in/blog/ai-brand-recommendation-factors" />
-  <link rel="stylesheet" href="../styles.css" />
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Article",
-    "headline": "What Factors Do AI Models Use to Decide Which Brands to Recommend?",
-    "description": "The signals AI models weigh when deciding which brand to name: entity presence, citation density, sentiment, and training data weight.",
-    "datePublished": "2026-06-25",
-    "author": { "@type": "Person", "name": "Saran Shraj" },
-    "publisher": { "@type": "Organization", "name": "Jeevan AI", "url": "https://jeevanai.co.in" }
-  }
-  </script>
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
-      {
-        "@type": "Question",
-        "name": "What factors do AI models use to recommend brands?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "AI models use five primary factors when deciding which brands to recommend: entity presence (how clearly the brand is defined in training data and crawlable content), citation density (how many independent sources mention the brand in the relevant category), contextual relevance (how closely the brand's described attributes match the query), sentiment and framing (how the brand is described in surrounding content), and recency signals for retrieval-based engines like Perplexity. Brands that score well across all five factors appear consistently in AI recommendations. Brands that are missing even one factor are often skipped in favor of better-profiled alternatives."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Why does ChatGPT recommend one brand over another?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "ChatGPT recommends one brand over another based on how that brand is represented in its training data. The primary factors are: how frequently the brand is mentioned in category-relevant contexts across the training corpus, how specific and verifiable the claims made about the brand are (generic descriptions are downweighted), whether the brand is described as a solution to the kind of problem the user is asking about, and whether the surrounding content frames the brand positively within a professional or credible context. Brands with high marketing spend but thin editorial presence often lose to smaller brands with more structured, specific content coverage."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "What is entity presence and why does it matter for AI recommendations?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Entity presence is how clearly and consistently a brand's identity is established in the content AI models can read. A strong entity presence means the brand name, category, key differentiators, target customer, and primary use cases are all explicitly defined in crawlable, structured content. AI models treat brands as entities in a knowledge graph. A brand with weak entity presence is ambiguous: the model is not sure what it does, who it is for, or how to distinguish it from alternatives. This ambiguity leads to the brand being omitted from recommendations. Entity presence is built through FAQ-rich content, About pages, structured schema markup, and consistent third-party editorial coverage."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Does the number of backlinks affect AI brand recommendations?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Backlinks affect AI brand recommendations indirectly, not directly. AI models do not read a backlink graph the way a search engine crawler does. However, backlinks correlate with third-party editorial mentions, which are a direct factor in AI recommendation decisions. A brand with many backlinks from credible editorial sources is likely also well-mentioned in the text of those sources, which strengthens its entity profile in AI training data. The content of those links matters more than the links themselves. A brand mentioned in comparison articles, category roundups, and review posts has a richer entity profile than one with the same number of backlinks from low-context sources."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "How does AI recommendation frequency differ from search ranking?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "AI recommendation frequency and search ranking measure different things. Search ranking measures how well a specific page matches a keyword query and reflects page-level authority signals like backlinks and content relevance. AI recommendation frequency measures how often a brand is named as a solution to a category-level question, which reflects entity-level authority: how well the brand's identity is established across all content AI models can access. A brand can rank number one for a keyword and still be invisible in AI recommendations if its entity profile is thin. Conversely, a brand with modest search rankings but rich, specific editorial coverage can appear consistently in AI recommendations."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Can a brand improve its AI recommendation frequency in 90 days?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "For Perplexity and Google AI Overviews, brands can see measurable improvement in AI recommendation frequency within 60 to 90 days of publishing structured, FAQ-rich content that directly addresses target query clusters. These engines use live retrieval, so new content can surface quickly. For ChatGPT, the timeline is longer because it depends on training data updates. Brands that combine owned content improvements with third-party editorial coverage (getting mentioned in category articles and comparison posts on independent sites) see the fastest improvement across all engines. The key is to address multiple recommendation factors simultaneously: entity clarity, specific claims, and third-party citation density."
-        }
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-S6X8Q5EY8E"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-S6X8Q5EY8E');
+</script>
+<meta charset="UTF-8">
+<link rel="icon" type="image/png" href="/logo.png">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>What Factors Do AI Models Use to Decide Which Brands to Recommend? | Jeevan AI</title>
+<meta name="description" content="The five signals ChatGPT, Perplexity, and Gemini use when deciding which brand to name: entity presence, citation density, contextual relevance, sentiment, and recency.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://jeevanai.co.in/blog/ai-brand-recommendation-factors">
+<meta property="og:title" content="What Factors Do AI Models Use to Decide Which Brands to Recommend?">
+<meta property="og:description" content="The five signals AI models weigh when deciding which brand to name: entity presence, citation density, contextual relevance, sentiment, and recency.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://jeevanai.co.in/blog/ai-brand-recommendation-factors">
+<meta property="og:site_name" content="Jeevan AI">
+<meta property="article:published_time" content="2026-06-25">
+<meta property="article:author" content="Jeevan AI">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "What Factors Do AI Models Use to Decide Which Brands to Recommend?",
+  "description": "The five signals ChatGPT, Perplexity, and Gemini use when deciding which brand to name in a recommendation.",
+  "author": { "@type": "Person", "name": "Saran Shraj" },
+  "publisher": { "@type": "Organization", "name": "Jeevan AI", "url": "https://jeevanai.co.in",
+    "logo": { "@type": "ImageObject", "url": "https://jeevanai.co.in/assets/logo.png" } },
+  "datePublished": "2026-06-25",
+  "dateModified": "2026-06-25",
+  "mainEntityOfPage": { "@type": "WebPage", "@id": "https://jeevanai.co.in/blog/ai-brand-recommendation-factors" },
+  "keywords": ["ai brand recommendation factors", "factors ai models use to recommend brands", "why chatgpt recommends brands", "GEO signals", "entity presence AI"]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What factors do AI models use to recommend brands?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "AI models use five primary factors when deciding which brands to recommend: entity presence (how clearly the brand is defined in training data and crawlable content), citation density (how many independent sources mention the brand in the relevant category), contextual relevance (how closely the brand's described attributes match the query), sentiment and framing (how the brand is described in surrounding content), and recency signals for retrieval-based engines like Perplexity. Brands that score well across all five factors appear consistently in AI recommendations. Brands that are missing even one factor are often skipped in favor of better-profiled alternatives."
       }
-    ]
+    },
+    {
+      "@type": "Question",
+      "name": "Why does ChatGPT recommend one brand over another?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "ChatGPT recommends one brand over another based on how that brand is represented in its training data. The primary factors are: how frequently the brand is mentioned in category-relevant contexts across the training corpus, how specific and verifiable the claims made about the brand are (generic descriptions are downweighted), whether the brand is described as a solution to the kind of problem the user is asking about, and whether the surrounding content frames the brand positively within a professional or credible context. Brands with high marketing spend but thin editorial presence often lose to smaller brands with more structured, specific content coverage."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is entity presence and why does it matter for AI recommendations?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Entity presence is how clearly and consistently a brand's identity is established in the content AI models can read. A strong entity presence means the brand name, category, key differentiators, target customer, and primary use cases are all explicitly defined in crawlable, structured content. AI models treat brands as entities in a knowledge graph. A brand with weak entity presence is ambiguous — the model is not sure what it does, who it is for, or how to distinguish it from alternatives. This ambiguity leads to the brand being omitted from recommendations. Entity presence is built through FAQ-rich content, About pages, structured schema markup, and consistent third-party editorial coverage."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does the number of backlinks affect AI brand recommendations?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Backlinks affect AI brand recommendations indirectly, not directly. AI models do not read a backlink graph the way a search engine crawler does. However, backlinks correlate with third-party editorial mentions, which are a direct factor in AI recommendation decisions. A brand with many backlinks from credible editorial sources is likely also well-mentioned in the text of those sources, which strengthens its entity profile in AI training data. The content of those links matters more than the links themselves. A brand mentioned in comparison articles, category roundups, and review posts has a richer entity profile than one with the same number of backlinks from low-context sources."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can a brand improve its AI recommendation frequency in 90 days?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "For Perplexity and Google AI Overviews, brands can see measurable improvement in AI recommendation frequency within 60 to 90 days of publishing structured, FAQ-rich content that directly addresses target query clusters. These engines use live retrieval, so new content can surface quickly. For ChatGPT, the timeline is longer because it depends on training data updates. Brands that combine owned content improvements with third-party editorial coverage (getting mentioned in category articles and comparison posts on independent sites) see the fastest improvement across all engines. The key is to address multiple recommendation factors simultaneously: entity clarity, specific claims, and third-party citation density."
+      }
+    }
+  ]
+}
+</script>
+<style>
+  :root {
+    --bg:#ffffff; --bg-card:#ffffff; --border:#e5e7eb; --border-hover:rgba(99,102,241,0.45);
+    --accent:#6366f1; --accent-dim:rgba(99,102,241,0.1); --text:#111827; --text-dim:#4b5563;
+    --text-muted:#9ca3af; --tag-bg:rgba(99,102,241,0.1); --tag-text:#4f46e5; --white:#ffffff;
+    --radius:12px; --radius-sm:8px; --font-sans:'DM Sans','Inter',system-ui,sans-serif;
+    --font-serif:'DM Serif Display',Georgia,serif; --font-mono:'JetBrains Mono',monospace; --max-w:1180px; --prose-w:720px;
   }
-  </script>
+  *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{background:var(--bg);color:var(--text);font-family:var(--font-sans);line-height:1.6;-webkit-font-smoothing:antialiased}
+  a{color:inherit;text-decoration:none} img{display:block;max-width:100%}
+  @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700&family=DM+Serif+Display&display=swap');
+  .nav{position:sticky;top:0;z-index:100;background:rgba(255,255,255,0.95);backdrop-filter:blur(16px);border-bottom:1px solid var(--border);padding:0 24px}
+  .nav__inner{max-width:var(--max-w);margin:0 auto;display:flex;align-items:center;justify-content:space-between;height:64px}
+  .nav__logo{display:flex;align-items:center;gap:10px;font-weight:700;font-size:1.05rem}
+  .nav__links{display:flex;align-items:center;gap:6px}
+  .nav__links a{padding:7px 14px;border-radius:8px;font-size:0.875rem;color:var(--text-dim);transition:all 0.2s}
+  .nav__links a:hover{color:var(--text);background:rgba(0,0,0,0.05)}
+  .nav__links a.active{color:var(--accent)}
+  .nav__cta{padding:8px 18px;border-radius:8px;background:linear-gradient(135deg,#6366f1,#7c3aed);color:#fff;font-size:0.875rem;font-weight:600}
+  .article-hero{background:linear-gradient(135deg,#1e3a8a 0%,#4338ca 45%,#7c3aed 100%);padding:60px 24px 64px;border-bottom:1px solid var(--border)}
+  .article-hero__inner{max-width:var(--prose-w);margin:0 auto}
+  .article-hero__breadcrumb{display:flex;align-items:center;gap:8px;font-size:0.8rem;color:rgba(255,255,255,0.72);margin-bottom:24px}
+  .article-hero__breadcrumb a{color:rgba(255,255,255,0.72)}
+  .article-hero__meta{display:flex;align-items:center;gap:12px;margin-bottom:20px;flex-wrap:wrap}
+  .post-tag{padding:3px 10px;border-radius:100px;font-size:0.72rem;font-weight:600;letter-spacing:0.04em;text-transform:uppercase;background:rgba(255,255,255,0.16);color:#fff}
+  .post-date,.read-time{font-size:0.8rem;color:rgba(255,255,255,0.6)}
+  .article-hero__title{font-family:var(--font-serif);font-size:clamp(1.9rem,3.5vw,2.6rem);line-height:1.18;letter-spacing:-0.02em;color:#fff;margin-bottom:18px}
+  .article-hero__subtitle{font-size:1.1rem;color:rgba(255,255,255,0.85);line-height:1.6;max-width:620px}
+  .article-wrap{max-width:var(--max-w);margin:0 auto;padding:56px 24px 90px;display:grid;grid-template-columns:var(--prose-w) 1fr;gap:60px;align-items:start}
+  .article-prose{max-width:var(--prose-w)}
+  .summary-block{background:#f9fafb;border:1px solid var(--border);border-left:3px solid var(--accent);border-radius:0 8px 8px 0;padding:18px 22px;margin-bottom:36px}
+  .summary-block p{font-size:1rem;color:var(--text-dim);line-height:1.65;margin:0}
+  .article-intro p{font-size:1.12rem;line-height:1.8;color:#374151;margin-bottom:18px}
+  .article-section{margin-top:14px}
+  .article-section h2{font-family:var(--font-serif);font-size:1.5rem;color:#111827;margin:34px 0 12px;padding-bottom:8px;border-bottom:2px solid #e5e7eb;line-height:1.25}
+  .article-section h3{font-size:1.2rem;color:#1f2937;margin:22px 0 8px}
+  .article-section p{font-size:1.08rem;line-height:1.85;color:#374151;margin-bottom:16px}
+  .article-section a{color:#4f46e5;text-decoration:underline;text-underline-offset:2px}
+  .article-section ol,.article-section ul{margin:14px 0 18px 2px;padding-left:20px}
+  .article-section li{font-size:1.06rem;line-height:1.7;color:#374151;margin-bottom:10px}
+  .callout{background:linear-gradient(135deg,rgba(99,102,241,0.06),rgba(124,58,237,0.03));border:1px solid rgba(99,102,241,0.2);border-radius:10px;padding:18px 22px;margin:22px 0}
+  .callout p{margin:0;color:#1a1730;font-size:1.02rem;line-height:1.7}
+  .article-divider{border:none;border-top:1px solid var(--border);margin:36px 0}
+  .faq-section h2{font-family:var(--font-serif);font-size:1.5rem;color:#111827;margin-bottom:18px}
+  .faq-item{border-bottom:1px solid var(--border);padding:18px 0}
+  .faq-item:last-child{border-bottom:none}
+  .faq-q{font-size:1.05rem;font-weight:600;color:#111827;margin-bottom:8px}
+  .faq-a{font-size:1rem;color:#4b5563;line-height:1.75;margin:0}
+  .article-conclusion p{font-size:1.08rem;line-height:1.85;color:#374151;margin-bottom:16px}
+  .inline-cta{background:linear-gradient(135deg,rgba(99,102,241,0.07),rgba(99,102,241,0.03));border:1px solid rgba(99,102,241,0.22);border-radius:12px;padding:26px 30px;display:flex;align-items:center;justify-content:space-between;gap:22px;flex-wrap:wrap;margin-top:24px}
+  .inline-cta__text strong{font-size:1.05rem;color:#111827} .inline-cta__text p{font-size:0.9rem;color:#6b7280;margin-top:4px}
+  .btn-primary{display:inline-flex;align-items:center;gap:8px;padding:12px 22px;border-radius:8px;background:linear-gradient(135deg,#6366f1,#7c3aed);color:#fff;font-size:0.9rem;font-weight:600;white-space:nowrap}
+  .article-sidebar{position:sticky;top:88px}
+  .sidebar-toc,.sidebar-card{background:#fff;border:1px solid var(--border);border-radius:12px;padding:22px;margin-bottom:22px;box-shadow:0 1px 3px rgba(0,0,0,0.05)}
+  .sidebar-toc h4{font-size:0.72rem;font-weight:700;text-transform:uppercase;letter-spacing:0.08em;color:var(--text-muted);margin-bottom:14px}
+  .toc-list{list-style:none} .toc-list li{padding:4px 0} .toc-list a{font-size:0.85rem;color:var(--text-dim)} .toc-list a:hover{color:var(--accent)}
+  .sidebar-card h4{font-size:0.98rem;color:#111827;margin-bottom:8px} .sidebar-card p{font-size:0.85rem;color:var(--text-dim);margin-bottom:16px;line-height:1.55}
+  .btn-outline-sm{display:inline-flex;justify-content:center;width:100%;padding:9px 18px;border-radius:8px;border:1px solid var(--border);color:#4f46e5;font-size:0.82rem;font-weight:600;margin-top:10px}
+  .related-section{border-top:1px solid var(--border);padding:56px 24px}
+  .related-section__inner{max-width:var(--max-w);margin:0 auto}
+  .related-section h3{font-size:0.78rem;font-weight:700;text-transform:uppercase;letter-spacing:0.08em;color:var(--text-muted);margin-bottom:24px}
+  .related-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+  .related-card{background:#fff;border:1px solid var(--border);border-radius:12px;padding:22px;box-shadow:0 1px 3px rgba(0,0,0,0.06)}
+  .related-card .post-tag{background:var(--tag-bg);color:var(--tag-text);margin-bottom:12px;display:inline-block}
+  .related-card h4{font-size:0.98rem;color:#111827;margin-bottom:8px;line-height:1.4} .related-card p{font-size:0.85rem;color:var(--text-dim);line-height:1.55;margin-bottom:14px}
+  .related-link{font-size:0.82rem;font-weight:600;color:var(--accent)}
+  .cta-strip{border-top:1px solid var(--border);background:linear-gradient(135deg,rgba(99,102,241,0.06),transparent 60%);padding:64px 24px;text-align:center}
+  .cta-strip__inner{max-width:640px;margin:0 auto}
+  .cta-strip__title{font-family:var(--font-serif);font-size:2rem;color:#111827;margin-bottom:12px}
+  .cta-strip__sub{color:var(--text-dim);margin-bottom:28px}
+  .footer{border-top:1px solid var(--border);padding:40px 24px;text-align:center}
+  .footer p{font-size:0.85rem;color:var(--text-muted)} .footer a{color:var(--text-dim)}
+  @media(max-width:1024px){.article-wrap{grid-template-columns:1fr;gap:40px}.article-sidebar{position:static}.related-grid{grid-template-columns:repeat(2,1fr)}}
+  @media(max-width:600px){.nav__links{display:none}.related-grid{grid-template-columns:1fr}.inline-cta{flex-direction:column}}
+</style>
 </head>
 <body>
-  <header>
-    <nav>
-      <a href="../index.html" class="logo">Jeevan AI</a>
-      <a href="../index.html#contact" class="cta-btn">Get Early Access</a>
+
+<nav class="nav" role="navigation" aria-label="Main navigation">
+  <div class="nav__inner">
+    <a href="/index.html" class="nav__logo" aria-label="Jeevan AI home">
+      <img src="/logo.png" alt="Jeevan AI" style="width:36px;height:36px;border-radius:8px;object-fit:cover"><span>Jeevan AI</span>
+    </a>
+    <div class="nav__links">
+      <a href="/features.html">Features</a>
+      <a href="/pricing.html">Pricing</a>
+      <a href="/blog-index.html" class="active">Blog</a>
+      <a href="/index.html#about">About</a>
+    </div>
+    <a href="https://dashboard.jeevanai.co.in/auth/login" class="nav__cta">Run Free Scan</a>
+  </div>
+</nav>
+
+<header class="article-hero">
+  <div class="article-hero__inner">
+    <nav class="article-hero__breadcrumb" aria-label="Breadcrumb">
+      <a href="/index.html">Home</a><span>&#8250;</span><a href="/blog-index.html">Blog</a><span>&#8250;</span><span>GEO Strategy</span>
     </nav>
-  </header>
+    <div class="article-hero__meta">
+      <span class="post-tag">GEO Strategy</span>
+      <span class="post-date">June 25, 2026</span>
+      <span class="read-time">· 8 min read</span>
+    </div>
+    <h1 class="article-hero__title">What Factors Do AI Models Use to Decide Which Brands to Recommend?</h1>
+    <p class="article-hero__subtitle">When ChatGPT names one brand and skips yours, it is not arbitrary. Here are the five retrievable signals that determine which brand gets recommended — and which gets ignored.</p>
+  </div>
+</header>
 
-  <main class="blog-post">
-    <article>
-      <div class="post-meta">
-        <span class="category">GEO Strategy</span>
-        <span class="read-time">8 min read</span>
-        <time datetime="2026-06-25">June 25, 2026</time>
-      </div>
+<div class="article-wrap">
+  <main class="article-prose" id="article-content">
 
-      <h1>What Factors Do AI Models Use to Decide Which Brands to Recommend?</h1>
+    <div class="summary-block" role="note">
+      <p>AI models weigh five factors when deciding which brands to recommend: entity presence, citation density, contextual relevance, sentiment and framing, and recency. Understanding which factor is holding your brand back is the starting point for any effective GEO strategy.</p>
+    </div>
 
-      <p class="lead">When a buyer asks ChatGPT "which HR software should a 200-person company use," the model names specific brands. When they ask Perplexity "best GEO tracking tool for B2B SaaS," specific names appear. These are not random. AI models apply a set of retrievable signals to decide which brands to name, which to skip, and how to frame each. Understanding those signals is the foundation of every effective GEO strategy.</p>
+    <div class="article-intro">
+      <p>When a buyer asks ChatGPT "which HR software should a 200-person company use," the model names specific brands. When they ask Perplexity "best GEO tracking tool for B2B SaaS," specific names appear. These are not random. AI models apply a set of retrievable signals to decide which brands to name, which to skip, and how to frame each. Understanding those signals is the foundation of every effective GEO strategy.</p>
+    </div>
 
+    <section class="article-section" id="five-factors">
       <h2>The Five Factors AI Models Weigh</h2>
-
       <p>AI recommendation decisions are not a single calculation. Different engines weight these factors differently, but the same five factors appear across ChatGPT, Perplexity, Gemini, and Google AI Overviews.</p>
 
-      <h3>1. Entity presence</h3>
-
+      <h3 id="entity-presence">1. Entity presence</h3>
       <p>An entity is how AI models represent a brand internally. A strong entity has a clear name, category, differentiators, and target customer all explicitly defined in the content the model has seen. A weak entity is vague: the model has encountered the brand name but cannot confidently classify what it does or who it serves.</p>
-
       <p>Entity presence is the most fundamental factor. If a brand's entity is ambiguous, the model will omit it from recommendations even when the brand would be a correct answer. The model defaults to brands it can describe with confidence.</p>
-
       <p>Entity presence is built through structured, crawlable content: About pages that explicitly state what the company does and who its customers are, FAQ content that answers category questions using the brand's specific attributes, and product pages that use precise, consistent language rather than marketing copy.</p>
 
-      <h3>2. Citation density</h3>
-
+      <h3 id="citation-density">2. Citation density</h3>
       <p>Citation density is how often a brand is mentioned in relevant contexts across independent sources. AI models that draw on training data treat frequent mentions in credible sources as a signal of category relevance. Models that use live retrieval (Perplexity, Google AI Overviews) look for brands that appear across multiple sources in response to a given query.</p>
+      <p>The category context of the citation matters more than raw volume. A brand mentioned in startup news forty times is less well-cited for "HR software for 200-person companies" than a brand mentioned ten times in specific, category-relevant editorial content.</p>
 
-      <p>Citation density is what most people mean when they talk about "brand awareness" in the context of AI search. But it is more specific than general awareness. A brand that is mentioned in startup news forty times is less well-cited for "HR software for 200-person companies" than a brand mentioned ten times in specific, category-relevant editorial content. The category context of the citation matters more than raw volume.</p>
-
-      <p>The practical implication is that generic brand mentions do not build citation density for specific recommendation queries. Editorial coverage in category-relevant publications, product comparison articles, and use-case roundups does.</p>
-
-      <h3>3. Contextual relevance</h3>
-
-      <p>Contextual relevance is how closely the brand's described attributes match the specific query being asked. AI models retrieve content that matches the query's intent, not just its keywords. A brand described as "an enterprise HR platform with advanced analytics" will appear for queries about enterprise HR tools but is less likely to appear for queries about "simple HR software for small teams," even if the product could serve both markets.</p>
-
+      <h3 id="contextual-relevance">3. Contextual relevance</h3>
+      <p>Contextual relevance is how closely the brand's described attributes match the specific query being asked. A brand described as "an enterprise HR platform with advanced analytics" will appear for queries about enterprise HR tools but is less likely to appear for "simple HR software for small teams," even if the product could serve both markets.</p>
       <p>This is a specific failure mode for brands that use generic marketing language. "We help teams work better" matches nothing specifically. "We help 50-to-500 person B2B SaaS companies manage performance reviews and OKRs" matches specific query patterns with precision.</p>
 
-      <p>The fix is to describe the brand in the specific language buyers use when they are searching. Not aspirational positioning language, but the exact problem-solution framing buyers use when asking AI models for recommendations.</p>
+      <h3 id="sentiment">4. Sentiment and framing</h3>
+      <p>AI models do not just count mentions. They read how a brand is described in the surrounding content. A brand that appears frequently in negative context builds a negative entity signal. A brand described consistently as a reliable solution in specific contexts builds a positive one.</p>
+      <p>Comparison content that shows the brand winning on specific criteria, customer success stories with measurable outcomes, and editorial coverage that positions the brand as a category leader all contribute to positive entity framing.</p>
 
-      <h3>4. Sentiment and framing</h3>
+      <h3 id="recency">5. Recency (for retrieval-based engines)</h3>
+      <p>Perplexity and Google AI Overviews have a recency factor that does not apply to ChatGPT's base model. They favor content published or updated recently for queries where freshness matters. "Best GEO tools in 2026" favors recently published content over older evergreen articles.</p>
+      <p>Content targeting recency-sensitive queries should be published or updated regularly. A 2025 article will start losing ground to fresher content as 2026 progresses.</p>
+    </section>
 
-      <p>AI models do not just count mentions. They read how a brand is described in the surrounding content. A brand that appears frequently in negative context (poor reviews, complaints, comparisons where it loses) builds a negative entity signal. A brand described consistently as a reliable solution in specific contexts builds a positive one.</p>
+    <hr class="article-divider">
 
-      <p>For most B2B brands, sentiment is not about reputation management in a crisis sense. It is about ensuring that the content describing the brand frames it as a solution rather than a category participant. Comparison content that shows the brand winning on specific criteria, customer success stories with measurable outcomes, and editorial coverage that positions the brand as a category leader all contribute to positive entity framing.</p>
-
-      <h3>5. Recency (for retrieval-based engines)</h3>
-
-      <p>Perplexity and Google AI Overviews have a recency factor that does not apply to ChatGPT's base model. They favor content published or updated recently for queries where freshness matters. "Best GEO tools in 2026" favors recently published content over older evergreen articles. "What is GEO" does not particularly favor recency.</p>
-
-      <p>The practical implication is that content targeting recency-sensitive queries should be published or updated regularly. A 2025 article titled "best AI visibility tools" will start losing ground to fresher content as 2026 progresses. Either update the article or publish a new version with the current year in the title and schema datePublished updated.</p>
-
+    <section class="article-section" id="engines">
       <h2>How Different Engines Weight These Factors</h2>
-
-      <p>Understanding how engines differ in their weighting helps prioritize where to invest first.</p>
-
       <p><strong>ChatGPT</strong> weighs entity presence and citation density most heavily, because its answers come primarily from training data. Recency is a weak factor in the base model. The path to improving ChatGPT recommendations is building a stronger entity profile across the broader web over time.</p>
-
       <p><strong>Perplexity</strong> weighs contextual relevance and recency most heavily in its live retrieval phase, then applies entity presence to decide which retrieved results to cite. A well-structured, recently published page that directly answers the query can appear in Perplexity within days of publication.</p>
+      <p><strong>Google AI Overviews</strong> inherits Google Search's entity understanding and weighs it alongside contextual relevance. Brands with strong Google entity profiles (structured schema, verified Google Business Profile, clear E-E-A-T signals) have a built-in advantage compared to their performance in Perplexity or ChatGPT.</p>
+    </section>
 
-      <p><strong>Google AI Overviews</strong> inherits Google Search's entity understanding and weighs it alongside contextual relevance. Brands with strong Google entity profiles (structured schema, verified Google Business Profile, clear E-E-A-T signals) have a built-in advantage in AI Overviews compared to their performance in Perplexity or ChatGPT.</p>
+    <hr class="article-divider">
 
+    <section class="article-section" id="gaps">
       <h2>The Most Common Factor Gaps</h2>
-
-      <p>In my experience auditing brand visibility across AI engines, the most common factor gaps are:</p>
-
+      <p>In my experience auditing brand visibility across AI engines, the most common gaps are:</p>
       <p><strong>Vague entity definition.</strong> The brand's own content does not clearly state what it does, who it is for, and how it is differentiated. The model cannot confidently represent the entity and defaults to alternatives it can describe with precision.</p>
-
       <p><strong>Thin citation density in the right category.</strong> The brand has press coverage, but it is concentrated in funding announcements rather than category-level editorial. AI models looking for "best X for Y" find the brand in news contexts rather than recommendation contexts.</p>
-
       <p><strong>Generic attribute language.</strong> The brand uses marketing language that matches no specific query pattern. "Helping businesses grow" is unmatchable. "Helping SaaS companies reduce churn through AI-powered customer health scoring" matches specific queries precisely.</p>
 
-      <p>Addressing these three gaps is the starting point for improving AI recommendation frequency for most brands.</p>
-
-      <h2>How to Audit Your Brand's Factor Gaps</h2>
-
-      <p>A practical factor gap audit takes thirty minutes and produces a prioritized action list.</p>
-
-      <p><strong>Entity presence check:</strong> Ask ChatGPT "describe [brand name] in one paragraph." If the response is vague, hallucinated, or conflates your brand with others, your entity presence is weak. The fix is to publish explicit, structured entity content and ensure it is indexed.</p>
-
-      <p><strong>Citation density check:</strong> Ask Perplexity "[category] tools for [your target customer]" ten times with query variations. Count how often your brand appears versus competitors. If competitors appear five times and you appear zero, your citation density in that category context is weak.</p>
-
-      <p><strong>Contextual relevance check:</strong> Read your top five pages out loud. Do they describe your product in the specific language your buyers use? If not, they are not matching the query patterns that drive AI recommendations.</p>
-
-      <p>A GEO monitoring tool automates this audit and tracks factor gaps over time, giving you a continuous signal of which factors are improving and which still need work.</p>
-
-      <section class="faq-section">
-        <h2>Frequently Asked Questions</h2>
-
-        <div class="faq-item">
-          <h3>What factors do AI models use to recommend brands?</h3>
-          <p>AI models use five primary factors when deciding which brands to recommend: entity presence (how clearly the brand is defined in training data and crawlable content), citation density (how many independent sources mention the brand in the relevant category), contextual relevance (how closely the brand's described attributes match the query), sentiment and framing (how the brand is described in surrounding content), and recency signals for retrieval-based engines like Perplexity. Brands that score well across all five factors appear consistently in AI recommendations. Brands that are missing even one factor are often skipped in favor of better-profiled alternatives.</p>
-        </div>
-
-        <div class="faq-item">
-          <h3>Why does ChatGPT recommend one brand over another?</h3>
-          <p>ChatGPT recommends one brand over another based on how that brand is represented in its training data. The primary factors are: how frequently the brand is mentioned in category-relevant contexts across the training corpus, how specific and verifiable the claims made about the brand are (generic descriptions are downweighted), whether the brand is described as a solution to the kind of problem the user is asking about, and whether the surrounding content frames the brand positively within a professional or credible context. Brands with high marketing spend but thin editorial presence often lose to smaller brands with more structured, specific content coverage.</p>
-        </div>
-
-        <div class="faq-item">
-          <h3>What is entity presence and why does it matter for AI recommendations?</h3>
-          <p>Entity presence is how clearly and consistently a brand's identity is established in the content AI models can read. A strong entity presence means the brand name, category, key differentiators, target customer, and primary use cases are all explicitly defined in crawlable, structured content. AI models treat brands as entities in a knowledge graph. A brand with weak entity presence is ambiguous: the model is not sure what it does, who it is for, or how to distinguish it from alternatives. This ambiguity leads to the brand being omitted from recommendations. Entity presence is built through FAQ-rich content, About pages, structured schema markup, and consistent third-party editorial coverage.</p>
-        </div>
-
-        <div class="faq-item">
-          <h3>Does the number of backlinks affect AI brand recommendations?</h3>
-          <p>Backlinks affect AI brand recommendations indirectly, not directly. AI models do not read a backlink graph the way a search engine crawler does. However, backlinks correlate with third-party editorial mentions, which are a direct factor in AI recommendation decisions. A brand with many backlinks from credible editorial sources is likely also well-mentioned in the text of those sources, which strengthens its entity profile in AI training data. The content of those links matters more than the links themselves. A brand mentioned in comparison articles, category roundups, and review posts has a richer entity profile than one with the same number of backlinks from low-context sources.</p>
-        </div>
-
-        <div class="faq-item">
-          <h3>How does AI recommendation frequency differ from search ranking?</h3>
-          <p>AI recommendation frequency and search ranking measure different things. Search ranking measures how well a specific page matches a keyword query and reflects page-level authority signals like backlinks and content relevance. AI recommendation frequency measures how often a brand is named as a solution to a category-level question, which reflects entity-level authority: how well the brand's identity is established across all content AI models can access. A brand can rank number one for a keyword and still be invisible in AI recommendations if its entity profile is thin. Conversely, a brand with modest search rankings but rich, specific editorial coverage can appear consistently in AI recommendations.</p>
-        </div>
-
-        <div class="faq-item">
-          <h3>Can a brand improve its AI recommendation frequency in 90 days?</h3>
-          <p>For Perplexity and Google AI Overviews, brands can see measurable improvement in AI recommendation frequency within 60 to 90 days of publishing structured, FAQ-rich content that directly addresses target query clusters. These engines use live retrieval, so new content can surface quickly. For ChatGPT, the timeline is longer because it depends on training data updates. Brands that combine owned content improvements with third-party editorial coverage (getting mentioned in category articles and comparison posts on independent sites) see the fastest improvement across all engines. The key is to address multiple recommendation factors simultaneously: entity clarity, specific claims, and third-party citation density.</p>
-        </div>
-      </section>
-
-      <div class="cta-box">
-        <h3>Audit Your Brand's AI Recommendation Factors</h3>
-        <p>Jeevan AI identifies which of the five factors are holding your brand back in ChatGPT, Perplexity, and Google AI Overviews, and shows you exactly which competitors are winning on each one.</p>
-        <a href="../index.html#contact" class="cta-btn">Get Early Access</a>
+      <div class="callout">
+        <p>Addressing these three gaps is the starting point for improving AI recommendation frequency for most brands. You do not need to fix all five factors at once — fix the worst one first and measure.</p>
       </div>
-    </article>
+    </section>
+
+    <hr class="article-divider">
+
+    <section class="article-section" id="audit">
+      <h2>How to Audit Your Brand's Factor Gaps</h2>
+      <p>A practical factor gap audit takes thirty minutes and produces a prioritized action list.</p>
+      <p><strong>Entity presence check:</strong> Ask ChatGPT "describe [brand name] in one paragraph." If the response is vague, hallucinated, or conflates your brand with others, your entity presence is weak. The fix is to publish explicit, structured entity content and ensure it is indexed.</p>
+      <p><strong>Citation density check:</strong> Ask Perplexity "[category] tools for [your target customer]" ten times with query variations. Count how often your brand appears versus competitors. If competitors appear five times and you appear zero, your citation density in that category context is weak.</p>
+      <p><strong>Contextual relevance check:</strong> Read your top five pages out loud. Do they describe your product in the specific language your buyers use? If not, they are not matching the query patterns that drive AI recommendations.</p>
+    </section>
+
+    <div class="inline-cta">
+      <div class="inline-cta__text">
+        <strong>See which factors are holding your brand back</strong>
+        <p>Jeevan AI identifies your entity gaps and shows exactly which competitors are winning on each recommendation factor.</p>
+      </div>
+      <a href="https://dashboard.jeevanai.co.in/auth/login" class="btn-primary">Run Free Scan &#8594;</a>
+    </div>
+
+    <hr class="article-divider">
+
+    <section class="faq-section" id="faq">
+      <h2>Frequently Asked Questions</h2>
+      <div class="faq-item">
+        <p class="faq-q">What factors do AI models use to recommend brands?</p>
+        <p class="faq-a">AI models use five primary factors when deciding which brands to recommend: entity presence (how clearly the brand is defined in training data and crawlable content), citation density (how many independent sources mention the brand in the relevant category), contextual relevance (how closely the brand's described attributes match the query), sentiment and framing (how the brand is described in surrounding content), and recency signals for retrieval-based engines like Perplexity. Brands that score well across all five factors appear consistently in AI recommendations. Brands that are missing even one factor are often skipped in favor of better-profiled alternatives.</p>
+      </div>
+      <div class="faq-item">
+        <p class="faq-q">Why does ChatGPT recommend one brand over another?</p>
+        <p class="faq-a">ChatGPT recommends one brand over another based on how that brand is represented in its training data. The primary factors are: how frequently the brand is mentioned in category-relevant contexts across the training corpus, how specific and verifiable the claims made about the brand are (generic descriptions are downweighted), whether the brand is described as a solution to the kind of problem the user is asking about, and whether the surrounding content frames the brand positively within a professional or credible context. Brands with high marketing spend but thin editorial presence often lose to smaller brands with more structured, specific content coverage.</p>
+      </div>
+      <div class="faq-item">
+        <p class="faq-q">What is entity presence and why does it matter for AI recommendations?</p>
+        <p class="faq-a">Entity presence is how clearly and consistently a brand's identity is established in the content AI models can read. A strong entity presence means the brand name, category, key differentiators, target customer, and primary use cases are all explicitly defined in crawlable, structured content. AI models treat brands as entities in a knowledge graph. A brand with weak entity presence is ambiguous — the model is not sure what it does, who it is for, or how to distinguish it from alternatives. This ambiguity leads to the brand being omitted from recommendations. Entity presence is built through FAQ-rich content, About pages, structured schema markup, and consistent third-party editorial coverage.</p>
+      </div>
+      <div class="faq-item">
+        <p class="faq-q">Does the number of backlinks affect AI brand recommendations?</p>
+        <p class="faq-a">Backlinks affect AI brand recommendations indirectly, not directly. AI models do not read a backlink graph the way a search engine crawler does. However, backlinks correlate with third-party editorial mentions, which are a direct factor in AI recommendation decisions. A brand with many backlinks from credible editorial sources is likely also well-mentioned in the text of those sources, which strengthens its entity profile in AI training data. The content of those links matters more than the links themselves. A brand mentioned in comparison articles, category roundups, and review posts has a richer entity profile than one with the same number of backlinks from low-context sources.</p>
+      </div>
+      <div class="faq-item">
+        <p class="faq-q">Can a brand improve its AI recommendation frequency in 90 days?</p>
+        <p class="faq-a">For Perplexity and Google AI Overviews, brands can see measurable improvement in AI recommendation frequency within 60 to 90 days of publishing structured, FAQ-rich content that directly addresses target query clusters. These engines use live retrieval, so new content can surface quickly. For ChatGPT, the timeline is longer because it depends on training data updates. Brands that combine owned content improvements with third-party editorial coverage (getting mentioned in category articles and comparison posts on independent sites) see the fastest improvement across all engines. The key is to address multiple recommendation factors simultaneously: entity clarity, specific claims, and third-party citation density.</p>
+      </div>
+    </section>
+
+    <hr class="article-divider">
+
+    <section class="article-conclusion">
+      <p>The five factors are not equally hard to fix. Entity presence and contextual relevance are within your direct control — they change the moment you publish better-structured content. Citation density takes longer because it depends on third-party editorial coverage. Sentiment improves as a byproduct of better positioning. Recency is a maintenance task.</p>
+      <p>Start with the factor audit, find your biggest gap, fix it with a specific content action, and measure the result in Perplexity and Google AI Overviews within 60 days. That cycle is the core of an effective GEO practice.</p>
+      <div class="inline-cta">
+        <div class="inline-cta__text">
+          <strong>Audit your factors in minutes</strong>
+          <p>Free scan across ChatGPT, Perplexity, Gemini, and Google AI Overviews. Real answers, real sources, no credit card.</p>
+        </div>
+        <a href="https://dashboard.jeevanai.co.in/auth/login" class="btn-primary">Run Free Scan &#8594;</a>
+      </div>
+    </section>
+
   </main>
 
-  <footer>
-    <p>&copy; 2026 Jeevan AI. All rights reserved.</p>
-  </footer>
+  <aside class="article-sidebar" aria-label="Article navigation">
+    <div class="sidebar-toc">
+      <h4>In this article</h4>
+      <ul class="toc-list">
+        <li><a href="#five-factors">The five factors</a></li>
+        <li><a href="#entity-presence">Entity presence</a></li>
+        <li><a href="#citation-density">Citation density</a></li>
+        <li><a href="#contextual-relevance">Contextual relevance</a></li>
+        <li><a href="#engines">How engines differ</a></li>
+        <li><a href="#gaps">Common factor gaps</a></li>
+        <li><a href="#audit">Audit your gaps</a></li>
+        <li><a href="#faq">FAQ</a></li>
+      </ul>
+    </div>
+    <div class="sidebar-card">
+      <h4>Find your weakest factor</h4>
+      <p>Run a free scan and see exactly where your entity profile is weak and which competitors are scoring higher on each recommendation signal.</p>
+      <a href="https://dashboard.jeevanai.co.in/auth/login" class="btn-primary" style="width:100%;justify-content:center">Run Free Scan &#8594;</a>
+      <a href="/blog/ai-brand-recommendation-analysis.html" class="btn-outline-sm">How to read AI recommendations &#8594;</a>
+    </div>
+  </aside>
+</div>
+
+<section class="related-section">
+  <div class="related-section__inner">
+    <h3>Continue reading</h3>
+    <div class="related-grid">
+      <article class="related-card">
+        <span class="post-tag">GEO Strategy</span>
+        <h4>AI Brand Recommendation Analysis: How to Read Why AI Picks a Brand</h4>
+        <p>When AI names one brand and skips another, it is not random. How to analyze the answer and turn it into a content brief.</p>
+        <a href="/blog/ai-brand-recommendation-analysis.html" class="related-link">Read article &#8594;</a>
+      </article>
+      <article class="related-card">
+        <span class="post-tag">Why AI Recommends</span>
+        <h4>Why Does ChatGPT Recommend My Competitor Instead of Me?</h4>
+        <p>The structural reasons AI models skip your brand and name a competitor — and the specific content fixes that change it.</p>
+        <a href="/blog/why-chatgpt-recommends-competitor.html" class="related-link">Read article &#8594;</a>
+      </article>
+      <article class="related-card">
+        <span class="post-tag">GEO Strategy</span>
+        <h4>ChatGPT vs Perplexity: Which AI Engine Should You Optimize For First?</h4>
+        <p>Retrieval mechanism differences and how to decide which engine to prioritize based on your brand's timeline.</p>
+        <a href="/blog/chatgpt-vs-perplexity-which-to-optimize-first.html" class="related-link">Read article &#8594;</a>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="cta-strip" aria-labelledby="cta-heading">
+  <div class="cta-strip__inner">
+    <h2 class="cta-strip__title" id="cta-heading">See which factor is limiting your AI visibility.</h2>
+    <p class="cta-strip__sub">Free scan across ChatGPT, Perplexity, Gemini, and Google AI Overviews. Real answers, real sources, no credit card.</p>
+    <a href="https://dashboard.jeevanai.co.in/auth/login" class="btn-primary">Run Free Scan &#8594;</a>
+  </div>
+</section>
+
+<footer class="footer" role="contentinfo">
+  <p>&#169; 2026 Jeevan AI. All rights reserved. &#183; <a href="/features.html">Features</a> &#183; <a href="/pricing.html">Pricing</a> &#183; <a href="/blog-index.html">Blog</a> &#183; <a href="mailto:jeevanaijobs@gmail.com">Contact</a></p>
+</footer>
+
 </body>
 </html>

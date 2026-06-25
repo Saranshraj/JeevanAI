@@ -1,195 +1,348 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>AI Visibility for Consumer Goods and FMCG Brands | Jeevan AI</title>
-  <meta name="description" content="Why ChatGPT recommends competitor consumer goods brands and not yours. How FMCG and consumer product brands get cited in AI recommendations — different signals from B2B, specific fixes." />
-  <link rel="canonical" href="https://jeevanai.co.in/blog/ai-visibility-consumer-goods-fmcg" />
-  <link rel="stylesheet" href="../styles.css" />
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Article",
-    "headline": "AI Visibility for Consumer Goods and FMCG Brands",
-    "description": "Why ChatGPT recommends competitor consumer goods brands and not yours, and what consumer product companies can do about it.",
-    "datePublished": "2026-06-25",
-    "author": { "@type": "Person", "name": "Saran Shraj" },
-    "publisher": { "@type": "Organization", "name": "Jeevan AI", "url": "https://jeevanai.co.in" }
-  }
-  </script>
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
-      {
-        "@type": "Question",
-        "name": "Why does ChatGPT recommend a competitor's consumer goods product instead of mine even when mine is better?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "ChatGPT recommends competitor consumer goods products because it draws on training data where the competitor has a stronger entity profile for the category in question. 'Better' in terms of actual product quality is invisible to AI models unless that quality is described in specific, structured, crawlable content. A competitor with years of editorial coverage, customer review aggregation pages, ingredient or specification content, and comparison articles will appear in ChatGPT recommendations regardless of actual product quality. The fix is not to improve the product further — it is to make the product's quality visible in the content AI models can read and cite."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "How do FMCG brands get recommended in ChatGPT and Perplexity?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "FMCG brands get recommended in ChatGPT and Perplexity by building a strong entity profile in the specific category and use-case context the AI model is being asked about. This means publishing structured content that maps the brand to specific buyer needs: not just 'a household cleaning product' but 'a plant-based household cleaner for homes with young children.' The category-specific framing is what AI models use to match your brand to specific recommendation queries. FMCG brands also benefit more than B2B brands from aggregating consumer review signals into structured content, because consumer queries weight social proof more heavily than professional queries do."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Is GEO different for consumer goods brands compared to B2B SaaS?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Yes. The core mechanics of GEO are the same — entity presence, citation density, contextual relevance — but the content types that build those signals are different. B2B SaaS brands build entity presence through case studies, comparison pages, and professional editorial coverage. Consumer goods brands build it through product specification content, use-case mapping (who is this for, in what situations), ingredient or material transparency pages, certification content, and aggregated consumer review pages. The query patterns are also different: consumer queries tend to be shorter and use more colloquial language, which means the FAQ content needs to mirror how consumers actually phrase product questions rather than how marketers describe the product."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "What content helps consumer goods brands appear in AI recommendations?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "The content types that most improve AI recommendation frequency for consumer goods brands are: ingredient or material pages that explain what the product contains and why it matters for the buyer's concern, use-case pages that map the product to specific situations (for example, 'best sunscreen for daily office commute in Indian summer'), certification and safety pages that answer the verification questions buyers ask AI models, comparison content that positions the brand against category alternatives on specific criteria, and FAQ pages that answer the exact questions consumers are submitting to AI models about the product category. Review aggregation content that synthesizes customer experience signals also carries more weight for consumer queries than for B2B queries."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "How do Indian FMCG brands compete with global brands in AI recommendations?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Indian FMCG brands compete with global brands in AI recommendations by owning the India-specific context. Global brands have broad entity profiles but thin India-specific content: they do not typically publish content about how their product performs in Indian climate conditions, how it compares to traditional Indian alternatives, or how it is priced relative to the Indian market. Indian FMCG brands that publish this India-specific content — ingredient sourcing from India, suitability for Indian skin types or weather, comparison to both Indian and global alternatives — build entity signals that global brands cannot easily replicate. AI models answering queries with India modifiers will favor this India-contextual content."
-        }
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-S6X8Q5EY8E"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-S6X8Q5EY8E');
+</script>
+<meta charset="UTF-8">
+<link rel="icon" type="image/png" href="/logo.png">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI Visibility for Consumer Goods and FMCG Brands | Jeevan AI</title>
+<meta name="description" content="Why ChatGPT recommends a competitor's consumer goods product even when yours is better — and the specific content investments that fix it for FMCG brands in India.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://jeevanai.co.in/blog/ai-visibility-consumer-goods-fmcg">
+<meta property="og:title" content="AI Visibility for Consumer Goods and FMCG Brands">
+<meta property="og:description" content="Why ChatGPT recommends competitor consumer goods brands and what FMCG companies can do about it.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://jeevanai.co.in/blog/ai-visibility-consumer-goods-fmcg">
+<meta property="og:site_name" content="Jeevan AI">
+<meta property="article:published_time" content="2026-06-25">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "AI Visibility for Consumer Goods and FMCG Brands",
+  "description": "Why ChatGPT recommends competitor consumer goods brands and what FMCG companies can do about it.",
+  "author": { "@type": "Person", "name": "Saran Shraj" },
+  "publisher": { "@type": "Organization", "name": "Jeevan AI", "url": "https://jeevanai.co.in",
+    "logo": { "@type": "ImageObject", "url": "https://jeevanai.co.in/assets/logo.png" } },
+  "datePublished": "2026-06-25",
+  "dateModified": "2026-06-25",
+  "mainEntityOfPage": { "@type": "WebPage", "@id": "https://jeevanai.co.in/blog/ai-visibility-consumer-goods-fmcg" },
+  "keywords": ["ai visibility consumer goods", "fmcg geo optimization", "chatgpt recommending competitor consumer goods", "ai brand visibility fmcg india"]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Why does ChatGPT recommend a competitor's consumer goods product instead of mine even when mine is better?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "ChatGPT recommends competitor consumer goods products because it draws on training data where the competitor has a stronger entity profile for the category in question. 'Better' in terms of actual product quality is invisible to AI models unless that quality is described in specific, structured, crawlable content. A competitor with years of editorial coverage, customer review aggregation pages, ingredient or specification content, and comparison articles will appear in ChatGPT recommendations regardless of actual product quality. The fix is not to improve the product further — it is to make the product's quality visible in the content AI models can read and cite."
       }
-    ]
+    },
+    {
+      "@type": "Question",
+      "name": "How do FMCG brands get recommended in ChatGPT and Perplexity?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "FMCG brands get recommended in ChatGPT and Perplexity by building a strong entity profile in the specific category and use-case context the AI model is being asked about. This means publishing structured content that maps the brand to specific buyer needs: not just 'a household cleaning product' but 'a plant-based household cleaner for homes with young children.' The category-specific framing is what AI models use to match your brand to specific recommendation queries. FMCG brands also benefit more than B2B brands from aggregating consumer review signals into structured content, because consumer queries weight social proof more heavily than professional queries do."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is GEO different for consumer goods brands compared to B2B SaaS?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. The core mechanics of GEO are the same — entity presence, citation density, contextual relevance — but the content types that build those signals are different. B2B SaaS brands build entity presence through case studies, comparison pages, and professional editorial coverage. Consumer goods brands build it through product specification content, use-case mapping (who is this for, in what situations), ingredient or material transparency pages, certification content, and aggregated consumer review pages. The query patterns are also different: consumer queries tend to be shorter and use more colloquial language, which means the FAQ content needs to mirror how consumers actually phrase product questions."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do Indian FMCG brands compete with global brands in AI recommendations?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Indian FMCG brands compete with global brands in AI recommendations by owning the India-specific context. Global brands have broad entity profiles but thin India-specific content: they do not typically publish content about how their product performs in Indian climate conditions, how it compares to traditional Indian alternatives, or how it is priced relative to the Indian market. Indian FMCG brands that publish this India-specific content — ingredient sourcing from India, suitability for Indian skin types or weather, comparison to both Indian and global alternatives — build entity signals that global brands cannot easily replicate. AI models answering queries with India modifiers will favor this India-contextual content."
+      }
+    }
+  ]
+}
+</script>
+<style>
+  :root {
+    --bg:#ffffff; --bg-card:#ffffff; --border:#e5e7eb; --border-hover:rgba(99,102,241,0.45);
+    --accent:#6366f1; --accent-dim:rgba(99,102,241,0.1); --text:#111827; --text-dim:#4b5563;
+    --text-muted:#9ca3af; --tag-bg:rgba(99,102,241,0.1); --tag-text:#4f46e5; --white:#ffffff;
+    --radius:12px; --radius-sm:8px; --font-sans:'DM Sans','Inter',system-ui,sans-serif;
+    --font-serif:'DM Serif Display',Georgia,serif; --font-mono:'JetBrains Mono',monospace; --max-w:1180px; --prose-w:720px;
   }
-  </script>
+  *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{background:var(--bg);color:var(--text);font-family:var(--font-sans);line-height:1.6;-webkit-font-smoothing:antialiased}
+  a{color:inherit;text-decoration:none} img{display:block;max-width:100%}
+  @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700&family=DM+Serif+Display&display=swap');
+  .nav{position:sticky;top:0;z-index:100;background:rgba(255,255,255,0.95);backdrop-filter:blur(16px);border-bottom:1px solid var(--border);padding:0 24px}
+  .nav__inner{max-width:var(--max-w);margin:0 auto;display:flex;align-items:center;justify-content:space-between;height:64px}
+  .nav__logo{display:flex;align-items:center;gap:10px;font-weight:700;font-size:1.05rem}
+  .nav__links{display:flex;align-items:center;gap:6px}
+  .nav__links a{padding:7px 14px;border-radius:8px;font-size:0.875rem;color:var(--text-dim);transition:all 0.2s}
+  .nav__links a:hover{color:var(--text);background:rgba(0,0,0,0.05)}
+  .nav__links a.active{color:var(--accent)}
+  .nav__cta{padding:8px 18px;border-radius:8px;background:linear-gradient(135deg,#6366f1,#7c3aed);color:#fff;font-size:0.875rem;font-weight:600}
+  .article-hero{background:linear-gradient(135deg,#1e3a8a 0%,#4338ca 45%,#7c3aed 100%);padding:60px 24px 64px;border-bottom:1px solid var(--border)}
+  .article-hero__inner{max-width:var(--prose-w);margin:0 auto}
+  .article-hero__breadcrumb{display:flex;align-items:center;gap:8px;font-size:0.8rem;color:rgba(255,255,255,0.72);margin-bottom:24px}
+  .article-hero__breadcrumb a{color:rgba(255,255,255,0.72)}
+  .article-hero__meta{display:flex;align-items:center;gap:12px;margin-bottom:20px;flex-wrap:wrap}
+  .post-tag{padding:3px 10px;border-radius:100px;font-size:0.72rem;font-weight:600;letter-spacing:0.04em;text-transform:uppercase;background:rgba(255,255,255,0.16);color:#fff}
+  .post-date,.read-time{font-size:0.8rem;color:rgba(255,255,255,0.6)}
+  .article-hero__title{font-family:var(--font-serif);font-size:clamp(1.9rem,3.5vw,2.6rem);line-height:1.18;letter-spacing:-0.02em;color:#fff;margin-bottom:18px}
+  .article-hero__subtitle{font-size:1.1rem;color:rgba(255,255,255,0.85);line-height:1.6;max-width:620px}
+  .article-wrap{max-width:var(--max-w);margin:0 auto;padding:56px 24px 90px;display:grid;grid-template-columns:var(--prose-w) 1fr;gap:60px;align-items:start}
+  .article-prose{max-width:var(--prose-w)}
+  .summary-block{background:#f9fafb;border:1px solid var(--border);border-left:3px solid var(--accent);border-radius:0 8px 8px 0;padding:18px 22px;margin-bottom:36px}
+  .summary-block p{font-size:1rem;color:var(--text-dim);line-height:1.65;margin:0}
+  .article-intro p{font-size:1.12rem;line-height:1.8;color:#374151;margin-bottom:18px}
+  .article-section{margin-top:14px}
+  .article-section h2{font-family:var(--font-serif);font-size:1.5rem;color:#111827;margin:34px 0 12px;padding-bottom:8px;border-bottom:2px solid #e5e7eb;line-height:1.25}
+  .article-section h3{font-size:1.2rem;color:#1f2937;margin:22px 0 8px}
+  .article-section p{font-size:1.08rem;line-height:1.85;color:#374151;margin-bottom:16px}
+  .article-section a{color:#4f46e5;text-decoration:underline;text-underline-offset:2px}
+  .article-section ol,.article-section ul{margin:14px 0 18px 2px;padding-left:20px}
+  .article-section li{font-size:1.06rem;line-height:1.7;color:#374151;margin-bottom:10px}
+  .callout{background:linear-gradient(135deg,rgba(99,102,241,0.06),rgba(124,58,237,0.03));border:1px solid rgba(99,102,241,0.2);border-radius:10px;padding:18px 22px;margin:22px 0}
+  .callout p{margin:0;color:#1a1730;font-size:1.02rem;line-height:1.7}
+  .article-divider{border:none;border-top:1px solid var(--border);margin:36px 0}
+  .faq-section h2{font-family:var(--font-serif);font-size:1.5rem;color:#111827;margin-bottom:18px}
+  .faq-item{border-bottom:1px solid var(--border);padding:18px 0}
+  .faq-item:last-child{border-bottom:none}
+  .faq-q{font-size:1.05rem;font-weight:600;color:#111827;margin-bottom:8px}
+  .faq-a{font-size:1rem;color:#4b5563;line-height:1.75;margin:0}
+  .article-conclusion p{font-size:1.08rem;line-height:1.85;color:#374151;margin-bottom:16px}
+  .inline-cta{background:linear-gradient(135deg,rgba(99,102,241,0.07),rgba(99,102,241,0.03));border:1px solid rgba(99,102,241,0.22);border-radius:12px;padding:26px 30px;display:flex;align-items:center;justify-content:space-between;gap:22px;flex-wrap:wrap;margin-top:24px}
+  .inline-cta__text strong{font-size:1.05rem;color:#111827} .inline-cta__text p{font-size:0.9rem;color:#6b7280;margin-top:4px}
+  .btn-primary{display:inline-flex;align-items:center;gap:8px;padding:12px 22px;border-radius:8px;background:linear-gradient(135deg,#6366f1,#7c3aed);color:#fff;font-size:0.9rem;font-weight:600;white-space:nowrap}
+  .article-sidebar{position:sticky;top:88px}
+  .sidebar-toc,.sidebar-card{background:#fff;border:1px solid var(--border);border-radius:12px;padding:22px;margin-bottom:22px;box-shadow:0 1px 3px rgba(0,0,0,0.05)}
+  .sidebar-toc h4{font-size:0.72rem;font-weight:700;text-transform:uppercase;letter-spacing:0.08em;color:var(--text-muted);margin-bottom:14px}
+  .toc-list{list-style:none} .toc-list li{padding:4px 0} .toc-list a{font-size:0.85rem;color:var(--text-dim)} .toc-list a:hover{color:var(--accent)}
+  .sidebar-card h4{font-size:0.98rem;color:#111827;margin-bottom:8px} .sidebar-card p{font-size:0.85rem;color:var(--text-dim);margin-bottom:16px;line-height:1.55}
+  .btn-outline-sm{display:inline-flex;justify-content:center;width:100%;padding:9px 18px;border-radius:8px;border:1px solid var(--border);color:#4f46e5;font-size:0.82rem;font-weight:600;margin-top:10px}
+  .related-section{border-top:1px solid var(--border);padding:56px 24px}
+  .related-section__inner{max-width:var(--max-w);margin:0 auto}
+  .related-section h3{font-size:0.78rem;font-weight:700;text-transform:uppercase;letter-spacing:0.08em;color:var(--text-muted);margin-bottom:24px}
+  .related-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+  .related-card{background:#fff;border:1px solid var(--border);border-radius:12px;padding:22px;box-shadow:0 1px 3px rgba(0,0,0,0.06)}
+  .related-card .post-tag{background:var(--tag-bg);color:var(--tag-text);margin-bottom:12px;display:inline-block}
+  .related-card h4{font-size:0.98rem;color:#111827;margin-bottom:8px;line-height:1.4} .related-card p{font-size:0.85rem;color:var(--text-dim);line-height:1.55;margin-bottom:14px}
+  .related-link{font-size:0.82rem;font-weight:600;color:var(--accent)}
+  .cta-strip{border-top:1px solid var(--border);background:linear-gradient(135deg,rgba(99,102,241,0.06),transparent 60%);padding:64px 24px;text-align:center}
+  .cta-strip__inner{max-width:640px;margin:0 auto}
+  .cta-strip__title{font-family:var(--font-serif);font-size:2rem;color:#111827;margin-bottom:12px}
+  .cta-strip__sub{color:var(--text-dim);margin-bottom:28px}
+  .footer{border-top:1px solid var(--border);padding:40px 24px;text-align:center}
+  .footer p{font-size:0.85rem;color:var(--text-muted)} .footer a{color:var(--text-dim)}
+  @media(max-width:1024px){.article-wrap{grid-template-columns:1fr;gap:40px}.article-sidebar{position:static}.related-grid{grid-template-columns:repeat(2,1fr)}}
+  @media(max-width:600px){.nav__links{display:none}.related-grid{grid-template-columns:1fr}.inline-cta{flex-direction:column}}
+</style>
 </head>
 <body>
-  <header>
-    <nav>
-      <a href="../index.html" class="logo">Jeevan AI</a>
-      <a href="../index.html#contact" class="cta-btn">Get Early Access</a>
+
+<nav class="nav" role="navigation" aria-label="Main navigation">
+  <div class="nav__inner">
+    <a href="/index.html" class="nav__logo" aria-label="Jeevan AI home">
+      <img src="/logo.png" alt="Jeevan AI" style="width:36px;height:36px;border-radius:8px;object-fit:cover"><span>Jeevan AI</span>
+    </a>
+    <div class="nav__links">
+      <a href="/features.html">Features</a>
+      <a href="/pricing.html">Pricing</a>
+      <a href="/blog-index.html" class="active">Blog</a>
+      <a href="/index.html#about">About</a>
+    </div>
+    <a href="https://dashboard.jeevanai.co.in/auth/login" class="nav__cta">Run Free Scan</a>
+  </div>
+</nav>
+
+<header class="article-hero">
+  <div class="article-hero__inner">
+    <nav class="article-hero__breadcrumb" aria-label="Breadcrumb">
+      <a href="/index.html">Home</a><span>&#8250;</span><a href="/blog-index.html">Blog</a><span>&#8250;</span><span>Consumer Goods &amp; FMCG</span>
     </nav>
-  </header>
+    <div class="article-hero__meta">
+      <span class="post-tag">Consumer Goods &amp; FMCG</span>
+      <span class="post-date">June 25, 2026</span>
+      <span class="read-time">· 7 min read</span>
+    </div>
+    <h1 class="article-hero__title">AI Visibility for Consumer Goods and FMCG Brands</h1>
+    <p class="article-hero__subtitle">ChatGPT cannot taste or test your product. It recommends based on structured content. Here is why your competitor's inferior product appears first — and the specific content investments that fix it.</p>
+  </div>
+</header>
 
-  <main class="blog-post">
-    <article>
-      <div class="post-meta">
-        <span class="category">Consumer Goods &amp; FMCG</span>
-        <span class="read-time">7 min read</span>
-        <time datetime="2026-06-25">June 25, 2026</time>
-      </div>
+<div class="article-wrap">
+  <main class="article-prose" id="article-content">
 
-      <h1>AI Visibility for Consumer Goods and FMCG Brands</h1>
+    <div class="summary-block" role="note">
+      <p>AI models recommend consumer goods brands based on how clearly the brand's quality is documented in crawlable content — not on actual product quality. FMCG brands that publish ingredient transparency pages, use-case content, certification pages, and India-specific context win AI recommendations. Brands that rely on packaging and marketing copy do not.</p>
+    </div>
 
-      <p class="lead">A consumer goods company asks: "ChatGPT is recommending our competitor's product for a query where our product is clearly the better option. What drives these recommendations?" The answer is not product quality. AI models cannot taste, test, or independently verify quality. They recommend brands based on how well the brand's story is told in structured, crawlable content — and for most consumer goods brands, that story is told far less clearly than it could be.</p>
+    <div class="article-intro">
+      <p>A consumer goods company asks: "ChatGPT is recommending our competitor's product for a query where our product is clearly the better option. What drives these recommendations?" The answer is not product quality. AI models cannot taste, test, or independently verify quality. They recommend brands based on how well the brand's story is told in structured, crawlable content — and for most consumer goods brands, that story is told far less clearly than it could be.</p>
+    </div>
 
+    <section class="article-section" id="why-different">
       <h2>Why Consumer Goods AI Visibility Is Different From B2B</h2>
-
       <p>Most GEO writing focuses on B2B SaaS brands. The mechanics are similar for consumer goods but the content types are different, the query patterns are different, and the competitive dynamics are different.</p>
+      <p>B2B buyers ask professional questions: "which CRM should a 50-person sales team use." Consumer buyers ask more varied questions: "best sunscreen for oily skin in Indian summer," "which household cleaner is safe for babies," "natural hair oil that actually works for thick hair." The answers draw on a much wider content set: editorial reviews, community discussions, ingredient databases, certification pages, and use-case guides.</p>
+    </section>
 
-      <p>B2B buyers ask AI models professional questions: "which CRM should a 50-person sales team use." The answers draw on editorial coverage from industry publications, comparison posts, analyst reports, and structured product content.</p>
+    <hr class="article-divider">
 
-      <p>Consumer buyers ask more varied questions: "best sunscreen for oily skin in Indian summer," "which household cleaner is safe for babies," "natural hair oil that actually works for thick hair." The answers draw on a much wider content set: editorial reviews, community discussions, ingredient databases, certification pages, and use-case guides.</p>
-
-      <p>For consumer goods brands, the AI visibility challenge is to be present and well-profiled in this diverse content ecosystem, not just in professional editorial.</p>
-
+    <section class="article-section" id="quality-problem">
       <h2>The Quality Visibility Problem</h2>
-
-      <p>Consumer goods companies often frame AI visibility as a frustrating unfairness: "Our product is better, so why is ChatGPT recommending something worse?" The frustration is understandable but the framing is wrong.</p>
-
       <p>AI models cannot evaluate product quality directly. They read text. A brand that makes an average product but publishes detailed ingredient sourcing pages, specific use-case guides, safety certification content, and comparison tables will appear in more AI recommendations than a brand that makes a superior product but describes it only in marketing language on a visually impressive website.</p>
+      <div class="callout">
+        <p>Closing an AI visibility gap is entirely within a brand's control. It requires no change to the product, only a change to how the product's quality is documented in crawlable content.</p>
+      </div>
+    </section>
 
-      <p>The implication is that closing an AI visibility gap is entirely within a brand's control. It requires no change to the product, only a change to how the product's quality is documented in crawlable content.</p>
+    <hr class="article-divider">
 
+    <section class="article-section" id="content-signals">
       <h2>What Drives Consumer AI Recommendations</h2>
 
-      <p>The content signals that most strongly influence AI recommendations for consumer goods brands follow a consistent pattern.</p>
-
       <h3>Ingredient and specification transparency</h3>
-
       <p>Consumer queries increasingly include questions about what is in a product: "does this contain parabens," "what are the active ingredients," "is this cruelty-free." AI models answering these questions need to find specific, verifiable answers in your content. A product page that lists ingredients in a structured format (not buried in an image) creates a citation-ready answer. A page that uses vague phrases like "natural formula" does not.</p>
 
-      <p>This is the single highest-leverage content investment for most consumer goods brands. Most brands already have ingredient information internally. Publishing it in a structured, accessible format is a one-time content effort with lasting AI visibility impact.</p>
-
       <h3>Use-case specificity</h3>
-
-      <p>Consumer recommendation queries are specific: not "which shampoo" but "which shampoo for color-treated hair in hard water." AI models match these specific queries to brands that have content explicitly addressing those conditions.</p>
-
-      <p>A consumer goods brand that publishes one general product page will appear for general category queries. A brand that publishes use-case pages for specific consumer situations (oily scalp, monsoon humidity, post-gym wash) will appear for those specific queries. In competitive categories, the specific-use queries have lower competition and often higher intent.</p>
+      <p>Consumer recommendation queries are specific: not "which shampoo" but "which shampoo for color-treated hair in hard water." AI models match these specific queries to brands that have content explicitly addressing those conditions. A brand that publishes use-case pages for specific consumer situations (oily scalp, monsoon humidity, post-gym wash) will appear for those specific queries. In competitive categories, specific-use queries have lower competition and often higher intent.</p>
 
       <h3>Certification and verification content</h3>
-
-      <p>Consumers increasingly ask AI models verification questions before purchasing: "is this PETA certified," "has this been dermatologist tested," "is this FSSAI approved." These queries have clear answers that AI models will cite if the certification content is published in a structured, findable format.</p>
-
-      <p>Every certification the brand holds should have a dedicated content section or page that explains what the certification means, who issued it, and what it implies for the buyer's specific concern. Not just a badge on the product page, but a page that answers the certification question directly.</p>
+      <p>Consumers increasingly ask AI models verification questions before purchasing: "is this PETA certified," "has this been dermatologist tested," "is this FSSAI approved." Every certification the brand holds should have a dedicated content section that explains what the certification means, who issued it, and what it implies for the buyer's specific concern. Not just a badge on the product page, but a page that answers the certification question directly.</p>
 
       <h3>Comparison content</h3>
+      <p>Publishing honest comparison content that positions your brand against category alternatives on specific criteria creates citation opportunities that no competitor can take from you. Honest comparisons that acknowledge tradeoffs are cited more often than purely promotional comparisons because AI models weight neutral framing as more credible.</p>
+    </section>
 
-      <p>Consumer queries often take comparison form: "this product vs that product," "natural alternative to [brand name]," "best [category] brand in India." AI models answering these queries look for content that directly addresses the comparison.</p>
+    <hr class="article-divider">
 
-      <p>Publishing honest comparison content that positions your brand against category alternatives on specific criteria creates citation opportunities that no competitor can take from you. The comparison pages do not need to be unfairly favorable to your brand. Honest comparisons that acknowledge tradeoffs are cited more often than purely promotional comparisons because AI models weight neutral framing as more credible.</p>
-
+    <section class="article-section" id="india-advantage">
       <h2>The India Context Advantage</h2>
-
       <p>Indian FMCG brands have a structural advantage in AI recommendations for Indian buyers that most of them are not using.</p>
-
       <p>Global consumer goods brands have broad entity profiles but thin India-specific content. They do not typically address Indian climate conditions (humidity, monsoon, extreme heat), Indian skin and hair types, Indian dietary and cultural practices, or Indian regulatory context (FSSAI standards, BIS certification).</p>
+      <p>An Indian brand that publishes content explicitly about how its product is designed for Indian conditions, sourced from Indian ingredients, or suited to Indian lifestyle contexts is building entity signals that global brands cannot replicate without significant content investment. For Indian FMCG brands, this is a defensible content moat that takes years for a global brand to close.</p>
+    </section>
 
-      <p>An Indian brand that publishes content explicitly about how its product is designed for Indian conditions, sourced from Indian ingredients, or suited to Indian lifestyle contexts is building entity signals that global brands cannot replicate without significant content investment. AI models answering queries with India modifiers will favor this India-contextual content.</p>
-
-      <p>For Indian FMCG brands, this is not a small tactical advantage. It is a defensible content moat that takes years for a global brand to close.</p>
-
-      <h2>Measuring AI Visibility for Consumer Goods</h2>
-
-      <p>Consumer AI visibility is measured the same way as B2B: a regular citation audit across target query clusters. The difference is that consumer query clusters are broader and more varied.</p>
-
-      <p>Start with the specific use-case queries that your highest-intent buyers are submitting. These are usually the queries where your product is genuinely the right answer for a specific consumer situation. Track whether your brand appears in AI responses to those queries monthly, and note which brands appear instead when you do not.</p>
-
-      <p>The content gap analysis follows directly: the queries where you are absent but competitors appear are the gaps to address. The content that competitors are using to win those queries is the template for what you need to publish.</p>
-
-      <section class="faq-section">
-        <h2>Frequently Asked Questions</h2>
-
-        <div class="faq-item">
-          <h3>Why does ChatGPT recommend a competitor's consumer goods product instead of mine even when mine is better?</h3>
-          <p>ChatGPT recommends competitor consumer goods products because it draws on training data where the competitor has a stronger entity profile for the category in question. 'Better' in terms of actual product quality is invisible to AI models unless that quality is described in specific, structured, crawlable content. A competitor with years of editorial coverage, customer review aggregation pages, ingredient or specification content, and comparison articles will appear in ChatGPT recommendations regardless of actual product quality. The fix is not to improve the product further — it is to make the product's quality visible in the content AI models can read and cite.</p>
-        </div>
-
-        <div class="faq-item">
-          <h3>How do FMCG brands get recommended in ChatGPT and Perplexity?</h3>
-          <p>FMCG brands get recommended in ChatGPT and Perplexity by building a strong entity profile in the specific category and use-case context the AI model is being asked about. This means publishing structured content that maps the brand to specific buyer needs: not just 'a household cleaning product' but 'a plant-based household cleaner for homes with young children.' The category-specific framing is what AI models use to match your brand to specific recommendation queries. FMCG brands also benefit more than B2B brands from aggregating consumer review signals into structured content, because consumer queries weight social proof more heavily than professional queries do.</p>
-        </div>
-
-        <div class="faq-item">
-          <h3>Is GEO different for consumer goods brands compared to B2B SaaS?</h3>
-          <p>Yes. The core mechanics of GEO are the same — entity presence, citation density, contextual relevance — but the content types that build those signals are different. B2B SaaS brands build entity presence through case studies, comparison pages, and professional editorial coverage. Consumer goods brands build it through product specification content, use-case mapping (who is this for, in what situations), ingredient or material transparency pages, certification content, and aggregated consumer review pages. The query patterns are also different: consumer queries tend to be shorter and use more colloquial language, which means the FAQ content needs to mirror how consumers actually phrase product questions rather than how marketers describe the product.</p>
-        </div>
-
-        <div class="faq-item">
-          <h3>What content helps consumer goods brands appear in AI recommendations?</h3>
-          <p>The content types that most improve AI recommendation frequency for consumer goods brands are: ingredient or material pages that explain what the product contains and why it matters for the buyer's concern, use-case pages that map the product to specific situations (for example, 'best sunscreen for daily office commute in Indian summer'), certification and safety pages that answer the verification questions buyers ask AI models, comparison content that positions the brand against category alternatives on specific criteria, and FAQ pages that answer the exact questions consumers are submitting to AI models about the product category. Review aggregation content that synthesizes customer experience signals also carries more weight for consumer queries than for B2B queries.</p>
-        </div>
-
-        <div class="faq-item">
-          <h3>How do Indian FMCG brands compete with global brands in AI recommendations?</h3>
-          <p>Indian FMCG brands compete with global brands in AI recommendations by owning the India-specific context. Global brands have broad entity profiles but thin India-specific content: they do not typically publish content about how their product performs in Indian climate conditions, how it compares to traditional Indian alternatives, or how it is priced relative to the Indian market. Indian FMCG brands that publish this India-specific content — ingredient sourcing from India, suitability for Indian skin types or weather, comparison to both Indian and global alternatives — build entity signals that global brands cannot easily replicate. AI models answering queries with India modifiers will favor this India-contextual content.</p>
-        </div>
-      </section>
-
-      <div class="cta-box">
-        <h3>Track Which Consumer Queries Your Brand Is Missing</h3>
-        <p>Jeevan AI shows FMCG and consumer goods brands exactly which AI recommendation queries their competitors are winning and what content is driving those wins.</p>
-        <a href="../index.html#contact" class="cta-btn">Get Early Access</a>
+    <div class="inline-cta">
+      <div class="inline-cta__text">
+        <strong>See which consumer queries your brand is missing</strong>
+        <p>Jeevan AI shows FMCG brands exactly which AI recommendation queries competitors are winning and what content is driving those wins.</p>
       </div>
-    </article>
+      <a href="https://dashboard.jeevanai.co.in/auth/login" class="btn-primary">Run Free Scan &#8594;</a>
+    </div>
+
+    <hr class="article-divider">
+
+    <section class="faq-section" id="faq">
+      <h2>Frequently Asked Questions</h2>
+      <div class="faq-item">
+        <p class="faq-q">Why does ChatGPT recommend a competitor's consumer goods product instead of mine even when mine is better?</p>
+        <p class="faq-a">ChatGPT recommends competitor consumer goods products because it draws on training data where the competitor has a stronger entity profile for the category in question. 'Better' in terms of actual product quality is invisible to AI models unless that quality is described in specific, structured, crawlable content. A competitor with years of editorial coverage, customer review aggregation pages, ingredient or specification content, and comparison articles will appear in ChatGPT recommendations regardless of actual product quality. The fix is not to improve the product further — it is to make the product's quality visible in the content AI models can read and cite.</p>
+      </div>
+      <div class="faq-item">
+        <p class="faq-q">How do FMCG brands get recommended in ChatGPT and Perplexity?</p>
+        <p class="faq-a">FMCG brands get recommended in ChatGPT and Perplexity by building a strong entity profile in the specific category and use-case context the AI model is being asked about. This means publishing structured content that maps the brand to specific buyer needs: not just 'a household cleaning product' but 'a plant-based household cleaner for homes with young children.' The category-specific framing is what AI models use to match your brand to specific recommendation queries. FMCG brands also benefit more than B2B brands from aggregating consumer review signals into structured content, because consumer queries weight social proof more heavily than professional queries do.</p>
+      </div>
+      <div class="faq-item">
+        <p class="faq-q">Is GEO different for consumer goods brands compared to B2B SaaS?</p>
+        <p class="faq-a">Yes. The core mechanics of GEO are the same — entity presence, citation density, contextual relevance — but the content types that build those signals are different. B2B SaaS brands build entity presence through case studies, comparison pages, and professional editorial coverage. Consumer goods brands build it through product specification content, use-case mapping, ingredient or material transparency pages, certification content, and aggregated consumer review pages. The query patterns are also different: consumer queries tend to be shorter and use more colloquial language, which means the FAQ content needs to mirror how consumers actually phrase product questions.</p>
+      </div>
+      <div class="faq-item">
+        <p class="faq-q">How do Indian FMCG brands compete with global brands in AI recommendations?</p>
+        <p class="faq-a">Indian FMCG brands compete with global brands in AI recommendations by owning the India-specific context. Global brands have broad entity profiles but thin India-specific content: they do not typically publish content about how their product performs in Indian climate conditions, how it compares to traditional Indian alternatives, or how it is priced relative to the Indian market. Indian FMCG brands that publish this India-specific content — ingredient sourcing from India, suitability for Indian skin types or weather, comparison to both Indian and global alternatives — build entity signals that global brands cannot easily replicate. AI models answering queries with India modifiers will favor this India-contextual content.</p>
+      </div>
+    </section>
+
+    <hr class="article-divider">
+
+    <section class="article-conclusion">
+      <p>The AI visibility gap for consumer goods brands is a content gap, not a product gap. The brands that appear consistently in AI recommendations are not necessarily the best products — they are the best-documented products. Ingredient pages, use-case guides, certification content, and India-specific context are all within your direct control and require no change to the underlying product.</p>
+      <div class="inline-cta">
+        <div class="inline-cta__text">
+          <strong>Track which queries your competitors are winning</strong>
+          <p>Free scan across ChatGPT, Perplexity, Gemini, and Google AI Overviews. Real answers, real sources, no credit card.</p>
+        </div>
+        <a href="https://dashboard.jeevanai.co.in/auth/login" class="btn-primary">Run Free Scan &#8594;</a>
+      </div>
+    </section>
+
   </main>
 
-  <footer>
-    <p>&copy; 2026 Jeevan AI. All rights reserved.</p>
-  </footer>
+  <aside class="article-sidebar" aria-label="Article navigation">
+    <div class="sidebar-toc">
+      <h4>In this article</h4>
+      <ul class="toc-list">
+        <li><a href="#why-different">B2C vs B2B GEO</a></li>
+        <li><a href="#quality-problem">The quality visibility problem</a></li>
+        <li><a href="#content-signals">What drives recommendations</a></li>
+        <li><a href="#india-advantage">India context advantage</a></li>
+        <li><a href="#faq">FAQ</a></li>
+      </ul>
+    </div>
+    <div class="sidebar-card">
+      <h4>See your FMCG brand in AI answers</h4>
+      <p>Run a free scan and see exactly where your brand appears — and where competitors appear instead — across every major AI engine.</p>
+      <a href="https://dashboard.jeevanai.co.in/auth/login" class="btn-primary" style="width:100%;justify-content:center">Run Free Scan &#8594;</a>
+      <a href="/blog/ai-visibility-d2c-india.html" class="btn-outline-sm">AI visibility for D2C India &#8594;</a>
+    </div>
+  </aside>
+</div>
+
+<section class="related-section">
+  <div class="related-section__inner">
+    <h3>Continue reading</h3>
+    <div class="related-grid">
+      <article class="related-card">
+        <span class="post-tag">D2C &amp; Indian Brands</span>
+        <h4>AI Visibility for D2C Brands in India</h4>
+        <p>Why Indian direct-to-consumer brands are invisible in ChatGPT and Perplexity — and the content investments that fix it.</p>
+        <a href="/blog/ai-visibility-d2c-india.html" class="related-link">Read article &#8594;</a>
+      </article>
+      <article class="related-card">
+        <span class="post-tag">GEO Strategy</span>
+        <h4>What Factors Do AI Models Use to Decide Which Brands to Recommend?</h4>
+        <p>The five signals AI models weigh when naming a brand: entity presence, citation density, contextual relevance, sentiment, and recency.</p>
+        <a href="/blog/ai-brand-recommendation-factors.html" class="related-link">Read article &#8594;</a>
+      </article>
+      <article class="related-card">
+        <span class="post-tag">Why AI Recommends</span>
+        <h4>Why Does ChatGPT Recommend My Competitor Instead of Me?</h4>
+        <p>The structural reasons AI models skip your brand and name a competitor — and what to do about it.</p>
+        <a href="/blog/why-chatgpt-recommends-competitor.html" class="related-link">Read article &#8594;</a>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="cta-strip" aria-labelledby="cta-heading">
+  <div class="cta-strip__inner">
+    <h2 class="cta-strip__title" id="cta-heading">See which consumer queries your brand is missing.</h2>
+    <p class="cta-strip__sub">Free scan across ChatGPT, Perplexity, Gemini, and Google AI Overviews. Real answers, real sources, no credit card.</p>
+    <a href="https://dashboard.jeevanai.co.in/auth/login" class="btn-primary">Run Free Scan &#8594;</a>
+  </div>
+</section>
+
+<footer class="footer" role="contentinfo">
+  <p>&#169; 2026 Jeevan AI. All rights reserved. &#183; <a href="/features.html">Features</a> &#183; <a href="/pricing.html">Pricing</a> &#183; <a href="/blog-index.html">Blog</a> &#183; <a href="mailto:jeevanaijobs@gmail.com">Contact</a></p>
+</footer>
+
 </body>
 </html>
