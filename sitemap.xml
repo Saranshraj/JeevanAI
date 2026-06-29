@@ -67,6 +67,18 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://jeevanai.co.in/blog/citation-decay-why-ai-stops-citing-you</loc>
+    <lastmod>2026-06-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://jeevanai.co.in/blog/geo-content-refresh-cycles</loc>
+    <lastmod>2026-06-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://jeevanai.co.in/blog/geo-for-accountants-bookkeepers</loc>
     <lastmod>2026-06-29</lastmod>
     <changefreq>monthly</changefreq>
@@ -103,6 +115,12 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://jeevanai.co.in/blog/how-to-structure-a-geo-team</loc>
+    <lastmod>2026-06-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://jeevanai.co.in/blog/local-service-business-geo</loc>
     <lastmod>2026-06-29</lastmod>
     <changefreq>monthly</changefreq>
@@ -110,6 +128,12 @@
   </url>
   <url>
     <loc>https://jeevanai.co.in/blog/running-geo-program-internal-playbook</loc>
+    <lastmod>2026-06-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://jeevanai.co.in/blog/seo-vs-geo-budget-allocation</loc>
     <lastmod>2026-06-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
