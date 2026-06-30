@@ -304,7 +304,8 @@ document.getElementById('auditForm').addEventListener('submit', function(e) {
     _replyto: document.getElementById('email').value.trim()
   };
 
-  fetch('https://formspree.io/jeevanaijobs@gmail.com', {
+  data.access_key = 'df2f9968-b231-4432-877f-eaf40b9390e9';
+  fetch('https://api.web3forms.com/submit', {
     method: 'POST',
     headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
     body: JSON.stringify(data)
