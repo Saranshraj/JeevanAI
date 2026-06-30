@@ -221,7 +221,8 @@
 </footer>
 
 <script>
-var ENDPOINT = "/.netlify/functions/analyze-page";
+// Site is on GitHub Pages (static); the function runs on the Netlify project.
+var ENDPOINT = "https://frabjous-maamoul-49a6fd.netlify.app/.netlify/functions/analyze-page";
 
 function colorFor(score){
   if(score >= 75) return "var(--good)";

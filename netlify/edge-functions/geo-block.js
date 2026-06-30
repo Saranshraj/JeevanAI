@@ -41,6 +41,12 @@ export default async (request, context) => {
   const url = new URL(request.url);
   const ua = (request.headers.get("user-agent") || "").toLowerCase();
 
+  // 0. Never gate serverless function (API) endpoints — they have their own CORS
+  //    and are called cross-origin from the GitHub Pages site.
+  if (url.pathname.startsWith("/.netlify/functions/")) {
+    return context.next();
+  }
+
   // 1. Always allow bots (skip logging — too noisy)
   if (BOT_PATTERNS.some(bot => ua.includes(bot))) {
     return context.next();
